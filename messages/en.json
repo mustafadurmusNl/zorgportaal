@@ -69,9 +69,34 @@
     }
   },
   "footer": {
-    "phone": "For questions, call 010 - 450 40 71",
-    "email": "info@mustafavolwassenen.nl",
-    "copyright": "© 2024 Mustafa Adults. All rights reserved."
+    "description": "From service-oriented practices, enthusiastic psychologists, specialized therapists and psychiatrists provide treatment for adults.",
+    "services": {
+      "title": "Our Care",
+      "anxiety": "Anxiety",
+      "adhd": "ADHD",
+      "depression": "Depression",
+      "trauma": "Trauma & PTSD",
+      "psychosomatic": "Psychosomatic & Psychology"
+    },
+    "clients": {
+      "title": "For Clients",
+      "register": "Register",
+      "waitingTimes": "Waiting Times",
+      "reimbursement": "Reimbursement",
+      "quality": "Quality",
+      "myFile": "My File"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions",
+      "complaints": "Complaints Procedure",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} Mohammad. All rights reserved.",
+    "partOf": "Part of"
   },
   "contact": {
     "phone": "010 - 450 40 71",

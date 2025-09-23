@@ -69,9 +69,34 @@
     }
   },
   "footer": {
-    "phone": "Voor vragen, bel 010 - 450 40 71",
-    "email": "info@mustafavolwassenen.nl",
-    "copyright": "© 2024 Mustafa Volwassenen. Alle rechten voorbehouden."
+    "description": "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen.",
+    "services": {
+      "title": "Zorgaanbod",
+      "anxiety": "Angst",
+      "adhd": "ADHD",
+      "depression": "Depressie",
+      "trauma": "Trauma & PTSS",
+      "psychosomatic": "Somatiek & Psyche"
+    },
+    "clients": {
+      "title": "Voor cliënten",
+      "register": "Aanmelden",
+      "waitingTimes": "Wachttijden",
+      "reimbursement": "Vergoeding",
+      "quality": "Kwaliteit",
+      "myFile": "Mijn Dossier"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "links": {
+      "privacy": "Privacybeleid",
+      "terms": "Algemene voorwaarden",
+      "complaints": "Klachtenregeling",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} Mohammad. Alle rechten voorbehouden.",
+    "partOf": "Onderdeel van"
   },
   "contact": {
     "phone": "010 - 450 40 71",

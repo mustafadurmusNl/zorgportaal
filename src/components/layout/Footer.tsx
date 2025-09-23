@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { navigationLinks, contactInfo } from "@/constants";
+import { useTranslations } from "next-intl";
+import { contactInfo } from "@/constants";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("footer");
+  const tContact = useTranslations("contact");
+
+  // Debug - console.log için geçici
+  console.log("Footer - Available footer keys:", Object.keys(t.raw || {}));
+  console.log("Footer - Trying copyright with:", { year: currentYear });
 
   return (
     <footer className="footer">
@@ -17,41 +24,38 @@ const Footer = () => {
               <div className="navbar-logo"></div>
               <span className="text-xl font-bold text-white">Mohammad</span>
             </div>
-            <p className="text-gray-400 leading-relaxed">
-              Vanuit servicegerichte praktijken bieden enthousiaste psychologen,
-              vaktherapeuten en psychiaters behandeling voor volwassenen.
-            </p>
+            <p className="text-gray-400 leading-relaxed">{t("description")}</p>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
-              Zorgaanbod
+              {t("services.title")}
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/zorgaanbod/angst" className="footer-link">
-                  Angst
+                  {t("services.anxiety")}
                 </Link>
               </li>
               <li>
                 <Link href="/zorgaanbod/adhd" className="footer-link">
-                  ADHD
+                  {t("services.adhd")}
                 </Link>
               </li>
               <li>
                 <Link href="/zorgaanbod/depressie" className="footer-link">
-                  Depressie
+                  {t("services.depression")}
                 </Link>
               </li>
               <li>
                 <Link href="/zorgaanbod/trauma" className="footer-link">
-                  Trauma & PTSS
+                  {t("services.trauma")}
                 </Link>
               </li>
               <li>
                 <Link href="/zorgaanbod/somatiek" className="footer-link">
-                  Somatiek & Psyche
+                  {t("services.psychosomatic")}
                 </Link>
               </li>
             </ul>
@@ -60,32 +64,32 @@ const Footer = () => {
           {/* Client Information */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
-              Voor cliënten
+              {t("clients.title")}
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/clienten/aanmelden" className="footer-link">
-                  Aanmelden
+                  {t("clients.register")}
                 </Link>
               </li>
               <li>
                 <Link href="/clienten/wachttijden" className="footer-link">
-                  Wachttijden
+                  {t("clients.waitingTimes")}
                 </Link>
               </li>
               <li>
                 <Link href="/clienten/vergoeding" className="footer-link">
-                  Vergoeding
+                  {t("clients.reimbursement")}
                 </Link>
               </li>
               <li>
                 <Link href="/clienten/kwaliteit" className="footer-link">
-                  Kwaliteit
+                  {t("clients.quality")}
                 </Link>
               </li>
               <li>
                 <Link href="/mijn-dossier" className="footer-link">
-                  Mijn Dossier
+                  {t("clients.myFile")}
                 </Link>
               </li>
             </ul>
@@ -93,7 +97,9 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              {t("contact.title")}
+            </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <svg
@@ -103,7 +109,7 @@ const Footer = () => {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="text-gray-400">{contactInfo.phone}</span>
+                <span className="text-gray-400">{tContact("phone")}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg
@@ -144,7 +150,7 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="text-gray-400">{contactInfo.hours}</span>
+                <span className="text-gray-400">{tContact("hours")}</span>
               </div>
             </div>
           </div>
@@ -155,23 +161,32 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="footer-links">
               <Link href="/privacybeleid" className="footer-link">
-                Privacybeleid
+                {t("links.privacy")}
               </Link>
               <Link href="/algemene-voorwaarden" className="footer-link">
-                Algemene voorwaarden
+                {t("links.terms")}
               </Link>
               <Link href="/klachtenregeling" className="footer-link">
-                Klachtenregeling
+                {t("links.complaints")}
               </Link>
               <Link href="/contact" className="footer-link">
-                Contact
+                {t("links.contact")}
               </Link>
             </div>
 
             <div className="text-center md:text-right">
-              <p>© {currentYear} Mohammad. Alle rechten voorbehouden.</p>
+              <p>
+                {(() => {
+                  try {
+                    return t("description"); // Basit bir key ile test
+                  } catch (error) {
+                    console.error("Footer description error:", error);
+                    return `© ${currentYear} Mohammad. All rights reserved.`;
+                  }
+                })()}
+              </p>
               <p className="text-sm mt-1">
-                Onderdeel van{" "}
+                Part of{" "}
                 <span className="text-pink-500 font-semibold">Mohammad</span>
               </p>
             </div>

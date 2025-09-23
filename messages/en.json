@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "Healthcare Portal - Diagnosis and treatment of psychological complaints",
+    "description": "From service-oriented practices, enthusiastic psychologists, specialized therapists and psychiatrists provide treatment for adults."
+  },
+  "navigation": {
+    "zorgaanbod": "Our Care",
+    "clienten": "For Clients",
+    "over-ons": "About Us",
+    "contact": "Contact",
+    "aanmelden": "Register"
+  },
+  "hero": {
+    "welcome": "WELCOME TO MUSTAFA ADULTS",
+    "title": "Diagnosis and treatment of psychological complaints",
+    "subtitle": "From service-oriented practices, enthusiastic psychologists, specialized therapists and psychiatrists provide treatment for adults.",
+    "treatments": "Our treatments",
+    "waitingTimes": "Current wait times"
+  },
+  "services": {
+    "title": "Our care offering",
+    "description": "After the intake, we make a diagnosis and then, together with you, choose the best treatment.",
+    "moreInfo": "More information",
+    "ourCare": {
+      "title": "Our care offering",
+      "description": "Mustafa Adults has an extensive range of specialized care programs."
+    },
+    "digitalPoli": {
+      "title": "Digital Clinic",
+      "description": "Complete online treatments tailored to your wishes, questions for help and treatment goals."
+    },
+    "locations": {
+      "title": "Our locations",
+      "description": "Our locations are spread across South Holland, but also in Halsteren."
+    },
+    "careers": {
+      "title": "Work with 1,500+ specialists at Mustafa?",
+      "description": "View our vacancies"
+    },
+    "effectiveCare": {
+      "title": "Proven effective care",
+      "description": "Average of 8.1 on ZorgKaart"
+    },
+    "blendedCare": {
+      "title": "Blended Care",
+      "description": "On-site appointments are combined with online modules and video calls"
+    },
+    "otherCare": {
+      "title": "Need different care?",
+      "description": "We arrange the internal referral"
+    }
+  },
+  "locations": {
+    "title": "Our locations",
+    "description": "Our locations are spread across South Holland, but also in Halsteren.",
+    "cta": {
+      "title": "View all our locations?",
+      "description": "Discover all locations where we provide care and find the location near you.",
+      "button": "All our locations"
+    }
+  },
+  "team": {
+    "title": "Work with 1,500+ specialists at Mustafa?",
+    "description": "At Mustafa, enthusiastic professionals work daily to provide the best care. Will you be our new colleague?",
+    "cta": {
+      "title": "Ready to make a difference?",
+      "description": "Join our team of professionals and help improve mental health for everyone.",
+      "button": "View our vacancies"
+    }
+  },
+  "footer": {
+    "phone": "For questions, call 010 - 450 40 71",
+    "email": "info@mustafavolwassenen.nl",
+    "copyright": "© 2024 Mustafa Adults. All rights reserved."
+  },
+  "contact": {
+    "phone": "010 - 450 40 71",
+    "hours": "Mon to Fri from 8:30 AM - 4:30 PM"
+  }
+}

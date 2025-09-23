@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "Zorgportaal - Diagnostiek en behandeling van psychische klachten",
+    "description": "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen."
+  },
+  "navigation": {
+    "zorgaanbod": "Zorgaanbod",
+    "clienten": "Voor cliënten",
+    "over-ons": "Over ons",
+    "contact": "Contact",
+    "aanmelden": "Aanmelden"
+  },
+  "hero": {
+    "welcome": "WELKOM BIJ MUSTAFA VOLWASSENEN",
+    "title": "Diagnostiek en behandeling van psychische klachten",
+    "subtitle": "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen.",
+    "treatments": "Onze behandelingen",
+    "waitingTimes": "Actuele wachttijden"
+  },
+  "services": {
+    "title": "Ons zorgaanbod",
+    "description": "Na de intake stellen wij een diagnose waarna samen met jou de beste behandeling wordt gekozen.",
+    "moreInfo": "Meer informatie",
+    "ourCare": {
+      "title": "Ons zorgaanbod",
+      "description": "Mustafa Volwassenen heeft een ruim aanbod aan specialistische zorgprogramma's."
+    },
+    "digitalPoli": {
+      "title": "Digitale Poli",
+      "description": "Volledige online behandelingen passend bij jouw wensen, hulpvragen en behandeldoelen."
+    },
+    "locations": {
+      "title": "Onze locaties",
+      "description": "Onze locaties zitten verspreid over Zuid-Holland, maar ook in Halsteren."
+    },
+    "careers": {
+      "title": "Samen met 1.500+ specialisten werken bij Mustafa?",
+      "description": "Bekijk onze vacatures"
+    },
+    "effectiveCare": {
+      "title": "Bewezen effectieve zorg",
+      "description": "Gemiddeld een 8.1 op Zorgkaart"
+    },
+    "blendedCare": {
+      "title": "Blended Care",
+      "description": "Afspraken op locatie worden gecombineerd met online modules en beeldbellen"
+    },
+    "otherCare": {
+      "title": "Toch andere zorg nodig?",
+      "description": "Wij regelen de interne doorverwijzing"
+    }
+  },
+  "locations": {
+    "title": "Onze locaties",
+    "description": "Onze locaties zitten verspreid over Zuid-Holland, maar ook in Halsteren.",
+    "cta": {
+      "title": "Al onze locaties bekijken?",
+      "description": "Ontdek alle locaties waar wij zorg verlenen en vind de locatie bij jou in de buurt.",
+      "button": "Al onze locaties"
+    }
+  },
+  "team": {
+    "title": "Samen met 1.500+ specialisten werken bij Mustafa?",
+    "description": "Bij Mustafa werken enthousiaste professionals die zich dagelijks inzetten voor de beste zorg. Word jij onze nieuwe collega?",
+    "cta": {
+      "title": "Klaar om het verschil te maken?",
+      "description": "Sluit je aan bij ons team van professionals en help mee aan betere geestelijke gezondheid voor iedereen.",
+      "button": "Bekijk onze vacatures"
+    }
+  },
+  "footer": {
+    "phone": "Voor vragen, bel 010 - 450 40 71",
+    "email": "info@mustafavolwassenen.nl",
+    "copyright": "© 2024 Mustafa Volwassenen. Alle rechten voorbehouden."
+  },
+  "contact": {
+    "phone": "010 - 450 40 71",
+    "hours": "ma t/m vr van 8.30 - 16.30 uur"
+  }
+}

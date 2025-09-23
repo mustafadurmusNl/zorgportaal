@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import "../globals.css";
 import { Footer, NavBar } from "@/components";
 
@@ -32,8 +31,10 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
 
-  // Provide a locale-specific messages object
-  const messages = await getMessages({ locale });
+  // Import messages directly based on locale
+  const messages = await import(`../../../messages/${locale}.json`).then(
+    (module) => module.default
+  );
 
   return (
     <html lang={locale}>

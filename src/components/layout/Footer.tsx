@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="navbar-logo"></div>
-              <span className="text-xl font-bold text-white">Mohammad</span>
+              <span className="text-xl font-bold text-white">Groeipunt</span>
             </div>
             <p className="text-gray-400 leading-relaxed">{t("description")}</p>
           </div>
@@ -181,13 +181,13 @@ const Footer = () => {
                     return t("description"); // Basit bir key ile test
                   } catch (error) {
                     console.error("Footer description error:", error);
-                    return `© ${currentYear} Mohammad. All rights reserved.`;
+                    return `© ${currentYear} Groeipunt. All rights reserved.`;
                   }
                 })()}
               </p>
               <p className="text-sm mt-1">
                 Part of{" "}
-                <span className="text-pink-500 font-semibold">Mohammad</span>
+                <span className="text-pink-500 font-semibold">Groeipunt</span>
               </p>
             </div>
           </div>

@@ -11,7 +11,7 @@
     "aanmelden": "Aanmelden"
   },
   "hero": {
-    "welcome": "WELKOM BIJ MUSTAFA VOLWASSENEN",
+    "welcome": "WELKOM BIJ GROEIPUNT VOLWASSENEN",
     "title": "Diagnostiek en behandeling van psychische klachten",
     "subtitle": "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen.",
     "treatments": "Onze behandelingen",
@@ -23,7 +23,7 @@
     "moreInfo": "Meer informatie",
     "ourCare": {
       "title": "Ons zorgaanbod",
-      "description": "Mustafa Volwassenen heeft een ruim aanbod aan specialistische zorgprogramma's."
+      "description": "Groeipunt heeft een ruim aanbod aan specialistische zorgprogramma's."
     },
     "digitalPoli": {
       "title": "Digitale Poli",
@@ -34,7 +34,7 @@
       "description": "Onze locaties zitten verspreid over Zuid-Holland, maar ook in Halsteren."
     },
     "careers": {
-      "title": "Samen met 1.500+ specialisten werken bij Mustafa?",
+      "title": "Samen met 1.500+ specialisten werken bij Groeipunt?",
       "description": "Bekijk onze vacatures"
     },
     "effectiveCare": {
@@ -60,8 +60,8 @@
     }
   },
   "team": {
-    "title": "Samen met 1.500+ specialisten werken bij Mustafa?",
-    "description": "Bij Mustafa werken enthousiaste professionals die zich dagelijks inzetten voor de beste zorg. Word jij onze nieuwe collega?",
+    "title": "Samen met 1.500+ specialisten werken bij Groeipunt?",
+    "description": "Bij Groeipunt werken enthousiaste professionals die zich dagelijks inzetten voor de beste zorg. Word jij onze nieuwe collega?",
     "cta": {
       "title": "Klaar om het verschil te maken?",
       "description": "Sluit je aan bij ons team van professionals en help mee aan betere geestelijke gezondheid voor iedereen.",
@@ -95,7 +95,7 @@
       "complaints": "Klachtenregeling",
       "contact": "Contact"
     },
-    "copyright": "© {year} Mohammad. Alle rechten voorbehouden.",
+    "copyright": "© {year} Groeipunt. Alle rechten voorbehouden.",
     "partOf": "Onderdeel van"
   },
   "contact": {

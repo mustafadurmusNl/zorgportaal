@@ -11,7 +11,7 @@ export const navigationLinks: NavLinkType[] = [
   {
     id: "zorgaanbod",
     title: "Zorgaanbod",
-    href: "/zorgaanbod",
+    href: "/",
     submenu: [
       { id: "angst", title: "Angst", href: "/zorgaanbod/angst" },
       { id: "adhd", title: "ADHD", href: "/zorgaanbod/adhd" },
@@ -22,7 +22,7 @@ export const navigationLinks: NavLinkType[] = [
   {
     id: "clienten",
     title: "Voor cliënten",
-    href: "/clienten",
+    href: "/",
     submenu: [
       { id: "aanmelden", title: "Aanmelden", href: "/clienten/aanmelden" },
       {
@@ -36,7 +36,7 @@ export const navigationLinks: NavLinkType[] = [
   {
     id: "over-ons",
     title: "Over ons",
-    href: "/over-ons",
+    href: "/",
     submenu: [
       { id: "locaties", title: "Locaties", href: "/over-ons/locaties" },
       { id: "team", title: "Ons team", href: "/over-ons/team" },
@@ -56,7 +56,7 @@ export const services: ServiceType[] = [
     id: "1",
     title: "Ons zorgaanbod",
     description:
-      "Mustafa Volwassenen heeft een ruim aanbod aan specialistische zorgprogramma's.",
+      "Groeipunt heeft een ruim aanbod aan specialistische zorgprogramma's.",
     icon: "🏥",
     link: "/zorgaanbod",
   },
@@ -78,7 +78,7 @@ export const services: ServiceType[] = [
   },
   {
     id: "4",
-    title: "Samen met 1.500+ specialisten werken bij Mustafa?",
+    title: "Samen met 1.500+ specialisten werken bij Groeipunt?",
     description: "Bekijk onze vacatures",
     icon: "👥",
     link: "/vacatures",
@@ -144,7 +144,7 @@ export const languageOptions: LanguageOption[] = [
 // Contact Information
 export const contactInfo = {
   phone: "0164 - 288 100",
-  email: "info@mustafavolwassenen.nl",
+  email: "info@groeipunt.nl",
   address: "Stationsplein 10, 4611 AA Bergen op Zoom",
   hours: "ma t/m vr van 8.30 - 16.30 uur",
 };

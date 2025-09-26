@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammad - Diagnostiek en behandeling van psychische klachten",
+  title: "Groeipunt - Diagnostiek en behandeling van psychische klachten",
   description:
     "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen.",
   keywords:

@@ -57,7 +57,7 @@ const NavBar = () => {
         {/* Logo */}
         <Link href="/" className="navbar-brand">
           <div className="navbar-logo"></div>
-          <span>Mohammad</span>
+          <span>Groeipunt</span>
         </Link>
 
         {/* Desktop Navigation */}

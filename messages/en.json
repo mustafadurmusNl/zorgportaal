@@ -11,7 +11,7 @@
     "aanmelden": "Register"
   },
   "hero": {
-    "welcome": "WELCOME TO MUSTAFA ADULTS",
+    "welcome": "WELCOME TO GROEIPUNT ADULTS",
     "title": "Diagnosis and treatment of psychological complaints",
     "subtitle": "From service-oriented practices, enthusiastic psychologists, specialized therapists and psychiatrists provide treatment for adults.",
     "treatments": "Our treatments",
@@ -23,7 +23,7 @@
     "moreInfo": "More information",
     "ourCare": {
       "title": "Our care offering",
-      "description": "Mustafa Adults has an extensive range of specialized care programs."
+      "description": "Groeipunt Adults has an extensive range of specialized care programs."
     },
     "digitalPoli": {
       "title": "Digital Clinic",
@@ -34,7 +34,7 @@
       "description": "Our locations are spread across South Holland, but also in Halsteren."
     },
     "careers": {
-      "title": "Work with 1,500+ specialists at Mustafa?",
+      "title": "Work with 1,500+ specialists at Groeipunt?",
       "description": "View our vacancies"
     },
     "effectiveCare": {
@@ -60,8 +60,8 @@
     }
   },
   "team": {
-    "title": "Work with 1,500+ specialists at Mustafa?",
-    "description": "At Mustafa, enthusiastic professionals work daily to provide the best care. Will you be our new colleague?",
+    "title": "Work with 1,500+ specialists at Groeipunt?",
+    "description": "At Groeipunt, enthusiastic professionals work daily to provide the best care. Will you be our new colleague?",
     "cta": {
       "title": "Ready to make a difference?",
       "description": "Join our team of professionals and help improve mental health for everyone.",
@@ -95,7 +95,7 @@
       "complaints": "Complaints Procedure",
       "contact": "Contact"
     },
-    "copyright": "© {year} Mohammad. All rights reserved.",
+    "copyright": "© {year} Groeipunt. All rights reserved.",
     "partOf": "Part of"
   },
   "contact": {

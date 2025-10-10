@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
   locales: ["nl", "en"],
 
@@ -10,6 +11,20 @@ export default createMiddleware({
   // Always show default locale in URL
   localePrefix: "always",
 });
+
+export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Redirect old /angst URLs to new /zorgaanbod/angst
+  if (pathname === "/nl/angst" || pathname === "/en/angst") {
+    const locale = pathname.startsWith("/nl") ? "nl" : "en";
+    const newUrl = new URL(`/${locale}/zorgaanbod/angst`, request.url);
+    return NextResponse.redirect(newUrl, 301); // Permanent redirect
+  }
+
+  // Apply internationalization middleware
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match only internationalized pathnames

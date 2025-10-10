@@ -101,5 +101,62 @@
   "contact": {
     "phone": "010 - 450 40 71",
     "hours": "ma t/m vr van 8.30 - 16.30 uur"
+  },
+  "angst": {
+    "title": "Angst",
+    "subtitle": "Angst is een gevoel dat iedereen kent: schrikken van een snel naderende auto of bang zijn voor het maken van een belangrijk examen. Angst is er om ons te beschermen tegen gevaar en is dus belangrijk. Alleen komt het vaak voor dat mensen sneller bang worden dan nodig is.",
+    "description": "Angst is een gevoel dat iedereen kent: schrikken van een snel naderende auto of bang zijn voor het maken van een belangrijk examen. Angst is er om ons te beschermen tegen gevaar en is dus belangrijk. Alleen komt het vaak voor dat mensen sneller bang worden dan nodig is.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "anxiety": "ANGST"
+    },
+    "sections": {
+      "what_is_anxiety": {
+        "title": "Wat is angst?",
+        "content": "Angst is belangrijk omdat het ons beschermt tegen gevaar. Echter, soms worden mensen sneller bang dan nodig is. Mensen kunnen voor veel verschillende dingen bang zijn. Wanneer je vaak bang bent zonder duidelijk gevaar of oorzaak, kan het zijn dat je situaties of plekken gaat vermijden. Dit kan leiden tot een verergering van de angst, het overnemen van je leven en uiteindelijk kan het overgaan in een angststoornis. Ongeveer 1 op de 4 mensen krijgt ooit in het leven last van een angststoornis."
+      },
+      "panic_disorder": {
+        "title": "Paniekstoornis",
+        "content": "Mensen die lijden aan een paniekstoornis ervaren regelmatig paniekaanvallen en zijn bang voor nieuwe aanvallen. Tijdens een paniekaanval herken je symptomen zoals een snellere hartslag, hyperventilatie, gevoelens van onrust, duizeligheid en trillen of zweten. Het gevoel kan ontstaan dat je de controle over jezelf verliest."
+      },
+      "disorders": {
+        "title": "Welke angststoornissen zijn er?",
+        "agoraphobia": {
+          "title": "Agorafobie",
+          "description": "Plein- of straatvrees (agorafobie) is een angst die ontstaat wanneer je op openbare plekken komt, zoals pleinen, supermarkten of het openbaar vervoer. Het vermijden van deze plekken kan zulke ernstige vormen aannemen dat je het huis niet meer uit durft."
+        },
+        "health_anxiety": {
+          "title": "Ziekteangststoornis",
+          "description": "Mensen met een ziekteangststoornis, ook wel hypochondrie genoemd, zijn bang dat ze een ernstige ziekte hebben. Zelfs als artsen niets vinden en ze uitgebreid onderzocht zijn, blijven ze zich te veel zorgen maken over hun gezondheid."
+        },
+        "ocd": {
+          "title": "Dwangstoornis",
+          "description": "Mensen met een obsessief-compulsieve stoornis kunnen last hebben van dwanggedachten en/of dwanghandelingen. Dwanggedachten zijn gedachten of beelden die steeds terugkomen en angst oproepen."
+        },
+        "social_anxiety": {
+          "title": "Sociale-angststoornis",
+          "description": "Mensen met een sociale-angststoornis zijn erg bang voor de reactie of kritiek van anderen. Ze kunnen zich zorgen maken dat anderen hen uitlachen of vinden dat ze raar, onaardig of saai zijn."
+        },
+        "generalized_anxiety": {
+          "title": "Gegeneraliseerde angststoornis",
+          "description": "Een gegeneraliseerde angststoornis wordt ook wel piekerstoornis genoemd. Iemand met een gegeneraliseerde angststoornis maakt zich langere tijd ernstig zorgen over alledaagse dingen."
+        },
+        "specific_phobias": {
+          "title": "Specifieke fobieën",
+          "description": "Specifieke fobie wordt een in principe eindeloze reeks fobieën begrepen die betrekking kunnen hebben op alle mogelijke objecten en situaties."
+        }
+      },
+      "treatments": {
+        "title": "Behandelvormen",
+        "description": "Bij Groeipunt maken we gebruik van verschillende wetenschappelijk onderbouwde behandelmethoden. Welke behandeling wordt ingezet, hangt af van jouw klachten en persoonlijke situatie.",
+        "view_all": "Bekijk alle behandelvormen"
+      },
+      "testimonial": {
+        "quote": "Therapie bij Groeipunt heeft mij geholpen om over mijn sociale angststoornis heen te komen. Zij hebben mij geholpen om mijn standaard gedachtenprocessen en triggers te herkennen.",
+        "source": "Recensie op Zorgkaart Nederland"
+      }
+    }
   }
 }

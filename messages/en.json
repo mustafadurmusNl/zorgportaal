@@ -101,5 +101,62 @@
   "contact": {
     "phone": "010 - 450 40 71",
     "hours": "Mon to Fri from 8:30 AM - 4:30 PM"
+  },
+  "angst": {
+    "title": "Anxiety",
+    "subtitle": "Anxiety is a feeling everyone knows: being startled by a fast approaching car or being afraid of taking an important exam. Anxiety exists to protect us from danger and is therefore important. However, it often happens that people become afraid faster than necessary.",
+    "description": "Anxiety is a feeling everyone knows: being startled by a fast approaching car or being afraid of taking an important exam. Anxiety exists to protect us from danger and is therefore important. However, it often happens that people become afraid faster than necessary.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "anxiety": "ANXIETY"
+    },
+    "sections": {
+      "what_is_anxiety": {
+        "title": "What is anxiety?",
+        "content": "Anxiety is important because it protects us from danger. However, sometimes people become afraid faster than necessary. People can be afraid of many different things. When you are often afraid without clear danger or cause, you may start avoiding situations or places. This can lead to a worsening of anxiety, taking over your life and eventually developing into an anxiety disorder. About 1 in 4 people will experience an anxiety disorder at some point in their life."
+      },
+      "panic_disorder": {
+        "title": "Panic Disorder",
+        "content": "People suffering from panic disorder regularly experience panic attacks and are afraid of new attacks. During a panic attack you recognize symptoms such as faster heartbeat, hyperventilation, feelings of restlessness, dizziness and trembling or sweating. The feeling may arise that you are losing control of yourself."
+      },
+      "disorders": {
+        "title": "What anxiety disorders are there?",
+        "agoraphobia": {
+          "title": "Agoraphobia",
+          "description": "Agoraphobia is an anxiety that arises when you come to public places, such as squares, supermarkets or public transport. Avoiding these places can take such serious forms that you no longer dare to leave the house."
+        },
+        "health_anxiety": {
+          "title": "Health Anxiety Disorder",
+          "description": "People with health anxiety disorder, also called hypochondria, are afraid that they have a serious illness. Even when doctors find nothing and they have been thoroughly examined, they continue to worry too much about their health."
+        },
+        "ocd": {
+          "title": "Obsessive-Compulsive Disorder",
+          "description": "People with obsessive-compulsive disorder can suffer from obsessive thoughts and/or compulsive behaviors. Obsessive thoughts are thoughts or images that keep coming back and cause anxiety."
+        },
+        "social_anxiety": {
+          "title": "Social Anxiety Disorder",
+          "description": "People with social anxiety disorder are very afraid of other people's reactions or criticism. They may worry that others will laugh at them or think they are weird, unkind or boring."
+        },
+        "generalized_anxiety": {
+          "title": "Generalized Anxiety Disorder",
+          "description": "Generalized anxiety disorder is also called worry disorder. Someone with generalized anxiety disorder worries seriously about everyday things for a long time."
+        },
+        "specific_phobias": {
+          "title": "Specific Phobias",
+          "description": "Specific phobia encompasses an essentially endless series of phobias that can relate to all possible objects and situations."
+        }
+      },
+      "treatments": {
+        "title": "Treatment Forms",
+        "description": "At Groeipunt we use various scientifically proven treatment methods. Which treatment is used depends on your complaints and personal situation.",
+        "view_all": "View all treatment forms"
+      },
+      "testimonial": {
+        "quote": "Therapy at Groeipunt helped me overcome my social anxiety disorder. They helped me recognize my standard thought processes and triggers.",
+        "source": "Review on Zorgkaart Nederland"
+      }
+    }
   }
 }

@@ -28,8 +28,22 @@ const NavBar = () => {
   };
 
   const switchLanguage = (newLocale: string) => {
+    // Get the current path without the locale prefix
+    const pathSegments = pathname.split("/").filter(Boolean);
+    let currentPath = "";
+
+    // Remove current locale from path if it exists
+    if (pathSegments[0] === "en" || pathSegments[0] === "nl") {
+      pathSegments.shift(); // Remove the locale part
+    }
+
+    // Reconstruct the path
+    if (pathSegments.length > 0) {
+      currentPath = "/" + pathSegments.join("/");
+    }
+
     // Create new path with the new locale
-    const newPath = `/${newLocale}`;
+    const newPath = `/${newLocale}${currentPath}`;
     router.push(newPath);
     setIsLanguageDropdownOpen(false);
   };
@@ -55,7 +69,7 @@ const NavBar = () => {
     <header className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <Link href="/" className="navbar-brand">
+        <Link href={`/${currentLocale}`} className="navbar-brand">
           <div className="navbar-logo"></div>
           <span>Groeipunt</span>
         </Link>
@@ -64,7 +78,10 @@ const NavBar = () => {
         <nav className="navbar-links">
           {navigationLinks.map((link) => (
             <div key={link.id} className="relative group">
-              <Link href={link.href} className="navbar-link">
+              <Link
+                href={`/${currentLocale}${link.href}`}
+                className="navbar-link"
+              >
                 {t(link.id)}
                 {link.submenu && (
                   <svg
@@ -87,7 +104,7 @@ const NavBar = () => {
                   {link.submenu.map((sublink) => (
                     <Link
                       key={sublink.id}
-                      href={sublink.href}
+                      href={`/${currentLocale}${sublink.href}`}
                       className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200"
                     >
                       {sublink.title}
@@ -198,7 +215,7 @@ const NavBar = () => {
             {navigationLinks.map((link) => (
               <div key={link.id}>
                 <Link
-                  href={link.href}
+                  href={`/${currentLocale}${link.href}`}
                   className="block text-gray-700 hover:text-cyan-600 font-medium transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -209,7 +226,7 @@ const NavBar = () => {
                     {link.submenu.map((sublink) => (
                       <Link
                         key={sublink.id}
-                        href={sublink.href}
+                        href={`/${currentLocale}${sublink.href}`}
                         className="block text-gray-600 hover:text-cyan-600 text-sm transition-colors duration-200"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >

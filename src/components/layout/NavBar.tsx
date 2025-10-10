@@ -107,7 +107,7 @@ const NavBar = () => {
                       href={`/${currentLocale}${sublink.href}`}
                       className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200"
                     >
-                      {sublink.title}
+                      {t(sublink.id)}
                     </Link>
                   ))}
                 </div>
@@ -230,7 +230,7 @@ const NavBar = () => {
                         className="block text-gray-600 hover:text-cyan-600 text-sm transition-colors duration-200"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        {sublink.title}
+                        {t(sublink.id)}
                       </Link>
                     ))}
                   </div>

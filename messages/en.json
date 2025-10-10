@@ -8,7 +8,32 @@
     "clienten": "For Clients",
     "over-ons": "About Us",
     "contact": "Contact",
-    "aanmelden": "Register"
+    "aanmelden": "Register",
+    "angst": "Anxiety",
+    "adhd": "ADHD",
+    "depressie": "Depression",
+    "trauma": "Trauma & PTSD",
+    "wachttijden": "Waiting Times",
+    "vergoeding": "Reimbursement",
+    "locaties": "Locations",
+    "team": "Our Team",
+    "kwaliteit": "Quality"
+  },
+  "sidebar": {
+    "help_needed": "Need help?",
+    "help_description": "Contact us for personal advice about our care programs.",
+    "contact_button": "Get in touch",
+    "care_description": "Click on a service category to learn more",
+    "care_categories": {
+      "angst": "Anxiety",
+      "depressie": "Depression",
+      "adhd": "ADHD",
+      "trauma": "Trauma & PTSD",
+      "somatiek": "Somatic & Psychology",
+      "zelfbeeld": "Self-image Issues",
+      "persoonlijkheid": "Personality Issues",
+      "psycho-oncologie": "Forta De Vruchtenburg"
+    }
   },
   "hero": {
     "welcome": "WELCOME TO GROEIPUNT ADULTS",
@@ -76,7 +101,10 @@
       "adhd": "ADHD",
       "depression": "Depression",
       "trauma": "Trauma & PTSD",
-      "psychosomatic": "Psychosomatic & Psychology"
+      "psychosomatic": "Psychosomatic & Psychology",
+      "self_image": "Self-image Issues",
+      "personality": "Personality Issues",
+      "forta": "Forta De Vruchtenburg"
     },
     "clients": {
       "title": "For Clients",
@@ -102,6 +130,72 @@
     "phone": "010 - 450 40 71",
     "hours": "Mon to Fri from 8:30 AM - 4:30 PM"
   },
+  "depressie": {
+    "title": "Depression",
+    "subtitle": "Depression is more than just feeling sad. It's a serious mood disorder that affects how you feel, think, and handle daily activities.",
+    "description": "Depression is more than just feeling sad. It's a serious mood disorder that affects how you feel, think, and handle daily activities such as sleeping, eating, or working. Everyone feels sad or down sometimes, but with depression, these feelings persist for longer periods and are more intense.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "depression": "DEPRESSION"
+    },
+    "sections": {
+      "what_is_depression": {
+        "title": "What is depression?",
+        "content": "Depression is a common but serious mood disorder. It causes severe symptoms that affect how you feel, think, and handle daily activities, such as sleeping, eating, or working. To be diagnosed with depression, the symptoms must be present for at least two weeks."
+      },
+      "major_depression": {
+        "title": "Depressive episode",
+        "content": "A depressive episode is characterized by persistent feelings of sadness and loss of interest in activities for at least two weeks. Other symptoms may include feelings of worthlessness, concentration problems, changes in appetite or sleep, and thoughts of death.",
+        "symptoms_title": "Symptoms of a depressive episode:",
+        "symptoms": {
+          "persistent_sadness": "Persistent feelings of sadness",
+          "loss_of_interest": "Loss of interest in activities",
+          "worthlessness": "Feelings of worthlessness",
+          "concentration_problems": "Concentration problems",
+          "appetite_changes": "Changes in appetite or sleep",
+          "death_thoughts": "Thoughts of death"
+        }
+      },
+      "types": {
+        "title": "Different forms of depression",
+        "major_depression": {
+          "title": "Major depressive disorder",
+          "description": "The most common form of depression, characterized by depressed mood or loss of interest in activities for at least two weeks."
+        },
+        "persistent_depression": {
+          "title": "Persistent depressive disorder",
+          "description": "A form of depression that lasts for at least two years. Symptoms may vary in intensity during this period."
+        },
+        "bipolar_disorder": {
+          "title": "Bipolar disorder",
+          "description": "Characterized by alternating periods of depression and mania (elevated mood). The depressive episodes are similar to those of major depressive disorder."
+        },
+        "seasonal_depression": {
+          "title": "Seasonal depression",
+          "description": "A form of depression that occurs at the same time each year, usually in fall or winter when there is less natural sunlight."
+        },
+        "postpartum_depression": {
+          "title": "Postpartum depression",
+          "description": "A serious form of depression that can occur after childbirth. It's more than the 'baby blues' and can affect a mother's ability to care for herself and her baby."
+        },
+        "psychotic_depression": {
+          "title": "Psychotic depression",
+          "description": "A form of severe depression accompanied by psychotic symptoms such as hallucinations, delusions, or paranoia."
+        }
+      },
+      "treatments": {
+        "title": "Treatment Forms",
+        "description": "At Groeipunt we use various scientifically proven treatment methods for depression. Which treatment is used depends on your specific situation and the severity of the depression.",
+        "view_all": "View all treatment forms"
+      },
+      "testimonial": {
+        "quote": "The treatment at Groeipunt helped me come out of the dark period of my depression. They gave me the tools to break through my negative thought patterns.",
+        "source": "Review on Zorgkaart Nederland"
+      }
+    }
+  },
   "angst": {
     "title": "Anxiety",
     "subtitle": "Anxiety is a feeling everyone knows: being startled by a fast approaching car or being afraid of taking an important exam. Anxiety exists to protect us from danger and is therefore important. However, it often happens that people become afraid faster than necessary.",
@@ -119,7 +213,16 @@
       },
       "panic_disorder": {
         "title": "Panic Disorder",
-        "content": "People suffering from panic disorder regularly experience panic attacks and are afraid of new attacks. During a panic attack you recognize symptoms such as faster heartbeat, hyperventilation, feelings of restlessness, dizziness and trembling or sweating. The feeling may arise that you are losing control of yourself."
+        "content": "People suffering from panic disorder regularly experience panic attacks and are afraid of new attacks. During a panic attack you recognize symptoms such as faster heartbeat, hyperventilation, feelings of restlessness, dizziness and trembling or sweating. The feeling may arise that you are losing control of yourself.",
+        "symptoms_title": "Symptoms of a panic attack:",
+        "symptoms": {
+          "faster_heartbeat": "Faster heartbeat",
+          "hyperventilation": "Hyperventilation",
+          "restlessness": "Feelings of restlessness",
+          "dizziness": "Dizziness",
+          "trembling": "Trembling or sweating",
+          "loss_of_control": "Feeling of losing control"
+        }
       },
       "disorders": {
         "title": "What anxiety disorders are there?",

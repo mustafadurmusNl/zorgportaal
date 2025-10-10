@@ -1,23 +1,23 @@
-// src/components/pages/AngstPage.tsx
+// src/components/pages/DepressionPage.tsx
 import {
-  AngstHero,
-  WhatIsAnxiety,
-  PanicDisorder,
-  AnxietyDisorders,
-  TreatmentMethods,
-  Testimonial,
-  ZorgaanbodSidebar,
-} from "@/components/angst";
+  DepressionHero,
+  WhatIsDepression,
+  MajorDepression,
+  DepressionTypes,
+  DepressionTreatmentMethods,
+  DepressionTestimonial,
+  DepressionCareSidebar,
+} from "@/components/depression";
 
-interface AngstPageProps {
+interface DepressionPageProps {
   heroImage: string | null;
 }
 
-export default function AngstPage({ heroImage }: AngstPageProps) {
+export default function DepressionPage({ heroImage }: DepressionPageProps) {
   return (
     <>
       {/* Hero section with dynamic image */}
-      <AngstHero imageUrl={heroImage || undefined} />
+      <DepressionHero imageUrl={heroImage || undefined} />
 
       {/* Main content with sidebar */}
       <div
@@ -28,32 +28,32 @@ export default function AngstPage({ heroImage }: AngstPageProps) {
           {/* Main content area */}
           <div className="lg:col-span-3">
             <div className="mb-32">
-              <WhatIsAnxiety />
+              <WhatIsDepression />
             </div>
 
             <div className="mb-32" style={{ marginBottom: "80px" }}>
-              <PanicDisorder />
+              <MajorDepression />
             </div>
 
             <div className="mb-32" style={{ marginBottom: "80px" }}>
-              <AnxietyDisorders />
+              <DepressionTypes />
             </div>
 
             <div className="mb-32" style={{ marginBottom: "80px" }}>
-              <Testimonial />
+              <DepressionTestimonial />
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <ZorgaanbodSidebar />
+            <DepressionCareSidebar />
           </div>
         </div>
       </div>
 
       {/* Treatment methods - full width section */}
       <div style={{ marginTop: "80px", marginBottom: "80px" }}>
-        <TreatmentMethods />
+        <DepressionTreatmentMethods />
       </div>
     </>
   );

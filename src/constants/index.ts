@@ -13,10 +13,10 @@ export const navigationLinks: NavLinkType[] = [
     title: "Zorgaanbod",
     href: "/",
     submenu: [
-      { id: "angst", title: "Angst", href: "/zorgaanbod/angst" },
-      { id: "adhd", title: "ADHD", href: "/zorgaanbod/adhd" },
-      { id: "depressie", title: "Depressie", href: "/zorgaanbod/depressie" },
-      { id: "trauma", title: "Trauma & PTSS", href: "/zorgaanbod/trauma" },
+      { id: "angst", href: "/zorgaanbod/angst" },
+      { id: "adhd", href: "/zorgaanbod/adhd" },
+      { id: "depressie", href: "/zorgaanbod/depressie" },
+      { id: "trauma", href: "/zorgaanbod/trauma" },
     ],
   },
   {
@@ -24,13 +24,12 @@ export const navigationLinks: NavLinkType[] = [
     title: "Voor cliënten",
     href: "/",
     submenu: [
-      { id: "aanmelden", title: "Aanmelden", href: "/clienten/aanmelden" },
+      { id: "aanmelden", href: "/clienten/aanmelden" },
       {
         id: "wachttijden",
-        title: "Wachttijden",
         href: "/clienten/wachttijden",
       },
-      { id: "vergoeding", title: "Vergoeding", href: "/clienten/vergoeding" },
+      { id: "vergoeding", href: "/clienten/vergoeding" },
     ],
   },
   {
@@ -38,9 +37,9 @@ export const navigationLinks: NavLinkType[] = [
     title: "Over ons",
     href: "/",
     submenu: [
-      { id: "locaties", title: "Locaties", href: "/over-ons/locaties" },
-      { id: "team", title: "Ons team", href: "/over-ons/team" },
-      { id: "kwaliteit", title: "Kwaliteit", href: "/over-ons/kwaliteit" },
+      { id: "locaties", href: "/over-ons/locaties" },
+      { id: "team", href: "/over-ons/team" },
+      { id: "kwaliteit", href: "/over-ons/kwaliteit" },
     ],
   },
   {

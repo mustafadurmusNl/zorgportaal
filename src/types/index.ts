@@ -41,7 +41,7 @@ export interface TeamMemberType {
 // Navigation Types
 export interface NavLinkType {
   id: string;
-  title: string;
+  title?: string;
   href: string;
   submenu?: NavLinkType[];
 }

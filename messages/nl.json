@@ -8,7 +8,32 @@
     "clienten": "Voor cliënten",
     "over-ons": "Over ons",
     "contact": "Contact",
-    "aanmelden": "Aanmelden"
+    "aanmelden": "Aanmelden",
+    "angst": "Angst",
+    "adhd": "ADHD",
+    "depressie": "Depressie",
+    "trauma": "Trauma & PTSS",
+    "wachttijden": "Wachttijden",
+    "vergoeding": "Vergoeding",
+    "locaties": "Locaties",
+    "team": "Ons team",
+    "kwaliteit": "Kwaliteit"
+  },
+  "sidebar": {
+    "help_needed": "Hulp nodig?",
+    "help_description": "Neem contact op voor persoonlijk advies over onze zorgprogramma's.",
+    "contact_button": "Contact opnemen",
+    "care_description": "Klik op een zorgcategorie om meer informatie te lezen",
+    "care_categories": {
+      "angst": "Angst",
+      "depressie": "Depressie",
+      "adhd": "ADHD",
+      "trauma": "Trauma & PTSS",
+      "somatiek": "Somatiek & Psyche",
+      "zelfbeeld": "Zelfbeeldproblematiek",
+      "persoonlijkheid": "Persoonlijkheidsproblematiek",
+      "psycho-oncologie": "Forta De Vruchtenburg"
+    }
   },
   "hero": {
     "welcome": "WELKOM BIJ GROEIPUNT VOLWASSENEN",
@@ -76,7 +101,10 @@
       "adhd": "ADHD",
       "depression": "Depressie",
       "trauma": "Trauma & PTSS",
-      "psychosomatic": "Somatiek & Psyche"
+      "psychosomatic": "Somatiek & Psyche",
+      "self_image": "Zelfbeeldproblematiek",
+      "personality": "Persoonlijkheidsproblematiek",
+      "forta": "Forta De Vruchtenburg"
     },
     "clients": {
       "title": "Voor cliënten",
@@ -102,6 +130,72 @@
     "phone": "010 - 450 40 71",
     "hours": "ma t/m vr van 8.30 - 16.30 uur"
   },
+  "depressie": {
+    "title": "Depressie",
+    "subtitle": "Depressie is meer dan zich gewoon verdrietig voelen. Het is een ernstige gemoedsstoornis die invloed heeft op hoe je je voelt, denkt en dagelijkse activiteiten uitvoert.",
+    "description": "Depressie is meer dan zich gewoon verdrietig voelen. Het is een ernstige gemoedsstoornis die invloed heeft op hoe je je voelt, denkt en dagelijkse activiteiten uitvoert. Iedereen voelt zich weleens verdrietig of neerslachtig, maar bij depressie houden deze gevoelens langere tijd aan en zijn ze intenser.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "depression": "DEPRESSIE"
+    },
+    "sections": {
+      "what_is_depression": {
+        "title": "Wat is depressie?",
+        "content": "Depressie is een veelvoorkomende maar ernstige gemoedsstoornis. Het veroorzaakt ernstige symptomen die van invloed zijn op hoe je je voelt, denkt en dagelijkse activiteiten uitvoert, zoals slapen, eten of werken. Om gediagnosticeerd te worden met depressie, moeten de symptomen minstens twee weken aanwezig zijn."
+      },
+      "major_depression": {
+        "title": "Depressieve episode",
+        "content": "Een depressieve episode wordt gekenmerkt door een aanhoudend gevoel van verdriet en verlies van interesse in activiteiten gedurende ten minste twee weken. Andere symptomen kunnen zijn: gevoelens van waardeloosheid, concentratieproblemen, veranderingen in eetlust of slaap, en gedachten aan de dood.",
+        "symptoms_title": "Symptomen van een depressieve episode:",
+        "symptoms": {
+          "persistent_sadness": "Aanhoudend gevoel van verdriet",
+          "loss_of_interest": "Verlies van interesse in activiteiten",
+          "worthlessness": "Gevoelens van waardeloosheid",
+          "concentration_problems": "Concentratieproblemen",
+          "appetite_changes": "Veranderingen in eetlust of slaap",
+          "death_thoughts": "Gedachten aan de dood"
+        }
+      },
+      "types": {
+        "title": "Verschillende vormen van depressie",
+        "major_depression": {
+          "title": "Depressieve stoornis",
+          "description": "De meest voorkomende vorm van depressie, gekenmerkt door een depressieve stemming of verlies van interesse in activiteiten gedurende minimaal twee weken."
+        },
+        "persistent_depression": {
+          "title": "Persistent depressieve stoornis",
+          "description": "Een vorm van depressie die minstens twee jaar aanhoudt. De symptomen kunnen variëren in intensiteit gedurende deze periode."
+        },
+        "bipolar_disorder": {
+          "title": "Bipolaire stoornis",
+          "description": "Gekenmerkt door afwisselende perioden van depressie en manie (verhoogde stemming). De depressieve episodes zijn vergelijkbaar met die van een depressieve stoornis."
+        },
+        "seasonal_depression": {
+          "title": "Seizoensgebonden depressie",
+          "description": "Een vorm van depressie die optreedt op hetzelfde tijdstip elk jaar, meestal in de herfst of winter wanneer er minder natuurlijk zonlicht is."
+        },
+        "postpartum_depression": {
+          "title": "Postpartum depressie",
+          "description": "Een ernstige vorm van depressie die kan optreden na de bevalling. Het is meer dan de 'baby blues' en kan het vermogen van een moeder om voor zichzelf en haar baby te zorgen beïnvloeden."
+        },
+        "psychotic_depression": {
+          "title": "Psychotische depressie",
+          "description": "Een vorm van ernstige depressie die gepaard gaat met psychotische symptomen zoals hallucinaties, wanen of paranoia."
+        }
+      },
+      "treatments": {
+        "title": "Behandelvormen",
+        "description": "Bij Groeipunt maken we gebruik van verschillende wetenschappelijk onderbouwde behandelmethoden voor depressie. Welke behandeling wordt ingezet, hangt af van jouw specifieke situatie en de ernst van de depressie.",
+        "view_all": "Bekijk alle behandelvormen"
+      },
+      "testimonial": {
+        "quote": "De behandeling bij Groeipunt heeft mij geholpen om uit de donkere periode van mijn depressie te komen. Ze hebben mij de tools gegeven om mijn negatieve gedachtenpatronen te doorbreken.",
+        "source": "Recensie op Zorgkaart Nederland"
+      }
+    }
+  },
   "angst": {
     "title": "Angst",
     "subtitle": "Angst is een gevoel dat iedereen kent: schrikken van een snel naderende auto of bang zijn voor het maken van een belangrijk examen. Angst is er om ons te beschermen tegen gevaar en is dus belangrijk. Alleen komt het vaak voor dat mensen sneller bang worden dan nodig is.",
@@ -119,7 +213,16 @@
       },
       "panic_disorder": {
         "title": "Paniekstoornis",
-        "content": "Mensen die lijden aan een paniekstoornis ervaren regelmatig paniekaanvallen en zijn bang voor nieuwe aanvallen. Tijdens een paniekaanval herken je symptomen zoals een snellere hartslag, hyperventilatie, gevoelens van onrust, duizeligheid en trillen of zweten. Het gevoel kan ontstaan dat je de controle over jezelf verliest."
+        "content": "Mensen die lijden aan een paniekstoornis ervaren regelmatig paniekaanvallen en zijn bang voor nieuwe aanvallen. Tijdens een paniekaanval herken je symptomen zoals een snellere hartslag, hyperventilatie, gevoelens van onrust, duizeligheid en trillen of zweten. Het gevoel kan ontstaan dat je de controle over jezelf verliest.",
+        "symptoms_title": "Symptomen van een paniekaanval:",
+        "symptoms": {
+          "faster_heartbeat": "Snellere hartslag",
+          "hyperventilation": "Hyperventilatie",
+          "restlessness": "Gevoelens van onrust",
+          "dizziness": "Duizeligheid",
+          "trembling": "Trillen of zweten",
+          "loss_of_control": "Gevoel van controleverlies"
+        }
       },
       "disorders": {
         "title": "Welke angststoornissen zijn er?",

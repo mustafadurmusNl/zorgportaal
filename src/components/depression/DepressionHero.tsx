@@ -72,6 +72,11 @@ const DepressionHero = ({ imageUrl }: DepressionHeroProps) => {
                     fill
                     className="object-cover rounded-2xl shadow-xl"
                     priority
+                    onError={(e) => {
+                      console.log("Image failed to load:", imageUrl);
+                      // Fallback'e geç
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-purple-100 via-indigo-50 to-purple-200 rounded-2xl shadow-xl flex items-center justify-center">

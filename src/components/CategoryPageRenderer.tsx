@@ -13,7 +13,7 @@ const CATEGORY_COMPONENTS = {
 
 interface CategoryPageRendererProps {
   category: string;
-  heroImage: string | null;
+  heroImage: string;
 }
 
 export default function CategoryPageRenderer({

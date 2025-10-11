@@ -10,14 +10,14 @@ import {
 } from "@/components/depression";
 
 interface DepressionPageProps {
-  heroImage: string | null;
+  heroImage: string;
 }
 
 export default function DepressionPage({ heroImage }: DepressionPageProps) {
   return (
     <>
       {/* Hero section with dynamic image */}
-      <DepressionHero imageUrl={heroImage || undefined} />
+      <DepressionHero imageUrl={heroImage} />
 
       {/* Main content with sidebar */}
       <div

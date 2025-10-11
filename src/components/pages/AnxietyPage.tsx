@@ -10,14 +10,14 @@ import {
 } from "@/components/anxiety";
 
 interface AnxietyPageProps {
-  heroImage: string | null;
+  heroImage: string;
 }
 
 export default function AnxietyPage({ heroImage }: AnxietyPageProps) {
   return (
     <>
       {/* Hero section with dynamic image */}
-      <AnxietyHero imageUrl={heroImage || undefined} />
+      <AnxietyHero imageUrl={heroImage} />
 
       {/* Main content with sidebar */}
       <div

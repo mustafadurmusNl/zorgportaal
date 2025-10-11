@@ -1,4 +1,4 @@
-import { fetchImageByCategory } from "@/lib/imageApi";
+import { getStaticImageByCategory } from "@/lib/staticImages";
 import { notFound } from "next/navigation";
 import CategoryPageRenderer from "@/components/CategoryPageRenderer";
 
@@ -29,8 +29,8 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
 
   console.log(`🎯 Dynamic route: /zorgaanbod/${category}`);
 
-  // Fetch image based on dynamic category
-  const heroImage = await fetchImageByCategory(category);
+  // Get static image for category
+  const heroImage = getStaticImageByCategory(category);
 
   return (
     <div className="min-h-screen">

@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+    // Alternatif: domains array kullan
+    domains: [
+      "www.ahealthylife.nl",
+      "images.unsplash.com",
+      "www.resilienz-akademie.com",
+    ],
   },
 };
 

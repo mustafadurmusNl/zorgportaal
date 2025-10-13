@@ -1,16 +1,3 @@
-import { MouseEventHandler } from "react";
-
-// Component Props Types
-export interface CustomButtonProps {
-  isDisabled?: boolean;
-  btnType?: "button" | "submit";
-  containerStyles?: string;
-  textStyles?: string;
-  title: string;
-  rightIcon?: string;
-  handleClick?: MouseEventHandler<HTMLButtonElement>;
-}
-
 // Service Types
 export interface ServiceType {
   id: string;

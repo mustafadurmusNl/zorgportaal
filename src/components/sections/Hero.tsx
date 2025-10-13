@@ -1,12 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CustomButton } from "@/components/ui";
+import { Button, Badge } from "@/components/ui";
 
 const Hero = () => {
   const t = useTranslations("hero");
   return (
-    <section className="hero-section">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 overflow-hidden pt-20">
       {/* Background Video Effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/2 h-full">
@@ -32,26 +32,29 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-content relative z-10">
-        <div className="hero-badge">{t("welcome")}</div>
+      <div className="max-w-4xl mx-auto text-center px-4 z-10 relative">
+        <Badge
+          variant="healthcare"
+          className="mb-6 text-sm font-semibold px-4 py-2 animate-fadeInUp"
+        >
+          {t("welcome")}
+        </Badge>
 
-        <h1 className="hero-title">{t("title")}</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fadeInUp">
+          {t("title")}
+        </h1>
 
-        <p className="hero-subtitle">{t("subtitle")}</p>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed animate-fadeInUp">
+          {t("subtitle")}
+        </p>
 
-        <div className="hero-buttons">
-          <CustomButton
-            title={t("treatments")}
-            btnType="button"
-            containerStyles="custom-btn-primary"
-            handleClick={() => {}}
-          />
-          <CustomButton
-            title={t("waitingTimes")}
-            btnType="button"
-            containerStyles="custom-btn-secondary"
-            handleClick={() => {}}
-          />
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center animate-fadeInUp">
+          <Button variant="healthcare" size="xl" onClick={() => {}}>
+            {t("treatments")}
+          </Button>
+          <Button variant="healthcare-outline" size="xl" onClick={() => {}}>
+            {t("waitingTimes")}
+          </Button>
         </div>
       </div>
     </section>

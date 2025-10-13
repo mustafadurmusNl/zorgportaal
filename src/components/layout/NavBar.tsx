@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { navigationLinks, languageOptions } from "@/constants";
-import { CustomButton } from "@/components/ui";
+import { Button } from "@/components/ui";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -89,16 +89,19 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="navbar">
-      <div className="navbar-container">
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
         {/* Logo */}
-        <Link href={`/${currentLocale}`} className="navbar-brand">
-          <div className="navbar-logo"></div>
+        <Link
+          href={`/${currentLocale}`}
+          className="flex items-center gap-2 text-2xl font-bold text-cyan-500"
+        >
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500"></div>
           <span>Groeipunt</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="navbar-links">
+        <nav className="hidden md:flex items-center gap-8">
           {navigationLinks.map((link) => (
             <div
               key={link.id}
@@ -109,7 +112,7 @@ const NavBar = () => {
               {link.submenu ? (
                 <button
                   onClick={() => toggleDropdown(link.id)}
-                  className="navbar-link flex items-center"
+                  className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
                 >
                   {t(link.id)}
                   <svg
@@ -129,7 +132,7 @@ const NavBar = () => {
               ) : (
                 <Link
                   href={`/${currentLocale}${link.href}`}
-                  className="navbar-link"
+                  className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200"
                 >
                   {t(link.id)}
                 </Link>
@@ -218,12 +221,9 @@ const NavBar = () => {
             )}
           </div>
 
-          <CustomButton
-            title={t("aanmelden")}
-            btnType="button"
-            containerStyles="custom-btn-primary"
-            handleClick={() => {}}
-          />
+          <Button variant="healthcare" size="default" onClick={() => {}}>
+            {t("aanmelden")}
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -313,12 +313,13 @@ const NavBar = () => {
                 </div>
               </div>
 
-              <CustomButton
-                title={t("aanmelden")}
-                btnType="button"
-                containerStyles="custom-btn-primary w-full"
-                handleClick={() => setIsMobileMenuOpen(false)}
-              />
+              <Button
+                variant="healthcare"
+                className="w-full"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("aanmelden")}
+              </Button>
             </div>
           </div>
         </div>

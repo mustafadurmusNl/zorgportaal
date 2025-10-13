@@ -10,6 +10,7 @@ import { CustomButton } from "@/components/ui";
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -25,6 +26,22 @@ const NavBar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setOpenDropdown(null);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const toggleDropdown = (linkId: string) => {
+    setOpenDropdown(openDropdown === linkId ? null : linkId);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const handleMouseEnter = (linkId: string) => {
+    setOpenDropdown(linkId);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenDropdown(null);
   };
 
   const switchLanguage = (newLocale: string) => {
@@ -51,11 +68,17 @@ const NavBar = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      const target = event.target as Node;
+
+      // Close language dropdown if clicking outside
+      if (dropdownRef.current && !dropdownRef.current.contains(target)) {
         setIsLanguageDropdownOpen(false);
+      }
+
+      // Close navigation dropdowns if clicking outside navbar
+      const navbar = document.querySelector(".navbar-links");
+      if (navbar && !navbar.contains(target)) {
+        setOpenDropdown(null);
       }
     };
 
@@ -77,15 +100,22 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <nav className="navbar-links">
           {navigationLinks.map((link) => (
-            <div key={link.id} className="relative group">
-              <Link
-                href={`/${currentLocale}${link.href}`}
-                className="navbar-link"
-              >
-                {t(link.id)}
-                {link.submenu && (
+            <div
+              key={link.id}
+              className="relative"
+              onMouseEnter={() => link.submenu && handleMouseEnter(link.id)}
+              onMouseLeave={() => link.submenu && handleMouseLeave()}
+            >
+              {link.submenu ? (
+                <button
+                  onClick={() => toggleDropdown(link.id)}
+                  className="navbar-link flex items-center"
+                >
+                  {t(link.id)}
                   <svg
-                    className="w-4 h-4 ml-1 inline-block transform group-hover:rotate-180 transition-transform duration-200"
+                    className={`w-4 h-4 ml-1 inline-block transform transition-transform duration-200 ${
+                      openDropdown === link.id ? "rotate-180" : ""
+                    }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -95,17 +125,33 @@ const NavBar = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                )}
-              </Link>
+                </button>
+              ) : (
+                <Link
+                  href={`/${currentLocale}${link.href}`}
+                  className="navbar-link"
+                >
+                  {t(link.id)}
+                </Link>
+              )}
 
               {/* Dropdown Menu */}
               {link.submenu && (
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+                <div
+                  className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50 transition-all duration-200 ${
+                    openDropdown === link.id
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible"
+                  }`}
+                  onMouseEnter={() => setOpenDropdown(link.id)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   {link.submenu.map((sublink) => (
                     <Link
                       key={sublink.id}
                       href={`/${currentLocale}${sublink.href}`}
                       className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200"
+                      onClick={() => setOpenDropdown(null)}
                     >
                       {t(sublink.id)}
                     </Link>
@@ -121,7 +167,10 @@ const NavBar = () => {
           {/* Language Switcher */}
           <div className="relative" ref={dropdownRef}>
             <button
-              onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+              onClick={() => {
+                setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
+                setOpenDropdown(null);
+              }}
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
             >
               <div

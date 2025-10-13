@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CustomButton } from "@/components/ui";
+import { Button } from "@/components/ui";
 
 const TreatmentMethods = () => {
   const t = useTranslations("depressie.sections.treatments");
@@ -81,14 +81,15 @@ const TreatmentMethods = () => {
               {t("description")}
             </p>
 
-            <CustomButton
-              title={t("view_all")}
-              btnType="button"
-              containerStyles="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              handleClick={() => {
+            <Button
+              size="xl"
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              onClick={() => {
                 window.location.href = "/behandelingen";
               }}
-            />
+            >
+              {t("view_all")}
+            </Button>
           </div>
 
           {/* Right side - Treatment pills in grid */}

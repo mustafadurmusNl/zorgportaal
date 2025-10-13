@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CustomButton } from "@/components/ui";
+import { Button, Badge } from "@/components/ui";
 import Image from "next/image";
 
 interface DepressionHeroProps {
@@ -27,18 +27,19 @@ const DepressionHero = ({ imageUrl }: DepressionHeroProps) => {
             {/* Left Side - Content */}
             <div className="flex flex-col justify-center">
               {/* Breadcrumb */}
-              <div className="mb-6">
-                <span className="inline-flex items-center bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  {breadcrumbT("clients")}
-                </span>
-                <span className="mx-2 text-gray-400">→</span>
+              <div className="mb-6 flex items-center gap-2 flex-wrap">
+                <Badge variant="depression">{breadcrumbT("clients")}</Badge>
+                <span className="text-gray-400">→</span>
                 <span className="text-gray-600 text-sm">
                   {breadcrumbT("care")}
                 </span>
-                <span className="mx-2 text-gray-400">→</span>
-                <span className="text-purple-600 text-sm font-semibold">
+                <span className="text-gray-400">→</span>
+                <Badge
+                  variant="outline"
+                  className="border-purple-500 text-purple-600"
+                >
                   {breadcrumbT("depression")}
-                </span>
+                </Badge>
               </div>
 
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -50,15 +51,16 @@ const DepressionHero = ({ imageUrl }: DepressionHeroProps) => {
               </p>
 
               <div>
-                <CustomButton
-                  title={t("cta")}
-                  btnType="button"
-                  containerStyles="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105"
-                  handleClick={() => {
+                <Button
+                  size="xl"
+                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-semibold transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+                  onClick={() => {
                     // Navigate to registration page
                     window.location.href = "/aanmelden";
                   }}
-                />
+                >
+                  {t("cta")}
+                </Button>
               </div>
             </div>
 

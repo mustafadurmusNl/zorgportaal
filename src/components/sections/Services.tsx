@@ -1,7 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CustomButton } from "@/components/ui";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui";
 
 const Services = () => {
   const t = useTranslations("services");
@@ -31,34 +38,40 @@ const Services = () => {
   ];
 
   return (
-    <section className="section">
-      <div className="section-container">
-        <h2 className="section-title">{t("title")}</h2>
+    <section className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          {t("title")}
+        </h2>
         <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
           {t("description")}
         </p>
 
-        <div className="services-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceItems.map((service, index) => (
-            <div
+            <Card
               key={service.id}
-              className={`service-card ${service.colorClass}`}
+              className={`${service.colorClass} text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105`}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="service-card-title">{t(`${service.id}.title`)}</h3>
-              <p className="service-card-description">
-                {t(`${service.id}.description`)}
-              </p>
-
-              <div className="mt-auto">
-                <CustomButton
-                  title={index === 3 ? t("careers.description") : t("moreInfo")}
-                  btnType="button"
-                  containerStyles="custom-btn-secondary border-white text-white hover:bg-white hover:text-gray-900"
-                  handleClick={() => {}}
-                />
-              </div>
-            </div>
+              <CardHeader className="text-center">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <CardTitle className="text-white text-xl">
+                  {t(`${service.id}.title`)}
+                </CardTitle>
+                <CardDescription className="text-white/90">
+                  {t(`${service.id}.description`)}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="mt-auto pt-0">
+                <Button
+                  variant="outline"
+                  className="w-full border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-200"
+                  onClick={() => {}}
+                >
+                  {index === 3 ? t("careers.description") : t("moreInfo")}
+                </Button>
+              </CardContent>
+            </Card>
           ))}
         </div>
 

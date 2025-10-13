@@ -2,7 +2,14 @@
 
 import { useTranslations } from "next-intl";
 import { teamMembers } from "@/constants";
-import { CustomButton } from "@/components/ui";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui";
 
 const Team = () => {
   const t = useTranslations("team");
@@ -39,20 +46,31 @@ const Team = () => {
         {/* Team member cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member) => (
-            <div key={member.id} className="service-card text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">
-                  {member.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
-              </div>
+            <Card
+              key={member.id}
+              className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <CardHeader>
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-2xl">
+                    {member.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
+                </div>
 
-              <h3 className="service-card-title">{member.name}</h3>
-              <p className="text-cyan-600 font-semibold mb-3">{member.role}</p>
-              <p className="service-card-description">{member.description}</p>
-            </div>
+                <CardTitle className="text-gray-900">{member.name}</CardTitle>
+                <p className="text-cyan-600 font-semibold mb-2">
+                  {member.role}
+                </p>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600">
+                  {member.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
@@ -60,12 +78,14 @@ const Team = () => {
         <div className="bg-gradient-to-r from-cyan-600 to-teal-600 rounded-2xl p-8 md:p-12 text-center text-white">
           <h3 className="text-3xl font-bold mb-4">{t("cta.title")}</h3>
           <p className="text-xl mb-8 opacity-90">{t("cta.description")}</p>
-          <CustomButton
-            title={t("cta.button")}
-            btnType="button"
-            containerStyles="custom-btn-secondary border-white text-white hover:bg-white hover:text-gray-900"
-            handleClick={() => {}}
-          />
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-200"
+            onClick={() => {}}
+          >
+            {t("cta.button")}
+          </Button>
         </div>
       </div>
     </section>

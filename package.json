@@ -6,8 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "install:clean": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
+    "info": "pnpm list --depth=0"
   },
+  "packageManager": "pnpm@10.18.3",
   "dependencies": {
     "@headlessui/react": "^2.2.8",
     "@heroicons/react": "^2.2.0",

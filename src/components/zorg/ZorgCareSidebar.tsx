@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const CareSidebar = () => {
+const ZorgCareSidebar = () => {
   const t = useTranslations("navigation");
   const sidebarT = useTranslations("sidebar");
   const footerT = useTranslations("footer.services");
@@ -78,15 +78,15 @@ const CareSidebar = () => {
               href={`/${locale}${item.href}`}
               className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-200 group ${
                 isActive
-                  ? "bg-purple-50 text-purple-600 border-l-4 border-purple-500"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-purple-600"
+                  ? "bg-pink-50 text-pink-600 border-l-4 border-pink-500"
+                  : "text-gray-700 hover:bg-gray-50 hover:text-pink-600"
               }`}
             >
               <span className="text-lg">{item.icon}</span>
               <span className="text-sm font-medium flex-1">{item.title}</span>
               {!isActive && (
                 <svg
-                  className="w-4 h-4 text-gray-400 group-hover:text-purple-500 transition-colors"
+                  className="w-4 h-4 text-gray-400 group-hover:text-pink-500 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ const CareSidebar = () => {
                 </svg>
               )}
               {isActive && (
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
               )}
             </Link>
           );
@@ -108,7 +108,7 @@ const CareSidebar = () => {
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-100">
-        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-lg">
+        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
           <h4 className="font-semibold text-gray-900 text-sm mb-2">
             {sidebarT("help_needed")}
           </h4>
@@ -117,7 +117,7 @@ const CareSidebar = () => {
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center text-xs font-medium text-purple-600 hover:text-purple-700"
+            className="inline-flex items-center text-xs font-medium text-blue-600 hover:text-blue-700"
           >
             {sidebarT("contact_button")}
             <svg
@@ -140,4 +140,4 @@ const CareSidebar = () => {
   );
 };
 
-export default CareSidebar;
+export default ZorgCareSidebar;

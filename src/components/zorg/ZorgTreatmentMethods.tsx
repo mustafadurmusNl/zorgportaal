@@ -3,31 +3,78 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui";
 
-const TreatmentMethods = () => {
-  const t = useTranslations("depressie.sections.treatments");
+// Theme colors for different categories
+const TREATMENT_THEMES = {
+  anxiety: {
+    sectionGradient: "from-pink-50 via-white to-purple-50",
+    buttonGradient:
+      "from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600",
+  },
+  depression: {
+    sectionGradient: "from-purple-50 via-white to-indigo-50",
+    buttonGradient:
+      "from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600",
+  },
+  adhd: {
+    sectionGradient: "from-green-50 via-white to-emerald-50",
+    buttonGradient:
+      "from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600",
+  },
+  trauma: {
+    sectionGradient: "from-orange-50 via-white to-amber-50",
+    buttonGradient:
+      "from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600",
+  },
+  burnout: {
+    sectionGradient: "from-red-50 via-white to-rose-50",
+    buttonGradient:
+      "from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600",
+  },
+} as const;
 
+type CategoryType = keyof typeof TREATMENT_THEMES;
+
+// Category to translation key mapping
+const CATEGORY_TO_TRANSLATION_KEY = {
+  anxiety: "angst",
+  depression: "depressie",
+  adhd: "adhd",
+  trauma: "trauma",
+  burnout: "burnout",
+} as const;
+
+interface ZorgTreatmentMethodsProps {
+  category: CategoryType;
+}
+
+const ZorgTreatmentMethods = ({ category }: ZorgTreatmentMethodsProps) => {
+  const translationKey = CATEGORY_TO_TRANSLATION_KEY[category];
+  const t = useTranslations(`${translationKey}.sections.treatments`);
+  const theme = TREATMENT_THEMES[category];
+
+  // Common treatment methods that apply to all categories
   const treatments = [
     {
       name: "Cognitieve gedragstherapie",
-      description: "Evidence-based therapie voor depressie",
+      description: "Evidence-based therapie voor psychische problemen",
       icon: "🧠",
-      color: "from-purple-500 to-indigo-500",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       name: "Beeldende Therapie",
       description: "Creatieve verwerking van emoties",
       icon: "🎨",
-      color: "from-pink-500 to-purple-500",
+      color: "from-purple-500 to-pink-500",
     },
     {
-      name: "Interpersoonlijke therapie",
-      description: "Focus op relaties en communicatie",
-      icon: "👥",
-      color: "from-blue-500 to-cyan-500",
+      name: "Exposure",
+      description: "Geleidelijke blootstelling aan moeilijke situaties",
+      icon: "⚡",
+      color: "from-yellow-500 to-orange-500",
     },
     {
-      name: "Mindfulness-Based Cognitive Therapy",
-      description: "Mindfulness gecombineerd met cognitieve therapie",
+      name: "Inquiry-Based Stress Reduction (IBSR)",
+      description: "Mindfulness-gebaseerde stressreductie",
       icon: "🧘",
       color: "from-green-500 to-teal-500",
     },
@@ -38,10 +85,10 @@ const TreatmentMethods = () => {
       color: "from-indigo-500 to-blue-500",
     },
     {
-      name: "Activatietherapie",
-      description: "Gedragsactivatie voor depressie",
-      icon: "⚡",
-      color: "from-yellow-500 to-orange-500",
+      name: "Competitive Memory Training",
+      description: "Geheugentraining voor zelfvertrouwen",
+      icon: "🎯",
+      color: "from-red-500 to-pink-500",
     },
     {
       name: "EMDR",
@@ -64,7 +111,7 @@ const TreatmentMethods = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <section className={`py-16 bg-gradient-to-br ${theme.sectionGradient}`}>
       <div
         className="max-w-7xl mx-auto"
         style={{ paddingLeft: "60px", paddingRight: "60px" }}
@@ -83,7 +130,7 @@ const TreatmentMethods = () => {
 
             <Button
               size="xl"
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className={`bg-gradient-to-r ${theme.buttonGradient} text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
               onClick={() => {
                 window.location.href = "/behandelingen";
               }}
@@ -152,4 +199,4 @@ const TreatmentMethods = () => {
   );
 };
 
-export default TreatmentMethods;
+export default ZorgTreatmentMethods;

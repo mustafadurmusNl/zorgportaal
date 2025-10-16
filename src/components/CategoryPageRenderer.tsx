@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 const CATEGORY_COMPONENTS = {
   angst: dynamic(() => import("@/components/pages/AnxietyPage")),
   depressie: dynamic(() => import("@/components/pages/DepressionPage")),
-  // Future pages will be added here when they're created:
+  // Future pages can be easily added here:
   // adhd: dynamic(() => import('@/components/pages/ADHDPage')),
   // trauma: dynamic(() => import('@/components/pages/TraumaPage')),
   // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),

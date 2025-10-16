@@ -108,31 +108,29 @@ const DepressionTypes = () => {
   ];
 
   return (
-    <section className="bg-white rounded-xl p-16 shadow-lg border border-gray-100">
-      <div className="max-w-none">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Klik op een depressietype om meer informatie te lezen
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          {depressionTypes.map((type) => (
-            <DisorderCard
-              key={type.key}
-              title={type.title}
-              description={type.description}
-              icon={type.icon}
-              isOpen={openCard === type.key}
-              onToggle={() => toggleCard(type.key)}
-            />
-          ))}
-        </div>
+    <div className="max-w-none">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          {t("title")}
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Klik op een depressietype om meer informatie te lezen
+        </p>
       </div>
-    </section>
+
+      <div className="space-y-4">
+        {depressionTypes.map((type) => (
+          <DisorderCard
+            key={type.key}
+            title={type.title}
+            description={type.description}
+            icon={type.icon}
+            isOpen={openCard === type.key}
+            onToggle={() => toggleCard(type.key)}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

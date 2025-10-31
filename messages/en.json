@@ -304,4 +304,47 @@
       }
     }
   }
+  ,
+  "trauma": {
+    "title": "Trauma & PTSD",
+    "subtitle": "Trauma can follow distressing events and have lasting effects on functioning and emotion.",
+    "description": "Trauma includes reactions to events where one's safety or integrity was seriously threatened. Treatment focuses on restoring safety and reducing trauma-related symptoms.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "trauma": "TRAUMA & PTSD"
+    },
+    "sections": {
+      "what_is_trauma": {
+        "title": "What is trauma?",
+        "content": "Trauma arises after a shocking or threatening event and can lead to long-lasting symptoms such as re-experiencing, hyperarousal, and avoidance."
+      },
+      "types": {
+        "title": "Types of trauma",
+        "subtitle": "Trauma can be acute, complex, or develop into PTSD.",
+        "ptsd": {
+          "title": "Post-Traumatic Stress Disorder (PTSD)",
+          "description": "Persistent symptoms like re-experiencing, nightmares and heightened irritability following trauma."
+        },
+        "acute": {
+          "title": "Acute stress reaction",
+          "description": "A direct response to a traumatic event, often temporary but intense."
+        },
+        "complex": {
+          "title": "Complex trauma",
+          "description": "Repeated or prolonged traumatic experiences that deeply affect functioning."
+        }
+      },
+      "treatments": {
+        "title": "Treatment options",
+        "description": "Treatments include EMDR, trauma-focused CBT and stabilization training, tailored to the client's capacity.",
+        "view_all": "View all treatment options"
+      },
+      "testimonial": {
+        "quote": "Therapy helped me process my memories and regain control of my life.",
+        "source": "Patient review"
+      }
+    }
+  }
 }

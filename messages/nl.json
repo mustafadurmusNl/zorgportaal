@@ -304,4 +304,47 @@
       }
     }
   }
+  ,
+  "trauma": {
+    "title": "Trauma & PTSS",
+    "subtitle": "Trauma kan ontstaan na ingrijpende gebeurtenissen en blijft gevolgen houden voor functioneren en emotie.",
+    "description": "Trauma omvat reacties op gebeurtenissen waarbij iemands veiligheid of integriteit ernstig werd bedreigd. Behandeling richt zich op herstel van veiligheid en vermindering van trauma-gerelateerde klachten.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "trauma": "TRAUMA & PTSS"
+    },
+    "sections": {
+      "what_is_trauma": {
+        "title": "Wat is trauma?",
+        "content": "Trauma ontstaat na een schokkende of bedreigende gebeurtenis en kan leiden tot langdurige klachten zoals herbeleving, hyperarousal en vermijding."
+      },
+      "types": {
+        "title": "Vormen van trauma",
+        "subtitle": "Trauma kan acuut, complex of resulteren in PTSS.",
+        "ptsd": {
+          "title": "Posttraumatische stressstoornis (PTSS)",
+          "description": "Aanhoudende symptomen zoals herbeleving, nachtmerries en verhoogde prikkelbaarheid na een trauma."
+        },
+        "acute": {
+          "title": "Acute stressreactie",
+          "description": "Een directe reactie op een traumatische gebeurtenis, vaak tijdelijk maar intens."
+        },
+        "complex": {
+          "title": "Complex trauma",
+          "description": "Herhaalde of langdurige traumatische ervaringen die het functioneren diepgaand beïnvloeden."
+        }
+      },
+      "treatments": {
+        "title": "Behandelopties",
+        "description": "Behandelingen omvatten EMDR, traumagerichte cognitieve gedragstherapie en stabilisatietrainingen, afgestemd op de belastbaarheid van de cliënt.",
+        "view_all": "Bekijk alle behandelopties"
+      },
+      "testimonial": {
+        "quote": "De behandeling hielp mij mijn herinneringen te verwerken en weer grip te krijgen op mijn leven.",
+        "source": "Cliëntrecensie"
+      }
+    }
+  }
 }

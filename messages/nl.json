@@ -13,6 +13,9 @@
     "adhd": "ADHD",
     "depressie": "Depressie",
     "trauma": "Trauma & PTSS",
+    "somatiek": "Somatiek & Psyche",
+    "zelfbeeld": "Zelfbeeldproblematiek",
+    "persoonlijkheid": "Persoonlijkheidsproblematiek",
     "wachttijden": "Wachttijden",
     "vergoeding": "Vergoeding",
     "locaties": "Locaties",
@@ -303,8 +306,7 @@
         "source": "Cliëntrecensie"
       }
     }
-  }
-  ,
+  },
   "trauma": {
     "title": "Trauma & PTSS",
     "subtitle": "Trauma kan ontstaan na ingrijpende gebeurtenissen en blijft gevolgen houden voor functioneren en emotie.",

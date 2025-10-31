@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { zorgCategories } from "@/components/zorg/zorgCategories";
 
 const ZorgCareSidebar = () => {
   const t = useTranslations("navigation");
@@ -11,56 +12,13 @@ const ZorgCareSidebar = () => {
   const locale = useLocale();
   const pathname = usePathname();
 
-  const zorgaanbodItems = [
-    {
-      id: "angst",
-      title: footerT("anxiety"),
-      href: "/zorgaanbod/angst",
-      icon: "🧠",
-    },
-    {
-      id: "depressie",
-      title: footerT("depression"),
-      href: "/zorgaanbod/depressie",
-      icon: "💙",
-    },
-    {
-      id: "adhd",
-      title: footerT("adhd"),
-      href: "/zorgaanbod/adhd",
-      icon: "⚡",
-    },
-    {
-      id: "trauma",
-      title: footerT("trauma"),
-      href: "/zorgaanbod/trauma",
-      icon: "🛡️",
-    },
-    {
-      id: "somatiek",
-      title: footerT("psychosomatic"),
-      href: "/zorgaanbod/somatiek",
-      icon: "🔗",
-    },
-    {
-      id: "zelfbeeld",
-      title: footerT("self_image"),
-      href: "/zorgaanbod/zelfbeeld",
-      icon: "🪞",
-    },
-    {
-      id: "persoonlijkheid",
-      title: footerT("personality"),
-      href: "/zorgaanbod/persoonlijkheid",
-      icon: "🎭",
-    },
-    {
-      id: "psycho-oncologie",
-      title: footerT("forta"),
-      href: "/zorgaanbod/psycho-oncologie",
-      icon: "🌱",
-    },
-  ];
+  // Use the shared zorgCategories so navbar and sidebar show the same items
+  const zorgaanbodItems = zorgCategories.map((c) => ({
+    id: c.id,
+    title: footerT(c.footerKey || c.id),
+    href: c.href,
+    icon: c.icon || "🔗",
+  }));
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 sticky top-24">

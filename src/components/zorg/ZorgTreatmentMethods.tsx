@@ -25,6 +25,11 @@ const TREATMENT_THEMES = {
     buttonGradient:
       "from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600",
   },
+  somatiek: {
+    sectionGradient: "from-teal-50 via-white to-sky-50",
+    buttonGradient:
+      "from-teal-500 to-sky-500 hover:from-teal-600 hover:to-sky-600",
+  },
   burnout: {
     sectionGradient: "from-red-50 via-white to-rose-50",
     buttonGradient:
@@ -41,6 +46,7 @@ const CATEGORY_TO_TRANSLATION_KEY = {
   adhd: "adhd",
   trauma: "trauma",
   burnout: "burnout",
+  somatiek: "somatiek",
 } as const;
 
 interface ZorgTreatmentMethodsProps {

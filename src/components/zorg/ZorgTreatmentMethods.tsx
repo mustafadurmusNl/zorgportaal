@@ -30,6 +30,11 @@ const TREATMENT_THEMES = {
     buttonGradient:
       "from-teal-500 to-sky-500 hover:from-teal-600 hover:to-sky-600",
   },
+  zelfbeeld: {
+    sectionGradient: "from-indigo-50 via-white to-purple-50",
+    buttonGradient:
+      "from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600",
+  },
   burnout: {
     sectionGradient: "from-red-50 via-white to-rose-50",
     buttonGradient:
@@ -47,6 +52,7 @@ const CATEGORY_TO_TRANSLATION_KEY = {
   trauma: "trauma",
   burnout: "burnout",
   somatiek: "somatiek",
+  zelfbeeld: "zelfbeeld",
 } as const;
 
 interface ZorgTreatmentMethodsProps {

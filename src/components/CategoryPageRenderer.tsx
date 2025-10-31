@@ -9,6 +9,7 @@ const CATEGORY_COMPONENTS = {
   adhd: dynamic(() => import("./pages/ADHDPage")),
   trauma: dynamic(() => import("./pages/TraumaPage")),
   somatiek: dynamic(() => import("./pages/SomatiekPage")),
+  zelfbeeld: dynamic(() => import("./pages/ZelfbeeldPage")),
   // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),
 };
 

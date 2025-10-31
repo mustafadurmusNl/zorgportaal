@@ -6,13 +6,15 @@ import ZorgCareSidebar from "./ZorgCareSidebar";
 import ZorgTestimonial from "./ZorgTestimonial";
 import ZorgTreatmentMethods from "./ZorgTreatmentMethods";
 
+// CategoryType: includes all supported Zorg categories
 type CategoryType =
   | "anxiety"
   | "depression"
   | "adhd"
   | "trauma"
   | "burnout"
-  | "somatiek";
+  | "somatiek"
+  | "zelfbeeld";
 
 interface ZorgPageLayoutProps {
   category: CategoryType;

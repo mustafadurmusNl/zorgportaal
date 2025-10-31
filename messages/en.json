@@ -432,5 +432,48 @@
         "source": "Patient review"
       }
     }
+  },
+  "persoonlijkheid": {
+    "title": "Personality issues",
+    "subtitle": "Problems rooted in long-standing personality patterns that affect relationships and functioning.",
+    "description": "Personality issues refer to persistent patterns of thinking, feeling and behaving that cause distress or impairment. Treatment often focuses on long-term change, mentalization, schema work and interpersonal strategies.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "persoonlijkheid": "PERSONALITY"
+    },
+    "sections": {
+      "what_is_persoonlijkheid": {
+        "title": "What are personality issues?",
+        "content": "Personality issues involve enduring patterns of thinking and behaving that can make relationships and everyday functioning harder. These patterns often develop early in life and can be resistant to change without targeted therapy."
+      },
+      "types": {
+        "title": "Common personality-related problems",
+        "subtitle": "Different presentations that may benefit from specialized therapy.",
+        "content": "Personality-related problems can include rigid interpersonal styles, difficulties regulating emotions, and maladaptive coping strategies.",
+        "avoidant": {
+          "title": "Avoidant patterns",
+          "description": "Severe social inhibition, feelings of inadequacy and hypersensitivity to negative evaluation."
+        },
+        "dependent": {
+          "title": "Dependent patterns",
+          "description": "Excessive need to be taken care of, submissive behavior and fear of separation."
+        },
+        "borderline": {
+          "title": "Emotionally unstable / Borderline patterns",
+          "description": "Instability in relationships, self-image and affect with impulsive behaviors; benefits from dialectical and schema-focused approaches."
+        }
+      },
+      "treatments": {
+        "title": "Treatment options",
+        "description": "Treatment may include schema therapy, dialectical behavior therapy (DBT), mentalization-based treatment (MBT) and long-term psychotherapeutic work tailored to the individual's needs.",
+        "view_all": "View all treatment options"
+      },
+      "testimonial": {
+        "quote": "Long-term therapy helped me understand and change old patterns. I now handle relationships and emotions much better.",
+        "source": "Patient review"
+      }
+    }
   }
 }

@@ -430,5 +430,48 @@
         "source": "Cliëntrecensie"
       }
     }
+  },
+  "persoonlijkheid": {
+    "title": "Persoonlijkheidsproblematiek",
+    "subtitle": "Langdurige persoonlijkheidspatronen die relaties en functioneren beïnvloeden.",
+    "description": "Persoonlijkheidsproblematiek verwijst naar hardnekkige patronen van denken, voelen en gedrag die klachten en beperkingen veroorzaken. Behandeling richt zich vaak op het in kaart brengen van patronen, relationele vaardigheden en langjarige therapeutische interventies.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "persoonlijkheid": "PERSOONLIJKHEID"
+    },
+    "sections": {
+      "what_is_persoonlijkheid": {
+        "title": "Wat is persoonlijkheidsproblematiek?",
+        "content": "Persoonlijkheidsproblematiek omvat blijvende manieren van denken en doen die het aangaan van relaties en het dagelijks functioneren bemoeilijken. Deze patronen ontwikkelen zich vaak vroeg in het leven en kunnen hardnekkig zijn zonder gerichte behandeling."
+      },
+      "types": {
+        "title": "Veelvoorkomende vormen",
+        "subtitle": "Verschillende presentaties die baat kunnen hebben bij gespecialiseerde therapie.",
+        "content": "Persoonlijkheidsproblematiek kan zich uiten in starre interpersoonlijke stijlen, emotie-regulatieproblemen en maladaptieve copingstrategieën.",
+        "avoidant": {
+          "title": "Vermijdende patronen",
+          "description": "Ernstige sociale remming, gevoel van ontoereikendheid en overgevoeligheid voor kritiek."
+        },
+        "dependent": {
+          "title": "Afhankelijke patronen",
+          "description": "Sterke behoefte aan zorg van anderen, onderdanig gedrag en angst voor verlaten worden."
+        },
+        "borderline": {
+          "title": "Emotioneel onstabiele / Borderline patronen",
+          "description": "Instabiliteit in relaties, zelfbeeld en stemming met impulsief gedrag; baat bij dialectische en schemagerichte behandeling."
+        }
+      },
+      "treatments": {
+        "title": "Behandelopties",
+        "description": "Behandeling kan bestaan uit schematherapie, dialectische gedragstherapie (DBT), mentalization-based treatment (MBT) en langdurige psychotherapeutische interventies op maat.",
+        "view_all": "Bekijk alle behandelopties"
+      },
+      "testimonial": {
+        "quote": "Langdurige therapie hielp mij oude patronen te begrijpen en veranderen. Ik ga nu beter om met emoties en relaties.",
+        "source": "Cliëntrecensie"
+      }
+    }
   }
 }

@@ -104,6 +104,23 @@ const CATEGORY_THEMES = {
       "from-rose-100 to-red-100",
     ],
   },
+  persoonlijkheid: {
+    gradient: "from-fuchsia-50 via-white to-pink-50",
+    badgeVariant: "healthcare" as const,
+    buttonGradient:
+      "from-fuchsia-500 to-pink-500 hover:from-fuchsia-600 hover:to-pink-600",
+    outlineBorder: "border-fuchsia-500 text-fuchsia-600",
+    fallbackGradient: "from-fuchsia-100 via-pink-50 to-fuchsia-200",
+    particleColors: ["bg-fuchsia-300", "bg-pink-300", "bg-fuchsia-200"],
+    silhouetteColors: [
+      "from-fuchsia-200 to-pink-200",
+      "from-fuchsia-100 to-pink-100",
+      "from-pink-100 to-fuchsia-100",
+    ],
+    // Per-category UI tweaks: slightly smaller heading and image height to avoid overlap
+    headingClass: "text-3xl md:text-4xl",
+    imageHeightClass: "h-64 lg:h-80",
+  },
 } as const;
 
 type CategoryType = keyof typeof CATEGORY_THEMES;
@@ -117,6 +134,7 @@ const CATEGORY_TO_TRANSLATION_KEY = {
   burnout: "burnout",
   somatiek: "somatiek",
   zelfbeeld: "zelfbeeld",
+  persoonlijkheid: "persoonlijkheid",
 } as const;
 
 // Category to breadcrumb key mapping (for breadcrumb.{key})
@@ -128,6 +146,7 @@ const CATEGORY_TO_BREADCRUMB_KEY = {
   burnout: "burnout",
   somatiek: "somatiek",
   zelfbeeld: "zelfbeeld",
+  persoonlijkheid: "persoonlijkheid",
 } as const;
 
 interface ZorgHeroProps {
@@ -143,6 +162,8 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
   const breadcrumbT = useTranslations(`${translationKey}.breadcrumb`);
 
   const theme = CATEGORY_THEMES[category];
+  const headingClass = (theme as any).headingClass || "text-4xl md:text-5xl";
+  const imageHeightClass = (theme as any).imageHeightClass || "h-80 lg:h-96";
 
   return (
     <>
@@ -175,7 +196,9 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
                 </Badge>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1
+                className={`${headingClass} font-bold text-gray-900 mb-6 leading-tight`}
+              >
                 {t("title")}
               </h1>
 
@@ -199,7 +222,7 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
 
             {/* Right Side - Image */}
             <div className="flex justify-center items-center">
-              <div className="relative w-full max-w-md h-80 lg:h-96">
+              <div className={`relative w-full max-w-md ${imageHeightClass}`}>
                 {imageUrl ? (
                   <Image
                     src={imageUrl}

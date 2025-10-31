@@ -3,10 +3,10 @@ import dynamic from "next/dynamic";
 
 // Dynamic component imports - only load when needed
 const CATEGORY_COMPONENTS = {
-  angst: dynamic(() => import("@/components/pages/AnxietyPage")),
-  depressie: dynamic(() => import("@/components/pages/DepressionPage")),
+  angst: dynamic(() => import("./pages/AnxietyPage")),
+  depressie: dynamic(() => import("./pages/DepressionPage")),
   // Future pages can be easily added here:
-  // adhd: dynamic(() => import('@/components/pages/ADHDPage')),
+  adhd: dynamic(() => import("./pages/ADHDPage")),
   // trauma: dynamic(() => import('@/components/pages/TraumaPage')),
   // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),
 };

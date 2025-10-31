@@ -261,5 +261,47 @@
         "source": "Recensie op Zorgkaart Nederland"
       }
     }
+  },
+  "adhd": {
+    "title": "ADHD",
+    "subtitle": "ADHD (Aandachtstekortstoornis met hyperactiviteit) kan zich op verschillende manieren uiten bij volwassenen.",
+    "description": "ADHD kan leiden tot problemen met aandacht, impulsiviteit en/of hyperactiviteit. Bij volwassenen kan dit invloed hebben op werk, relaties en dagelijks functioneren.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "adhd": "ADHD"
+    },
+    "sections": {
+      "what_is_adhd": {
+        "title": "Wat is ADHD?",
+        "content": "ADHD is een neurobiologische ontwikkelingsstoornis die problemen met aandacht, impulsiviteit en soms hyperactiviteit veroorzaakt. Symptomen kunnen variëren per persoon en levensfase. Diagnose en behandeling zijn gericht op het verminderen van klachten en verbeteren van functioneren."
+      },
+      "types": {
+        "title": "Vormen van ADHD",
+        "subtitle": "ADHD kent verschillende presentaties die invloed hebben op het dagelijks leven.",
+        "inattentive": {
+          "title": "Overwegend onoplettend",
+          "description": "Moeite met concentratie, snel afgeleid zijn en moeilijk taken afmaken."
+        },
+        "hyperactive": {
+          "title": "Overwegend hyperactief-impulsief",
+          "description": "Rusteloosheid, impulsief gedrag en moeite met stilzitten of wachten."
+        },
+        "combined": {
+          "title": "Gecombineerde presentatie",
+          "description": "Een mix van zowel aandachts- als hyperactiviteitsklachten."
+        }
+      },
+      "treatments": {
+        "title": "Behandelopties",
+        "description": "Behandeling voor ADHD kan psycho-educatie, coaching, gedragstherapie en, indien passend, medicatie omvatten. De behandeling wordt afgestemd op de individuele behoefte.",
+        "view_all": "Bekijk alle behandelopties"
+      },
+      "testimonial": {
+        "quote": "Een duidelijke diagnose en praktische copingstrategieën maakten het dagelijks leven weer beheersbaar.",
+        "source": "Cliëntrecensie"
+      }
+    }
   }
 }

@@ -14,7 +14,8 @@ type CategoryType =
   | "trauma"
   | "burnout"
   | "somatiek"
-  | "zelfbeeld";
+  | "zelfbeeld"
+  | "persoonlijkheid";
 
 interface ZorgPageLayoutProps {
   category: CategoryType;

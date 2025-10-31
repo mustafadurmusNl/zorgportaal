@@ -10,6 +10,9 @@ const CATEGORY_COMPONENTS = {
   trauma: dynamic(() => import("./pages/TraumaPage")),
   somatiek: dynamic(() => import("./pages/SomatiekPage")),
   zelfbeeld: dynamic(() => import("./pages/ZelfbeeldPage")),
+  persoonlijkheid: dynamic(
+    () => import("@/components/pages/PersoonlijkheidPage")
+  ),
   // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),
 };
 

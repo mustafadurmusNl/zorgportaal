@@ -10,6 +10,7 @@ const VALID_CATEGORIES = [
   "adhd",
   "trauma",
   "burnout",
+  "somatiek",
 ] as const;
 type ValidCategory = (typeof VALID_CATEGORIES)[number];
 
@@ -92,6 +93,7 @@ export async function generateMetadata({ params }: ZorgaanbodPageProps) {
     adhd: { nl: "ADHD", en: "ADHD" },
     trauma: { nl: "Trauma & PTSS", en: "Trauma & PTSD" },
     burnout: { nl: "Burnout", en: "Burnout" },
+    somatiek: { nl: "Somatiek & Psyche", en: "Somatic & Psych" },
   };
 
   const title =

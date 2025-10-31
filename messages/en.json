@@ -348,5 +348,49 @@
         "source": "Patient review"
       }
     }
+  },
+
+  "somatiek": {
+    "title": "Somatic & Psych",
+    "subtitle": "Somatic issues concern physical complaints that are connected with psychological factors.",
+    "description": "Somatic complaints are physical symptoms for which no full medical explanation is found; emotional or psychological factors often contribute to their maintenance.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "somatiek": "SOMATIC"
+    },
+    "sections": {
+      "what_is_somatiek": {
+        "title": "What is somatic (somatiek)?",
+        "content": "Somatic complaints are physical symptoms without a complete medical explanation. Stress, tension or emotional factors often play a role in maintaining these complaints."
+      },
+      "types": {
+        "title": "Common somatic complaints",
+        "subtitle": "Examples where physical and psychological factors interact.",
+        "content": "Here we discuss some common somatic complaints and how psychological factors may contribute to them.",
+        "pain": {
+          "title": "Chronic pain",
+          "description": "Pain complaints without a fully explanatory medical cause, often with an important psychological component."
+        },
+        "fatigue": {
+          "title": "Chronic fatigue",
+          "description": "Long-lasting fatigue that impairs daily functioning and is not fully explained by somatic illness."
+        },
+        "functional_symptoms": {
+          "title": "Functional symptoms",
+          "description": "For example gastrointestinal complaints, dizziness or palpitations without a clear physical cause."
+        }
+      },
+      "treatments": {
+        "title": "Treatment options",
+        "description": "Treatment may include psychoeducation, graded activity, cognitive behavioral approaches and collaboration with somatic specialists, tailored to capacity and symptom profile.",
+        "view_all": "View all treatment options"
+      },
+      "testimonial": {
+        "quote": "Therapy helped me manage my physical symptoms better and regain routine in daily life.",
+        "source": "Patient review"
+      }
+    }
   }
 }

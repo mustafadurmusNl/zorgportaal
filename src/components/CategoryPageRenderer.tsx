@@ -8,6 +8,7 @@ const CATEGORY_COMPONENTS = {
   // Future pages can be easily added here:
   adhd: dynamic(() => import("./pages/ADHDPage")),
   trauma: dynamic(() => import("./pages/TraumaPage")),
+  somatiek: dynamic(() => import("./pages/SomatiekPage")),
   // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),
 };
 

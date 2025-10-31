@@ -62,6 +62,20 @@ const CATEGORY_THEMES = {
       "from-amber-100 to-orange-100",
     ],
   },
+  somatiek: {
+    gradient: "from-teal-50 via-white to-sky-50",
+    badgeVariant: "healthcare" as const,
+    buttonGradient:
+      "from-teal-500 to-sky-500 hover:from-teal-600 hover:to-sky-600",
+    outlineBorder: "border-teal-500 text-teal-600",
+    fallbackGradient: "from-teal-100 via-sky-50 to-teal-200",
+    particleColors: ["bg-teal-300", "bg-sky-300", "bg-teal-200"],
+    silhouetteColors: [
+      "from-teal-200 to-sky-200",
+      "from-teal-100 to-sky-100",
+      "from-sky-100 to-teal-100",
+    ],
+  },
   burnout: {
     gradient: "from-red-50 via-white to-rose-50",
     badgeVariant: "healthcare" as const,
@@ -87,6 +101,7 @@ const CATEGORY_TO_TRANSLATION_KEY = {
   adhd: "adhd",
   trauma: "trauma",
   burnout: "burnout",
+  somatiek: "somatiek",
 } as const;
 
 // Category to breadcrumb key mapping (for breadcrumb.{key})
@@ -96,6 +111,7 @@ const CATEGORY_TO_BREADCRUMB_KEY = {
   adhd: "adhd",
   trauma: "trauma",
   burnout: "burnout",
+  somatiek: "somatiek",
 } as const;
 
 interface ZorgHeroProps {

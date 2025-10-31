@@ -348,5 +348,48 @@
         "source": "Cliëntrecensie"
       }
     }
+  },
+  "somatiek": {
+    "title": "Somatiek & Psyche",
+    "subtitle": "Somatiek heeft betrekking op lichamelijke klachten die samenhangen met psychische factoren.",
+    "description": "Somatiek verwijst naar de wisselwerking tussen lichaam en psyche waarbij lichamelijke klachten mede worden beïnvloed door emotionele of psychische factoren.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "somatiek": "SOMATIEK"
+    },
+    "sections": {
+      "what_is_somatiek": {
+        "title": "Wat is somatiek?",
+        "content": "Somatische klachten zijn lichamelijke klachten waarvoor geen volledige medische verklaring wordt gevonden. Vaak spelen stress, spanning of emotionele factoren een rol bij het in stand houden van deze klachten."
+      },
+      "types": {
+        "title": "Veel voorkomende somatische klachten",
+        "subtitle": "Voorbeelden van klachten waarbij lichamelijke en psychische factoren elkaar beïnvloeden.",
+        "content": "Hier bespreken we enkele veelvoorkomende somatische klachten en hoe psychische factoren hieraan kunnen bijdragen.",
+        "pain": {
+          "title": "Chronische pijn",
+          "description": "Pijnklachten zonder een volledig verklarende medische oorzaak, vaak met een belangrijke psychische component."
+        },
+        "fatigue": {
+          "title": "Chronische vermoeidheid",
+          "description": "Langdurige vermoeidheid die belemmert in het dagelijks functioneren en niet volledig wordt verklaard door somatische ziekte."
+        },
+        "functional_symptoms": {
+          "title": "Functionele klachten",
+          "description": "Bijvoorbeeld maag-darmklachten, duizeligheid of hartkloppingen zonder duidelijke lichamelijke oorzaak."
+        }
+      },
+      "treatments": {
+        "title": "Behandelopties",
+        "description": "Behandeling kan bestaan uit psycho-educatie, graded activity, cognitie-gedragstherapie en samenwerking met somatische zorgverleners, afgestemd op belastbaarheid en klachtenbeeld.",
+        "view_all": "Bekijk alle behandelopties"
+      },
+      "testimonial": {
+        "quote": "De behandeling heeft mij geholpen beter om te gaan met mijn lichamelijke klachten en meer routine in het dagelijks leven te krijgen.",
+        "source": "Cliëntrecensie"
+      }
+    }
   }
 }

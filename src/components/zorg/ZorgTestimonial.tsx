@@ -20,6 +20,10 @@ const TESTIMONIAL_THEMES = {
     background: "bg-orange-50",
     iconColor: "text-orange-500",
   },
+  somatiek: {
+    background: "bg-teal-50",
+    iconColor: "text-teal-500",
+  },
   burnout: {
     background: "bg-red-50",
     iconColor: "text-red-500",
@@ -35,6 +39,7 @@ const CATEGORY_TO_TRANSLATION_KEY = {
   adhd: "adhd",
   trauma: "trauma",
   burnout: "burnout",
+  somatiek: "somatiek",
 } as const;
 
 interface ZorgTestimonialProps {

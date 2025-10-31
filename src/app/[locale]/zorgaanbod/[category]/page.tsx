@@ -1,5 +1,5 @@
 import { getStaticImageByCategory } from "@/lib/staticImages";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import CategoryPageRenderer from "@/components/CategoryPageRenderer";
 import type { Locale } from "@/i18n/request";
 
@@ -29,6 +29,12 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
   // Validate category
   if (!VALID_CATEGORIES.includes(category as ValidCategory)) {
     notFound();
+  }
+
+  // Validate locale - if it's not supported, redirect to default locale
+  if (!LOCALES.includes(locale as Locale)) {
+    // Redirect to default locale (nl)
+    redirect(`/nl/zorgaanbod/${category}`);
   }
 
   console.log(`🎯 Dynamic route: /${locale}/zorgaanbod/${category}`);
@@ -64,9 +70,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ZorgaanbodPageProps) {
   const { category, locale } = await params;
 
-  // Import messages dynamically based on locale
-  const messages = (await import(`../../../../../messages/${locale}.json`))
-    .default;
+  // Import messages dynamically based on locale. If the locale file is missing
+  // fall back to the default Dutch messages to avoid server errors.
+  let messages;
+  try {
+    // Try to load the requested locale
+    messages = (await import(`../../../../../messages/${locale}.json`)).default;
+  } catch (e) {
+    // Fallback to Dutch messages
+    messages = (await import(`../../../../../messages/nl.json`)).default;
+  }
 
   // Get category-specific translations
   const categoryData = messages[category as ValidCategory];

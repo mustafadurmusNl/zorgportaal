@@ -261,5 +261,47 @@
         "source": "Review on Zorgkaart Nederland"
       }
     }
+  },
+  "adhd": {
+    "title": "ADHD",
+    "subtitle": "ADHD (Attention-Deficit/Hyperactivity Disorder) can present in multiple ways in adults.",
+    "description": "ADHD can cause difficulties with attention, impulsivity and/or hyperactivity. In adults this may affect work, relationships and daily functioning.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "adhd": "ADHD"
+    },
+    "sections": {
+      "what_is_adhd": {
+        "title": "What is ADHD?",
+        "content": "ADHD is a neurodevelopmental condition that affects attention, impulsivity, and sometimes hyperactivity. Symptoms vary per person and life stage. Diagnosis and treatment aim to reduce symptoms and improve functioning."
+      },
+      "types": {
+        "title": "Presentations of ADHD",
+        "subtitle": "ADHD has different presentations that affect daily life.",
+        "inattentive": {
+          "title": "Predominantly inattentive",
+          "description": "Difficulty sustaining attention, easily distracted, trouble completing tasks."
+        },
+        "hyperactive": {
+          "title": "Predominantly hyperactive-impulsive",
+          "description": "Restlessness, impulsive actions and difficulty sitting still or waiting."
+        },
+        "combined": {
+          "title": "Combined presentation",
+          "description": "A combination of both attention and hyperactivity/impulsivity symptoms."
+        }
+      },
+      "treatments": {
+        "title": "Treatment options",
+        "description": "Treatment for ADHD often includes psychoeducation, coaching, behavioral strategies and, when appropriate, medication. Treatment is tailored to individual needs.",
+        "view_all": "View all treatment options"
+      },
+      "testimonial": {
+        "quote": "Getting a clear diagnosis and practical coping strategies made daily life manageable again.",
+        "source": "Patient review"
+      }
+    }
   }
 }

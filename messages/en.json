@@ -392,5 +392,45 @@
         "source": "Patient review"
       }
     }
+  },
+
+  "zelfbeeld": {
+    "title": "Self-image issues",
+    "subtitle": "Problems with self-image can seriously affect functioning and wellbeing.",
+    "description": "Self-image issues include negative beliefs about oneself, body image concerns and low self-esteem. Treatment focuses on building self-worth and breaking maladaptive patterns.",
+    "cta": "Register",
+    "breadcrumb": {
+      "clients": "FOR CLIENTS",
+      "care": "OUR CARE",
+      "zelfbeeld": "SELF-IMAGE"
+    },
+    "sections": {
+      "what_is_zelfbeeld": {
+        "title": "What is self-image?",
+        "content": "Self-image refers to how you see and evaluate yourself. Negative self-image can lead to withdrawal, perfectionism and mood problems."
+      },
+      "types": {
+        "title": "Forms of self-image issues",
+        "subtitle": "Different presentations of low self-esteem and body image concerns.",
+        "content": "We describe common forms such as low self-esteem, social insecurity and body image problems.",
+        "low_self_esteem": {
+          "title": "Low self-esteem",
+          "description": "A persistent sense of insecurity about one's abilities and worth."
+        },
+        "body_image": {
+          "title": "Body image problems",
+          "description": "Negative perception of one's body that leads to shame or avoidance."
+        }
+      },
+      "treatments": {
+        "title": "Treatment options",
+        "description": "Treatments can include cognitive behavioral therapy, schema therapy, body-focused therapy and self-worth training.",
+        "view_all": "View all treatment options"
+      },
+      "testimonial": {
+        "quote": "Therapy helped me improve my self-image and gain more confidence.",
+        "source": "Patient review"
+      }
+    }
   }
 }

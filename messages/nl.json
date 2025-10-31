@@ -391,5 +391,44 @@
         "source": "Cliëntrecensie"
       }
     }
+  },
+  "zelfbeeld": {
+    "title": "Zelfbeeldproblematiek",
+    "subtitle": "Problemen met zelfbeeld kunnen iemands functioneren en welzijn ernstig beïnvloeden.",
+    "description": "Zelfbeeldproblemen omvatten negatieve overtuigingen over jezelf, lichaamsbeeldkwesties en laag zelfvertrouwen. Behandeling richt zich vaak op het versterken van zelfwaardering en het doorbreken van maladaptieve patronen.",
+    "cta": "Aanmelden",
+    "breadcrumb": {
+      "clients": "VOOR CLIËNTEN",
+      "care": "ZORGAANBOD",
+      "zelfbeeld": "ZELFBEELD"
+    },
+    "sections": {
+      "what_is_zelfbeeld": {
+        "title": "Wat is zelfbeeld?",
+        "content": "Zelfbeeld verwijst naar de manier waarop je jezelf ziet en beoordeelt. Negatief zelfbeeld kan leiden tot terugtrekking, perfectionisme en stemmingsklachten."
+      },
+      "types": {
+        "title": "Vormen van zelfbeeldproblematiek",
+        "subtitle": "Verschillende presentaties van laag zelfbeeld en lichaamsbeeldproblemen.",
+        "content": "We beschrijven hier veelvoorkomende vormen zoals laag zelfvertrouwen, sociale onzekerheid en lichaamsbeeldproblemen.",
+        "low_self_esteem": {
+          "title": "Laag zelfvertrouwen",
+          "description": "Een aanhoudend gevoel van onzekerheid over eigen vaardigheden en waarde."
+        },
+        "body_image": {
+          "title": "Lichaamsbeeldproblemen",
+          "description": "Negatieve perceptie van het eigen lichaam die leidt tot schaamte of vermijding."
+        }
+      },
+      "treatments": {
+        "title": "Behandelopties",
+        "description": "Behandelingen kunnen bestaan uit cognitieve gedragstherapie, schematherapie, lichaamsgerichte therapie en zelfwaarderingstrainingen.",
+        "view_all": "Bekijk alle behandelopties"
+      },
+      "testimonial": {
+        "quote": "De therapie hielp mij mijn zelfbeeld te verbeteren en meer zelfvertrouwen te krijgen.",
+        "source": "Cliëntrecensie"
+      }
+    }
   }
 }

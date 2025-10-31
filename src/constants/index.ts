@@ -5,6 +5,7 @@ import {
   NavLinkType,
   LanguageOption,
 } from "@/types";
+import { zorgCategories } from "@/components/zorg/zorgCategories";
 
 // Navigation Links
 export const navigationLinks: NavLinkType[] = [
@@ -12,12 +13,7 @@ export const navigationLinks: NavLinkType[] = [
     id: "zorgaanbod",
     title: "Zorgaanbod",
     href: "/",
-    submenu: [
-      { id: "angst", href: "/zorgaanbod/angst" },
-      { id: "adhd", href: "/zorgaanbod/adhd" },
-      { id: "depressie", href: "/zorgaanbod/depressie" },
-      { id: "trauma", href: "/zorgaanbod/trauma" },
-    ],
+    submenu: zorgCategories.map((c) => ({ id: c.id, href: c.href })),
   },
   {
     id: "clienten",

@@ -141,7 +141,7 @@ const NavBar = () => {
               {/* Dropdown Menu */}
               {link.submenu && (
                 <div
-                  className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50 transition-all duration-200 ${
+                  className={`absolute left-0 mt-2 min-w-[12rem] md:min-w-[14rem] max-w-sm bg-white rounded-md shadow-lg py-2 z-50 transition-all duration-200 ${
                     openDropdown === link.id
                       ? "opacity-100 visible"
                       : "opacity-0 invisible"
@@ -153,7 +153,7 @@ const NavBar = () => {
                     <Link
                       key={sublink.id}
                       href={`/${currentLocale}${sublink.href}`}
-                      className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200"
+                      className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200 text-sm break-words whitespace-normal"
                       onClick={() => setOpenDropdown(null)}
                     >
                       {t(sublink.id)}

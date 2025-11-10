@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { navigationLinks, languageOptions } from "@/constants";
+import zorgCategories from "@/components/zorg/zorgCategories";
 import { Button } from "@/components/ui";
 
 const NavBar = () => {
@@ -102,67 +103,76 @@ const NavBar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navigationLinks.map((link) => (
-            <div
-              key={link.id}
-              className="relative"
-              onMouseEnter={() => link.submenu && handleMouseEnter(link.id)}
-              onMouseLeave={() => link.submenu && handleMouseLeave()}
-            >
-              {link.submenu ? (
-                <button
-                  onClick={() => toggleDropdown(link.id)}
-                  className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
-                >
-                  {t(link.id)}
-                  <svg
-                    className={`w-4 h-4 ml-1 inline-block transform transition-transform duration-200 ${
-                      openDropdown === link.id ? "rotate-180" : ""
-                    }`}
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              ) : (
-                <Link
-                  href={`/${currentLocale}${link.href}`}
-                  className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200"
-                >
-                  {t(link.id)}
-                </Link>
-              )}
+          {navigationLinks.map((link) => {
+            // Replace zorgaanbod submenu with the central zorgCategories so the
+            // navbar and sidebar stay in sync.
+            const submenu =
+              link.id === "zorgaanbod"
+                ? zorgCategories.map((c) => ({ id: c.id, href: c.href }))
+                : link.submenu;
 
-              {/* Dropdown Menu */}
-              {link.submenu && (
-                <div
-                  className={`absolute left-0 mt-2 min-w-[12rem] md:min-w-[14rem] max-w-sm bg-white rounded-md shadow-lg py-2 z-50 transition-all duration-200 ${
-                    openDropdown === link.id
-                      ? "opacity-100 visible"
-                      : "opacity-0 invisible"
-                  }`}
-                  onMouseEnter={() => setOpenDropdown(link.id)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {link.submenu.map((sublink) => (
-                    <Link
-                      key={sublink.id}
-                      href={`/${currentLocale}${sublink.href}`}
-                      className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200 text-sm break-words whitespace-normal"
-                      onClick={() => setOpenDropdown(null)}
+            return (
+              <div
+                key={link.id}
+                className="relative"
+                onMouseEnter={() => submenu && handleMouseEnter(link.id)}
+                onMouseLeave={() => submenu && handleMouseLeave()}
+              >
+                {submenu ? (
+                  <button
+                    onClick={() => toggleDropdown(link.id)}
+                    className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
+                  >
+                    {t(link.id)}
+                    <svg
+                      className={`w-4 h-4 ml-1 inline-block transform transition-transform duration-200 ${
+                        openDropdown === link.id ? "rotate-180" : ""
+                      }`}
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
                     >
-                      {t(sublink.id)}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                ) : (
+                  <Link
+                    href={`/${currentLocale}${link.href}`}
+                    className="text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200"
+                  >
+                    {t(link.id)}
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {submenu && (
+                  <div
+                    className={`absolute left-0 mt-2 min-w-[12rem] md:min-w-[14rem] max-w-sm bg-white rounded-md shadow-lg py-2 z-50 transition-all duration-200 ${
+                      openDropdown === link.id
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible"
+                    }`}
+                    onMouseEnter={() => setOpenDropdown(link.id)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {submenu.map((sublink) => (
+                      <Link
+                        key={sublink.id}
+                        href={`/${currentLocale}${sublink.href}`}
+                        className="block px-4 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors duration-200 text-sm break-words whitespace-normal"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {t(sublink.id)}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Language Switcher & Desktop CTA Button */}

@@ -1,19 +1,19 @@
 // src/components/CategoryPageRenderer.tsx
 import dynamic from "next/dynamic";
+import zorgCategories, {
+  ZORG_CATEGORIES,
+} from "@/components/zorg/zorgCategories";
 
-// Dynamic component imports - only load when needed
-const CATEGORY_COMPONENTS = {
+// Static dynamic imports — keep imports explicit so Next.js can statically
+// analyze them. Avoid using a runtime-variable inside `import(...)`.
+const CATEGORY_COMPONENTS: Record<string, any> = {
   angst: dynamic(() => import("./pages/AnxietyPage")),
   depressie: dynamic(() => import("./pages/DepressionPage")),
-  // Future pages can be easily added here:
   adhd: dynamic(() => import("./pages/ADHDPage")),
   trauma: dynamic(() => import("./pages/TraumaPage")),
   somatiek: dynamic(() => import("./pages/SomatiekPage")),
   zelfbeeld: dynamic(() => import("./pages/ZelfbeeldPage")),
-  persoonlijkheid: dynamic(
-    () => import("@/components/pages/PersoonlijkheidPage")
-  ),
-  // burnout: dynamic(() => import('@/components/pages/BurnoutPage')),
+  persoonlijkheid: dynamic(() => import("./pages/PersoonlijkheidPage")),
 };
 
 interface CategoryPageRendererProps {

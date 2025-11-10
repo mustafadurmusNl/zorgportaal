@@ -4,7 +4,7 @@ import {
   WhatIsAnxiety,
   PanicDisorder,
   AnxietyDisorders,
-} from "@/components/anxiety";
+} from "@/components/zorgaanbod/anxiety";
 
 interface AnxietyPageProps {
   heroImage: string;

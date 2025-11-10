@@ -4,7 +4,7 @@ import {
   WhatIsDepression,
   MajorDepression,
   DepressionTypes,
-} from "@/components/depression";
+} from "@/components/zorgaanbod/depression";
 
 interface DepressionPageProps {
   heroImage: string;

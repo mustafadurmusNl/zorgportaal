@@ -5,7 +5,7 @@ import { ZorgSimpleContentSection } from "@/components/zorg";
 const WhatIsAnxiety = () => {
   return (
     <ZorgSimpleContentSection translationNamespace="angst.sections.what_is_anxiety">
-      {/* Future: anxiety-specific additions can go here */}
+      {/* Anxiety-specific content can be added here */}
     </ZorgSimpleContentSection>
   );
 };

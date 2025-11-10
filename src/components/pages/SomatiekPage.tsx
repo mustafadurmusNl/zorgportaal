@@ -1,6 +1,6 @@
 // src/components/pages/SomatiekPage.tsx
 import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
-import { WhatIsSomatiek, SomatiekTypes } from "@/components/somatiek";
+import { WhatIsSomatiek, SomatiekTypes } from "@/components/zorgaanbod/somatic";
 
 interface SomatiekPageProps {
   heroImage: string;

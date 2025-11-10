@@ -3,7 +3,7 @@ import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
 import {
   WhatIsPersoonlijkheid,
   PersoonlijkheidTypes,
-} from "@/components/persoonlijkheid";
+} from "@/components/zorgaanbod/personality";
 
 interface PersoonlijkheidPageProps {
   heroImage: string;

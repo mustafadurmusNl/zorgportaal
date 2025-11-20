@@ -1,7 +1,12 @@
 // src/components/AboutUsPageRenderer.tsx
 "use client";
 
-import { AboutUsSidebar, LocationsPage, TeamPage, KwaliteitPage } from "@/components";
+import {
+  AboutUsSidebar,
+  LocationsPage,
+  TeamPage,
+  KwaliteitPage,
+} from "@/components";
 
 interface AboutUsPageRendererProps {
   page: string;

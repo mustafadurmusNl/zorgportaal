@@ -8,10 +8,18 @@ export function KwaliteitPage() {
   const locale = useLocale();
 
   const SATISFACTION_SCORES = [
-    { category: t("satisfaction.categories.rapportcijfer"), score: 8.4, max: 10 },
+    {
+      category: t("satisfaction.categories.rapportcijfer"),
+      score: 8.4,
+      max: 10,
+    },
     { category: t("satisfaction.categories.bejegening"), score: 4.8, max: 5 },
     { category: t("satisfaction.categories.informatie"), score: 4.5, max: 5 },
-    { category: t("satisfaction.categories.samen_beslissen"), score: 4.7, max: 5 },
+    {
+      category: t("satisfaction.categories.samen_beslissen"),
+      score: 4.7,
+      max: 5,
+    },
     { category: t("satisfaction.categories.uitvoering"), score: 4.4, max: 5 },
   ];
 
@@ -27,25 +35,25 @@ export function KwaliteitPage() {
       {/* Breadcrumb */}
       <nav className="flex space-x-2 text-sm">
         <span className="bg-pink-500 text-white px-3 py-1 rounded-full font-medium">
-          {locale === 'nl' ? 'OVER ONS' : 'ABOUT US'}
+          {locale === "nl" ? "OVER ONS" : "ABOUT US"}
         </span>
         <span className="text-gray-500">→</span>
         <span className="text-gray-700 font-medium">
-          {locale === 'nl' ? 'KWALITEIT' : 'QUALITY'}
+          {locale === "nl" ? "KWALITEIT" : "QUALITY"}
         </span>
       </nav>
 
       {/* Header */}
       <div className="space-y-4">
         <h1 className="text-4xl font-bold text-gray-900">{t("title")}</h1>
-        <p className="text-lg text-gray-600 max-w-4xl">
-          {t("intro")}
-        </p>
+        <p className="text-lg text-gray-600 max-w-4xl">{t("intro")}</p>
       </div>
 
       {/* Tevredenheid Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">{t("satisfaction.title")}</h2>
+        <h2 className="text-2xl font-bold text-gray-900">
+          {t("satisfaction.title")}
+        </h2>
 
         {/* Client Satisfaction 2024 */}
         <div className="bg-white border border-gray-100 rounded-xl p-8">
@@ -102,7 +110,9 @@ export function KwaliteitPage() {
 
       {/* Keurmerk Basis GGZ */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">{t("keurmerk.title")}</h2>
+        <h2 className="text-2xl font-bold text-gray-900">
+          {t("keurmerk.title")}
+        </h2>
         <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-xl">
           <p className="text-gray-700 leading-relaxed mb-6">
             {t("keurmerk.description")}
@@ -137,7 +147,9 @@ export function KwaliteitPage() {
 
       {/* Kwaliteitsstatuut Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">{t("statuut.title")}</h2>
+        <h2 className="text-2xl font-bold text-gray-900">
+          {t("statuut.title")}
+        </h2>
 
         <div className="bg-white p-6 border border-gray-100 rounded-xl">
           <p className="text-gray-700 leading-relaxed">
@@ -149,9 +161,7 @@ export function KwaliteitPage() {
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white">
         <div className="text-center space-y-4">
-          <h3 className="text-2xl font-bold">
-            {t("contact.title")}
-          </h3>
+          <h3 className="text-2xl font-bold">{t("contact.title")}</h3>
           <p className="text-pink-100 max-w-2xl mx-auto">
             {t("contact.description")}
           </p>

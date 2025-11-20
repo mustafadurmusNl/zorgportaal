@@ -750,7 +750,7 @@
         "categories": {
           "rapportcijfer": "Overall Rating",
           "bejegening": "Treatment",
-          "informatie": "Information Treatment", 
+          "informatie": "Information Treatment",
           "samen_beslissen": "Shared Decision",
           "uitvoering": "Treatment Execution"
         },
@@ -785,6 +785,45 @@
     "questions": {
       "title": "Questions?",
       "description": "For registration, more information or help, you can contact Groeipunt Adults directly via:"
+    }
+  },
+  "contact_page": {
+    "breadcrumb": "WE'RE HAPPY TO HELP",
+    "title": "Get in touch",
+    "office_hours": {
+      "description": "We are available by phone during office hours from Monday to Friday, from 08:30 to 16:30 at",
+      "phone": "010 - 450 40 71",
+      "or_email": "or via email at"
+    },
+    "appointment": {
+      "title": "Unable to attend your appointment?",
+      "description_1": "We ask you to cancel at least",
+      "hours_required": "48 hours",
+      "description_2": "in advance by phone or email at",
+      "or_email": "or",
+      "email_requirements": "Always include your name, date of birth, phone number, appointment date and reason for cancellation in your email. Without this information we cannot cancel the appointment.",
+      "careful_scheduling": "We ask you to handle appointments carefully and only cancel them in extreme cases. Switching to video calling is always possible.",
+      "warning": {
+        "title": "Note: Canceling appointment within 48 hours",
+        "description": "When the appointment is canceled or rescheduled less than 48 hours in advance or you don't show up for the appointment, costs will be charged.",
+        "link": "Click here",
+        "info": "for more information about reimbursements"
+      },
+      "emergency": "For emergencies outside office hours, you can contact your GP or the GP post."
+    },
+    "sidebar": {
+      "question_title": "Do you have a question?",
+      "contact_info": {
+        "title": "Contact information",
+        "office_hours": "We are available by phone during office hours from Monday to Friday, from 08:30 to 16:30",
+        "lunch_break": "Due to lunch break, we are limited available by phone between 12:30 - 13:30.",
+        "emergency": "For emergencies outside office hours, you can contact your GP or the GP post."
+      },
+      "locations": {
+        "title": "Our locations",
+        "description": "Curious where Groeipunt is located? View the overview of all our locations, including contact details and waiting times.",
+        "button": "View all locations"
+      }
     }
   }
 }

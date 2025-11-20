@@ -52,6 +52,7 @@ export default function middleware(request: NextRequest) {
     "/over-ons/locaties",
     "/over-ons/team",
     "/over-ons/kwaliteit",
+    "/contact",
   ];
 
   // Extract the path after locale

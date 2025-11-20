@@ -3,9 +3,19 @@ import type { Locale } from "@/i18n/request";
 import { AboutUsPageRenderer } from "@/components";
 import { NotFoundPage } from "@/components/sections";
 
-// Define valid about us pages
-const VALID_ABOUT_PAGES = ["locaties", "team", "kwaliteit"] as const;
-type ValidAboutPage = (typeof VALID_ABOUT_PAGES)[number];
+// Define valid about us pages with language mapping
+const VALID_ABOUT_PAGES = {
+  // Dutch pages
+  locaties: "locaties",
+  team: "team",
+  kwaliteit: "kwaliteit",
+  // English pages (mapped to Dutch keys for component rendering)
+  locations: "locaties",
+  quality: "kwaliteit",
+} as const;
+
+type ValidAboutPageKey = keyof typeof VALID_ABOUT_PAGES;
+type ValidAboutPage = (typeof VALID_ABOUT_PAGES)[ValidAboutPageKey];
 
 // Define supported locales
 const LOCALES: Locale[] = ["nl", "en"];
@@ -25,17 +35,22 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
     redirect(`/nl/over-ons/${page}`);
   }
 
+  // Validate page parameter and map to internal page name
+  const mappedPage = VALID_ABOUT_PAGES[page as ValidAboutPageKey];
+
   // If page is not valid, show custom NotFound page instead of generic 404
-  if (!VALID_ABOUT_PAGES.includes(page as ValidAboutPage)) {
+  if (!mappedPage) {
     return <NotFoundPage />;
   }
 
-  console.log(`🎯 Dynamic route: /${locale}/over-ons/${page}`);
+  console.log(
+    `🎯 Dynamic route: /${locale}/about/${page} → mapped to: ${mappedPage}`
+  );
 
   return (
     <div className="min-h-screen">
-      {/* 🚀 PURE COMPONENT MAPPING - NO CONFIG NEEDED */}
-      <AboutUsPageRenderer page={page} />
+      {/* 🚀 PURE COMPONENT MAPPING - Use mapped page for component rendering */}
+      <AboutUsPageRenderer page={mappedPage} />
     </div>
   );
 }
@@ -44,7 +59,8 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
 export async function generateStaticParams() {
   const params = [];
 
-  for (const page of VALID_ABOUT_PAGES) {
+  // Generate params for all valid page keys (both Dutch and English URLs)
+  for (const page of Object.keys(VALID_ABOUT_PAGES) as ValidAboutPageKey[]) {
     for (const locale of LOCALES) {
       params.push({
         page,

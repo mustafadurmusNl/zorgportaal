@@ -42,16 +42,38 @@ export default function middleware(request: NextRequest) {
   // For valid locales, check if path exists by defining valid routes
   const validRoutes = [
     "/",
+    // Dutch routes (will be rewritten to English folders)
     "/zorgaanbod",
     "/zorgaanbod/angst",
     "/zorgaanbod/depressie",
-    "/clienten",
-    "/clienten/voor-wie",
-    "/clienten/wachttijden",
+    "/zorgaanbod/adhd",
+    "/zorgaanbod/trauma",
+    "/zorgaanbod/burnout",
+    "/zorgaanbod/somatiek",
+    "/zorgaanbod/zelfbeeld",
+    "/zorgaanbod/persoonlijkheid",
     "/over-ons",
     "/over-ons/locaties",
     "/over-ons/team",
     "/over-ons/kwaliteit",
+    // English routes (direct to folders)
+    "/about",
+    "/about/locations",
+    "/about/team",
+    "/about/quality",
+    "/services",
+    "/services/anxiety",
+    "/services/depression",
+    "/services/adhd",
+    "/services/trauma",
+    "/services/burnout",
+    "/services/somatic",
+    "/services/self-image",
+    "/services/personality",
+    // Universal routes
+    "/clienten",
+    "/clienten/voor-wie",
+    "/clienten/wachttijden",
     "/contact",
   ];
 

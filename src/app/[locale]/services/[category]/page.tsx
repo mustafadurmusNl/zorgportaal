@@ -3,18 +3,27 @@ import { notFound, redirect } from "next/navigation";
 import CategoryPageRenderer from "@/components/CategoryPageRenderer";
 import type { Locale } from "@/i18n/request";
 
-// Define valid categories
-const VALID_CATEGORIES = [
-  "angst",
-  "depressie",
-  "adhd",
-  "trauma",
-  "burnout",
-  "somatiek",
-  "zelfbeeld",
-  "persoonlijkheid",
-] as const;
-type ValidCategory = (typeof VALID_CATEGORIES)[number];
+// Define valid categories with language mapping
+const VALID_CATEGORIES = {
+  // Dutch categories
+  angst: "angst",
+  depressie: "depressie",
+  adhd: "adhd",
+  trauma: "trauma",
+  burnout: "burnout",
+  somatiek: "somatiek",
+  zelfbeeld: "zelfbeeld",
+  persoonlijkheid: "persoonlijkheid",
+  // English categories (mapped to Dutch keys for component rendering)
+  anxiety: "angst",
+  depression: "depressie",
+  somatic: "somatiek",
+  "self-image": "zelfbeeld",
+  personality: "persoonlijkheid",
+} as const;
+
+type ValidCategoryKey = keyof typeof VALID_CATEGORIES;
+type ValidCategory = (typeof VALID_CATEGORIES)[ValidCategoryKey];
 
 // Define supported locales
 const LOCALES: Locale[] = ["nl", "en"];
@@ -29,8 +38,11 @@ interface ZorgaanbodPageProps {
 export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
   const { category, locale } = await params;
 
-  // Validate category
-  if (!VALID_CATEGORIES.includes(category as ValidCategory)) {
+  // Validate category and map to internal category name
+  const mappedCategory = VALID_CATEGORIES[category as ValidCategoryKey];
+
+  // If category is not valid, show 404
+  if (!mappedCategory) {
     notFound();
   }
 
@@ -40,15 +52,17 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
     redirect(`/nl/zorgaanbod/${category}`);
   }
 
-  console.log(`🎯 Dynamic route: /${locale}/zorgaanbod/${category}`);
+  console.log(
+    `🎯 Dynamic route: /${locale}/services/${category} → mapped to: ${mappedCategory}`
+  );
 
-  // Get static image for category
-  const heroImage = getStaticImageByCategory(category);
+  // Get static image for mapped category
+  const heroImage = getStaticImageByCategory(mappedCategory);
 
   return (
     <div className="min-h-screen">
-      {/* 🚀 PURE COMPONENT MAPPING - NO CONFIG NEEDED */}
-      <CategoryPageRenderer category={category} heroImage={heroImage} />
+      {/* 🚀 PURE COMPONENT MAPPING - Use mapped category for component rendering */}
+      <CategoryPageRenderer category={mappedCategory} heroImage={heroImage} />
     </div>
   );
 }
@@ -57,7 +71,8 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
 export async function generateStaticParams() {
   const params = [];
 
-  for (const category of VALID_CATEGORIES) {
+  // Generate params for all valid category keys (both Dutch and English URLs)
+  for (const category of Object.keys(VALID_CATEGORIES) as ValidCategoryKey[]) {
     for (const locale of LOCALES) {
       params.push({
         category,

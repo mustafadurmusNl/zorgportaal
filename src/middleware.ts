@@ -22,22 +22,66 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(newUrl, 301); // Permanent redirect
   }
 
-  // Apply internationalization middleware
+  // FIRST: Check for invalid locale patterns like /nlxxx, /enxxx etc
+  // This must be done BEFORE intlMiddleware to prevent auto-redirects
+  const localeMatch = pathname.match(/^\/([a-zA-Z]{2,})/);
+  if (localeMatch) {
+    const potentialLocale = localeMatch[1];
+    const validLocales = ["nl", "en"];
+
+    // If the path looks like a locale but isn't valid, trigger not-found
+    if (!validLocales.includes(potentialLocale)) {
+      console.log(
+        `🚫 Invalid locale detected: ${potentialLocale} for path: ${pathname}`
+      );
+      // Return styled 404 page immediately, don't let intlMiddleware handle it
+      return NextResponse.rewrite(new URL("/not-found", request.url));
+    }
+  }
+
+  // For valid locales, check if path exists by defining valid routes
+  const validRoutes = [
+    "/",
+    "/zorgaanbod",
+    "/zorgaanbod/angst",
+    "/zorgaanbod/depressie",
+    "/clienten",
+    "/clienten/voor-wie",
+    "/clienten/wachttijden",
+  ];
+
+  // Extract the path after locale
+  const localePathMatch = pathname.match(/^\/(nl|en)(\/.*)?$/);
+  if (localePathMatch) {
+    const locale = localePathMatch[1];
+    const pathAfterLocale = localePathMatch[2] || "/";
+
+    // Check if this is a valid route
+    const isValidRoute = validRoutes.some(
+      (route) =>
+        pathAfterLocale === route || pathAfterLocale.startsWith(route + "/")
+    );
+
+    if (!isValidRoute && pathAfterLocale !== "/") {
+      console.log(`🚫 Invalid route detected: ${locale}${pathAfterLocale}`);
+      // Rewrite to locale-specific not-found
+      return NextResponse.rewrite(
+        new URL(`/${locale}/not-found-internal`, request.url)
+      );
+    }
+  }
+
+  // Apply internationalization middleware for valid paths only
   return intlMiddleware(request);
 }
 
 export const config = {
-  // Match only internationalized pathnames
+  // Match all paths except static files and API routes
   matcher: [
     // Enable a redirect to a matching locale at the root
     "/",
 
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    "/(nl|en)/:path*",
-
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    "/((?!_next|_vercel|api|.*\\..*).*))",
+    // Match all paths that could be locale-like (including invalid ones like /nlxxx)
+    "/((?!_next|_vercel|api|favicon|.*\\..*).*)",
   ],
 };

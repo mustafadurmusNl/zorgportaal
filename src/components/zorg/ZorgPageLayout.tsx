@@ -15,13 +15,16 @@ type CategoryType =
   | "burnout"
   | "somatiek"
   | "zelfbeeld"
-  | "persoonlijkheid";
+  | "persoonlijkheid"
+  | "client";
 
 interface ZorgPageLayoutProps {
   category: CategoryType;
   heroImage?: string;
   heroAltText?: string;
   children: ReactNode; // Content sections for the main area
+  hideTestimonials?: boolean;
+  hideTreatmentMethods?: boolean;
 }
 
 const ZorgPageLayout = ({
@@ -29,12 +32,19 @@ const ZorgPageLayout = ({
   heroImage,
   heroAltText,
   children,
+  hideTestimonials = false,
+  hideTreatmentMethods = false,
 }: ZorgPageLayoutProps) => {
+  // For client pages, we want to hide treatment methods and testimonials
+  const isClientPage = category === "client";
+  const shouldShowTestimonials = !hideTestimonials && !isClientPage;
+  const shouldShowTreatmentMethods = !hideTreatmentMethods && !isClientPage;
+
   return (
     <>
       {/* Hero section with dynamic image */}
       <ZorgHero
-        category={category}
+        category={isClientPage ? "anxiety" : category} // Fallback for client pages
         imageUrl={heroImage}
         altText={heroAltText}
       />
@@ -50,8 +60,10 @@ const ZorgPageLayout = ({
             <div className="space-y-32">
               {children}
 
-              {/* Testimonial section */}
-              <ZorgTestimonial category={category} />
+              {/* Testimonial section - only for care pages */}
+              {shouldShowTestimonials && (
+                <ZorgTestimonial category={category as any} />
+              )}
             </div>
           </div>
 
@@ -62,10 +74,12 @@ const ZorgPageLayout = ({
         </div>
       </div>
 
-      {/* Treatment methods - full width section */}
-      <div style={{ marginTop: "80px", marginBottom: "80px" }}>
-        <ZorgTreatmentMethods category={category} />
-      </div>
+      {/* Treatment methods - only for care pages */}
+      {shouldShowTreatmentMethods && (
+        <div style={{ marginTop: "80px", marginBottom: "80px" }}>
+          <ZorgTreatmentMethods category={category as any} />
+        </div>
+      )}
     </>
   );
 };

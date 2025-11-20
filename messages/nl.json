@@ -16,6 +16,8 @@
     "somatiek": "Somatiek & Psyche",
     "zelfbeeld": "Zelfbeeldproblematiek",
     "persoonlijkheid": "Persoonlijkheidsproblematiek",
+    "voor_wie": "Voor wie",
+    "intake_behandelplan": "Intake & Behandelplan",
     "wachttijden": "Wachttijden",
     "vergoeding": "Vergoeding",
     "locaties": "Locaties",
@@ -125,6 +127,13 @@
       "terms": "Algemene voorwaarden",
       "complaints": "Klachtenregeling",
       "contact": "Contact"
+    },
+    "contact_banner": {
+      "title": "Behandeling aanmelden of doorverwijzen?",
+      "description": "Verwijzen kan via ZorgDomein, via de telefoon of per e-mail.",
+      "email": "info@groeipunt.nl",
+      "phone": "010 - 450 40 71",
+      "hours": "ma t/m vr van 8.30 - 16.30 uur"
     },
     "copyright": "© {year} Groeipunt. Alle rechten voorbehouden.",
     "partOf": "Onderdeel van"
@@ -472,6 +481,250 @@
         "quote": "Langdurige therapie hielp mij oude patronen te begrijpen en veranderen. Ik ga nu beter om met emoties en relaties.",
         "source": "Cliëntrecensie"
       }
+    }
+  },
+  "clienten": {
+    "voor-wie": {
+      "title": "Voor wie zijn wij er",
+      "subtitle": "Onze zorg is er voor iedereen die professionele psychologische hulp nodig heeft.",
+      "who_we_help": {
+        "title": "Voor wie zijn wij er",
+        "content": "Onze praktijk biedt gespecialiseerde zorg voor volwassenen met verschillende psychische klachten. We staan klaar voor iedereen die hulp zoekt."
+      },
+      "adults": {
+        "title": "Volwassenen (18+)",
+        "description": "Professionele behandeling voor alle volwassenen met psychische klachten zoals angst, depressie, trauma en meer."
+      },
+      "first_time": {
+        "title": "Eerste keer hulp zoeken",
+        "description": "Ook als dit de eerste keer is dat je psychologische hulp zoekt, begeleiden we je graag door het proces."
+      },
+      "returning": {
+        "title": "Terugkerende klachten",
+        "description": "Heb je eerder hulp gehad en ervaar je opnieuw klachten? We helpen je verder waar je gebleven was."
+      },
+      "urgent": {
+        "title": "Urgente situaties",
+        "description": "Bij acute problematiek zorgen we voor snelle intake en passende ondersteuning."
+      },
+      "when_to_seek_help": {
+        "title": "Wanneer hulp zoeken",
+        "content": "Weet je niet zeker of professionele hulp nodig is? Deze signalen kunnen aangeven dat het tijd is om contact op te nemen.",
+        "symptom_1": "Je ervaart langdurig psychische klachten die je dagelijks functioneren beïnvloeden",
+        "symptom_2": "Je hebt moeite om je gevoelens en gedachten te reguleren",
+        "symptom_3": "Je sociale relaties of werk worden negatief beïnvloed door je klachten",
+        "symptom_4": "Je merkt dat zelfhulp en ondersteuning van naasten niet meer voldoende zijn"
+      },
+      "contact": {
+        "title": "Twijfel je of hulp nodig hebt?",
+        "description": "Neem gerust contact op voor een vrijblijvend gesprek over je situatie.",
+        "button": "Contact opnemen"
+      }
+    },
+    "intake-behandelplan": {
+      "title": "Intake & Behandelplan",
+      "subtitle": "Een zorgvuldige start van je behandeling met persoonlijke aandacht en professionele begeleiding.",
+      "process": {
+        "title": "Ons proces",
+        "content": "We volgen een gestructureerde aanpak om ervoor te zorgen dat je de beste zorg krijgt die aansluit bij jouw specifieke behoeften.",
+        "step1": {
+          "title": "Eerste contact",
+          "description": "Via telefoon of online maken we een afspraak en bespreken we je hulpvraag globaal."
+        },
+        "step2": {
+          "title": "Intake gesprek",
+          "description": "Uitgebreid gesprek waarin we je klachten, achtergrond en doelen in kaart brengen."
+        },
+        "step3": {
+          "title": "Behandelplan",
+          "description": "Samen stellen we een persoonlijk behandelplan op dat aansluit bij jouw behoeften."
+        },
+        "step4": {
+          "title": "Start behandeling",
+          "description": "We beginnen de behandeling volgens het afgesproken plan met regelmatige evaluaties."
+        }
+      },
+      "what_to_expect": {
+        "title": "Wat kun je verwachten",
+        "content": "We zorgen ervoor dat je goed voorbereid bent en weet wat je kunt verwachten tijdens het hele proces.",
+        "intake": {
+          "title": "Tijdens de intake",
+          "description": "Een veilige omgeving waarin je je verhaal kunt vertellen en al je vragen kunt stellen."
+        },
+        "plan": {
+          "title": "Je behandelplan",
+          "description": "Een op maat gemaakt plan met duidelijke doelen en een passende behandelmethode."
+        }
+      },
+      "preparation": {
+        "title": "Voorbereiding op je intake",
+        "content": "Een goede voorbereiding helpt je om het meeste uit je intake gesprek te halen en zorgt voor een efficiënt begin van je behandeltraject.",
+        "tips_title": "Tips voor je eerste afspraak:",
+        "tip1": "Denk na over wat je wilt bereiken met de behandeling",
+        "tip2": "Maak eventueel aantekeningen van je klachten en wanneer ze ontstonden",
+        "tip3": "Neem een lijst mee van medicatie die je gebruikt",
+        "tip4": "Bereid vragen voor die je graag wilt stellen"
+      }
+    },
+    "wachttijden": {
+      "title": "Actuele wachttijden",
+      "subtitle": "Transparante informatie over onze huidige wachttijden voor verschillende behandelingen.",
+      "current_times": {
+        "title": "Huidige wachttijden",
+        "intake": {
+          "title": "Intake gesprek",
+          "time": "1-2 weken",
+          "description": "Voor een eerste gesprek"
+        },
+        "treatment": {
+          "title": "Start behandeling",
+          "time": "2-4 weken",
+          "description": "Na goedkeuring behandelplan"
+        },
+        "urgent": {
+          "title": "Spoedeisende hulp",
+          "time": "Binnen 48 uur",
+          "description": "Bij acute problematiek"
+        }
+      },
+      "note": {
+        "title": "Let op",
+        "description": "Wachttijden kunnen variëren per therapeut en type behandeling. We houden je altijd op de hoogte."
+      },
+      "factors": {
+        "title": "Wat beïnvloedt wachttijden",
+        "factor1": "Type behandeling en specialisatie van de therapeut",
+        "factor2": "Urgentie van je hulpvraag",
+        "factor3": "Beschikbaarheid van gecontracteerde therapeuten",
+        "factor4": "Seizoensgebonden drukte (vaak drukker na vakanties)"
+      },
+      "while_waiting": {
+        "title": "Tijdens het wachten",
+        "description": "Terwijl je wacht op je behandeling, kun je alvast enkele stappen ondernemen:",
+        "tip1": "Houd een dagboek bij van je klachten en triggers",
+        "tip2": "Blijf contact houden met je huisarts",
+        "tip3": "Zoek tijdelijke ondersteuning bij familie of vrienden",
+        "tip4": "Informeer naar zelfhulpgroepen in je omgeving"
+      },
+      "urgent_contact": {
+        "title": "Acute hulp nodig?",
+        "description": "Bij ernstige klachten of crisissituaties kun je direct contact opnemen voor spoedintake.",
+        "button": "Direct contact"
+      },
+      "registration_cta": {
+        "badge": "Neem contact op",
+        "title": "Aanmelden of doorverwijzen?",
+        "description": "Wil je weten hoe je jezelf kunt aanmelden of een cliënt kunt doorverwijzen naar Forta Volwassenen? Bekijk dan onze aanmeldinformatie.",
+        "button": "Aanmeldinformatie"
+      }
+    },
+    "vergoeding": {
+      "title": "Vergoeding & kosten",
+      "subtitle": "Duidelijke informatie over de kosten van behandeling en wat er vergoed wordt door je verzekering.",
+      "basic_insurance": {
+        "title": "Basisverzekering",
+        "covered": {
+          "title": "Behandeling volledig vergoed",
+          "description": "Psychologische behandeling valt onder de basisverzekering en wordt volledig vergoed na je eigen risico."
+        },
+        "sessions": {
+          "title": "Aantal sessies",
+          "description": "De basisverzekering vergoedt alle noodzakelijke behandelsessies zonder maximum aantal."
+        },
+        "referral": {
+          "title": "Verwijzing vereist",
+          "description": "Je hebt een verwijzing van je huisarts nodig om in aanmerking te komen voor vergoeding."
+        }
+      },
+      "deductible": {
+        "title": "Eigen risico",
+        "amount": {
+          "title": "€385 per jaar (2024)",
+          "description": "Je betaalt eerst je eigen risico. Daarna vergoedt je verzekering 100% van de kosten."
+        }
+      },
+      "additional_insurance": {
+        "title": "Aanvullende verzekering",
+        "description": "Sommige verzekeraars bieden extra vergoeding voor psychologische hulp via aanvullende verzekeringen.",
+        "psychology": {
+          "title": "Psycholoog aanvullend",
+          "description": "Extra vergoeding voor behandeling bij psychologen zonder verwijzing."
+        },
+        "alternative": {
+          "title": "Alternatieve therapieën",
+          "description": "Vergoeding voor aanvullende behandelvormen zoals EMDR of mindfulness."
+        }
+      },
+      "payment_process": {
+        "title": "Hoe werkt de betaling",
+        "step1": {
+          "title": "Direct declareren",
+          "description": "Wij declareren rechtstreeks bij je zorgverzekeraar. Je hoeft zelf niets te regelen."
+        },
+        "step2": {
+          "title": "Eigen risico",
+          "description": "Je betaalt alleen je eigen risico, de rest nemen wij direct af met je verzekeraar."
+        },
+        "step3": {
+          "title": "Transparante kosten",
+          "description": "Je ontvangt altijd vooraf duidelijke informatie over alle kosten en vergoedingen."
+        }
+      },
+      "contact": {
+        "title": "Vragen over vergoeding?",
+        "description": "We helpen je graag met vragen over verzekering en kosten. Neem gerust contact op.",
+        "button": "Contact over vergoeding"
+      }
+    }
+  },
+  "shared": {
+    "treatment-methods": {
+      "title": "Behandelvormen",
+      "individual": {
+        "title": "Individuele therapie",
+        "description": "Persoonlijke begeleiding op maat"
+      },
+      "group": {
+        "title": "Groepstherapie",
+        "description": "Samen werken aan herstel"
+      },
+      "online": {
+        "title": "Online behandeling",
+        "description": "Flexibele hulp op afstand"
+      }
+    },
+    "contact": {
+      "title": "Klaar om te beginnen?",
+      "description": "Neem contact op voor een intake of stel je vraag direct.",
+      "phone_button": "Bel ons",
+      "form_button": "Contactformulier"
+    }
+  },
+  "notFound": {
+    "title": "Oops, deze pagina is niet gevonden",
+    "subtitle": "Waar ben je naar op zoek?",
+    "suggestions": {
+      "zorg": {
+        "text": "Passende GGZ-zorg? Bekijk ons",
+        "link": "zorgaanbod"
+      },
+      "wachttijden": {
+        "text": "Actuele wachttijden? Je vindt ze op de",
+        "link": "wachttijdenpagina"
+      },
+      "locaties": {
+        "text": "Locatiegegevens? Bekijk onze",
+        "link": "locaties"
+      }
+    },
+    "contact": {
+      "text": "Kom je er niet uit? Neem gerust",
+      "link": "contact",
+      "suffix": " met ons op!"
+    },
+    "buttons": {
+      "goBack": "Ga terug",
+      "goHome": "Naar homepage"
     }
   }
 }

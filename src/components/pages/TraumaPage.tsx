@@ -1,6 +1,6 @@
 // src/components/pages/TraumaPage.tsx
-import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
-import { WhatIsTrauma, TraumaTypes } from "@/components/zorgaanbod/trauma";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
+import { WhatIsTrauma, TraumaTypes } from "@/components/services/trauma";
 
 interface TraumaPageProps {
   heroImage: string;

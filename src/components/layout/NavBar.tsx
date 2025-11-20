@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { navigationLinks, languageOptions } from "@/constants";
-import zorgCategories from "@/components/zorg/zorgCategories";
+import zorgCategories from "@/components/care/zorgCategories";
 import { Button } from "@/components/ui";
 
 const NavBar = () => {

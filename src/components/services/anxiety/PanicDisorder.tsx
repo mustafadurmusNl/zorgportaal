@@ -1,6 +1,6 @@
 "use client";
 
-import { ZorgSimpleContentSection } from "@/components/zorg";
+import { ZorgSimpleContentSection } from "@/components/care";
 
 const PanicDisorder = () => {
   return (

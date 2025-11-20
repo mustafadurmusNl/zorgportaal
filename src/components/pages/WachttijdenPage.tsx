@@ -2,7 +2,7 @@
 
 // src/components/pages/WachttijdenPage.tsx
 import { useTranslations } from "next-intl";
-import { ClientPageLayout } from "@/components/zorg";
+import { ClientPageLayout } from "@/components/care";
 
 function WachttijdenPage() {
   const t = useTranslations("clienten.wachttijden");

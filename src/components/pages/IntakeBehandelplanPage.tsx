@@ -2,7 +2,7 @@
 
 // src/components/pages/IntakeBehandelplanPage.tsx
 import { useTranslations } from "next-intl";
-import { ClientPageLayout } from "@/components/zorg";
+import { ClientPageLayout } from "@/components/care";
 
 function IntakeBehandelplanPage() {
   const t = useTranslations("clienten.intake-behandelplan");

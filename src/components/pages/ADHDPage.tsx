@@ -4,8 +4,8 @@ import {
   ZorgContentSection,
   ZorgTreatmentMethods,
   ZorgTestimonial,
-} from "@/components/zorg";
-import { WhatIsADHD, ADHDTypes } from "@/components/zorgaanbod/adhd";
+} from "@/components/care";
+import { WhatIsADHD, ADHDTypes } from "@/components/services/adhd";
 
 interface ADHDPageProps {
   heroImage: string;

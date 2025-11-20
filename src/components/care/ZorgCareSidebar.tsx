@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { zorgCategories } from "@/components/zorg/zorgCategories";
+import { zorgCategories } from "@/components/care/zorgCategories";
 
 const ZorgCareSidebar = () => {
   const t = useTranslations("navigation");

@@ -5,7 +5,7 @@ import {
   NavLinkType,
   LanguageOption,
 } from "@/types";
-import { zorgCategories } from "@/components/zorg/zorgCategories";
+import { zorgCategories } from "@/components/care/zorgCategories";
 
 // Navigation Links
 export const navigationLinks: NavLinkType[] = [

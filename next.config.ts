@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
-      // Dutch locale: Dutch URLs → English folders 
+      // Dutch locale: Dutch URLs → English folders
       {
         source: "/nl/over-ons/:path*",
         destination: "/nl/about/:path*",

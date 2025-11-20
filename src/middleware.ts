@@ -48,6 +48,10 @@ export default function middleware(request: NextRequest) {
     "/clienten",
     "/clienten/voor-wie",
     "/clienten/wachttijden",
+    "/over-ons",
+    "/over-ons/locaties",
+    "/over-ons/team",
+    "/over-ons/kwaliteit",
   ];
 
   // Extract the path after locale

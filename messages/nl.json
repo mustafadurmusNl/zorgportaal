@@ -726,5 +726,63 @@
       "goBack": "Ga terug",
       "goHome": "Naar homepage"
     }
+  },
+  "over-ons": {
+    "title": "Over ons",
+    "description": "Leer meer over Groeipunt, onze locaties, team en kwaliteitsstandaarden.",
+    "locaties": {
+      "title": "Onze locaties",
+      "description": "Groeipunt Volwassenen is op verschillende plekken in Nederland gevestigd. Hieronder vind je per locatie het adres, de contactgegevens en de actuele wachttijden."
+    },
+    "team": {
+      "title": "Ons team",
+      "description": "Ontmoet onze toegewijde professionals die zich inzetten voor uw mentale welzijn. Ons multidisciplinaire team bestaat uit ervaren specialisten die samenwerken om de beste zorg te bieden."
+    },
+    "kwaliteit": {
+      "title": "Kwaliteit",
+      "description": "Leer meer over onze kwaliteitsstandaarden, certificeringen en continue verbeteringen.",
+      "intro": "Alle zorg die wij binnen onze zorgprogramma's bieden worden door jouw zorgverzekeraar vergoed. Wij hebben een verwijsbrief van je (huis-)arts nodig plus je verzekeringsgegevens, BSN (burgerservicenummer) en een geldig identiteitsbewijs.",
+      "satisfaction": {
+        "title": "Tevredenheid",
+        "table_title": "Cliënttevredenheid 2024",
+        "categories": {
+          "rapportcijfer": "Rapportcijfer",
+          "bejegening": "Bejegening", 
+          "informatie": "Informatie behandeling",
+          "samen_beslissen": "Samen beslissen",
+          "uitvoering": "Uitvoering behandeling"
+        },
+        "max_score": "maximale score"
+      },
+      "keurmerk": {
+        "title": "Keurmerk Basis GGZ",
+        "description": "Bij Groeipunt streven we naar kwalitatief hoogstaande zorg en zijn we trots keurmerkdrager in de Basis GGZ sinds 2016. Dit is het kenmerk voor kwaliteit in de Basis GGZ. We laten als zorgaanbieder hiermee zien dat we boven het wettelijk vereiste ons inzetten als het gaat om cliëntgerichtheid, transparantie en implementatie van innovaties. Het evalueren van onze dienstverlening, het blijven verbeteren van behandelingen en de inzet voor landelijke ontwikkeling in de Basis GGZ zijn hier vast onderdeel van. We nemen actief deel aan bijeenkomsten rondom het Keurmerk Basis GGZ."
+      },
+      "hkz": {
+        "title": "HKZ",
+        "description": "Groeipunt is HKZ gecertificeerd. Het HKZ keurmerk laat zien dat de Groeipunt voldoet aan de kwaliteitseisen die worden gesteld door cliënten, de overheid, de GGZ sector en de zorgverzekeraars. Dit is vastgesteld door een onafhankelijke certificatie-instelling. Het keurmerk biedt een basisgarantie voor kwaliteit. Een gecertificeerde instelling heeft het werk zodanig georganiseerd dat aan alle voorwaarden is voldaan om optimale zorg te leveren. Het perspectief van de cliënt is daarbij altijd het uitgangspunt.",
+        "subtitle": "Het HKZ Keurmerk betekent dat een organisatie:",
+        "benefits": [
+          "De klant centraal stelt",
+          "De zaken intern goed op orde heeft",
+          "Betrouwbare resultaten presenteert", 
+          "Voortdurend werkt aan optimalisering van de zorg- en dienstverlening"
+        ]
+      },
+      "statuut": {
+        "title": "Kwaliteitsstatuut",
+        "description": "Groeipunt heeft een goedgekeurd Kwaliteitsstatuut GGZ. Om deze in te zien, klik hier."
+      },
+      "contact": {
+        "title": "Vragen over onze kwaliteitszorg?",
+        "description": "Neem contact op voor meer informatie over onze kwaliteitsstandaarden, certificeringen en verbeterprogramma's.",
+        "email": "E-mail ons",
+        "phone": "Bel ons"
+      }
+    },
+    "questions": {
+      "title": "Vragen?",
+      "description": "Voor aanmelden, meer informatie of hulp kunt u direct terecht bij Groeipunt Volwassenen via:"
+    }
   }
 }

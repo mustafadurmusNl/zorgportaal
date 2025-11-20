@@ -728,5 +728,63 @@
       "goBack": "Go back",
       "goHome": "Go to homepage"
     }
+  },
+  "over-ons": {
+    "title": "About Us",
+    "description": "Learn more about Groeipunt, our locations, team and quality standards.",
+    "locaties": {
+      "title": "Our Locations",
+      "description": "Groeipunt Adults is located in various places in the Netherlands. Below you will find the address, contact details and current waiting times for each location."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Meet our dedicated professionals who are committed to your mental wellbeing. Our multidisciplinary team consists of experienced specialists who work together to provide the best care."
+    },
+    "kwaliteit": {
+      "title": "Quality",
+      "description": "Learn more about our quality standards, certifications and continuous improvements.",
+      "intro": "All care we provide within our care programs is reimbursed by your health insurer. We need a referral letter from your (family) doctor plus your insurance details, BSN (citizen service number) and a valid identity document.",
+      "satisfaction": {
+        "title": "Satisfaction",
+        "table_title": "Client Satisfaction 2024",
+        "categories": {
+          "rapportcijfer": "Overall Rating",
+          "bejegening": "Treatment",
+          "informatie": "Information Treatment", 
+          "samen_beslissen": "Shared Decision",
+          "uitvoering": "Treatment Execution"
+        },
+        "max_score": "maximum score"
+      },
+      "keurmerk": {
+        "title": "Basic Mental Health Quality Mark",
+        "description": "At Groeipunt we strive for high-quality care and we are proud to be a quality mark holder in Basic Mental Healthcare since 2016. This is the mark for quality in Basic Mental Healthcare. As a care provider, we show that we go beyond the legal requirements when it comes to client focus, transparency and implementation of innovations. Evaluating our services, continuously improving treatments and commitment to national development in Basic Mental Healthcare are an integral part of this. We actively participate in meetings around the Basic Mental Healthcare Quality Mark."
+      },
+      "hkz": {
+        "title": "HKZ",
+        "description": "Groeipunt is HKZ certified. The HKZ quality mark shows that Groeipunt meets the quality requirements set by clients, the government, the mental healthcare sector and health insurers. This has been established by an independent certification body. The quality mark provides a basic guarantee for quality. A certified institution has organized its work in such a way that all conditions are met to deliver optimal care. The client's perspective is always the starting point.",
+        "subtitle": "The HKZ Quality Mark means that an organization:",
+        "benefits": [
+          "Puts the client at the center",
+          "Has its internal affairs well organized",
+          "Presents reliable results",
+          "Continuously works on optimizing care and service delivery"
+        ]
+      },
+      "statuut": {
+        "title": "Quality Statute",
+        "description": "Groeipunt has an approved Mental Healthcare Quality Statute. To view it, click here."
+      },
+      "contact": {
+        "title": "Questions about our quality care?",
+        "description": "Contact us for more information about our quality standards, certifications and improvement programs.",
+        "email": "Email us",
+        "phone": "Call us"
+      }
+    },
+    "questions": {
+      "title": "Questions?",
+      "description": "For registration, more information or help, you can contact Groeipunt Adults directly via:"
+    }
   }
 }

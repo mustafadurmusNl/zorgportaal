@@ -1,10 +1,10 @@
 // src/components/pages/DepressionPage.tsx
-import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import {
   WhatIsDepression,
   MajorDepression,
   DepressionTypes,
-} from "@/components/zorgaanbod/depression";
+} from "@/components/services/depression";
 
 interface DepressionPageProps {
   heroImage: string;

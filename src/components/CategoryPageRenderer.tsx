@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import zorgCategories, {
   ZORG_CATEGORIES,
-} from "@/components/zorg/zorgCategories";
+} from "@/components/care/zorgCategories";
 
 // Static dynamic imports — keep imports explicit so Next.js can statically
 // analyze them. Avoid using a runtime-variable inside `import(...)`.

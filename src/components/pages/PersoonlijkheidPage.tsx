@@ -1,9 +1,9 @@
 // src/components/pages/PersoonlijkheidPage.tsx
-import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import {
   WhatIsPersoonlijkheid,
   PersoonlijkheidTypes,
-} from "@/components/zorgaanbod/personality";
+} from "@/components/services/personality";
 
 interface PersoonlijkheidPageProps {
   heroImage: string;

@@ -1,9 +1,9 @@
 export * from "./layout";
 export * from "./sections";
 export * from "./ui";
-export * from "./zorg";
-export * from "./zorgaanbod";
-export * from "./over-ons";
+export * from "./care";
+export * from "./services";
+export * from "./about";
 export * from "./pages";
 
 export { default as ClientPageRenderer } from "./ClientPageRenderer";

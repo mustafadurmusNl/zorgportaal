@@ -2,7 +2,7 @@
 
 // src/components/pages/VergoedingPage.tsx
 import { useTranslations } from "next-intl";
-import { ClientPageLayout } from "@/components/zorg";
+import { ClientPageLayout } from "@/components/care";
 
 function VergoedingPage() {
   const t = useTranslations("clienten.vergoeding");

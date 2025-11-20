@@ -1,10 +1,10 @@
 // src/components/pages/AnxietyPage.tsx
-import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import {
   WhatIsAnxiety,
   PanicDisorder,
   AnxietyDisorders,
-} from "@/components/zorgaanbod/anxiety";
+} from "@/components/services/anxiety";
 
 interface AnxietyPageProps {
   heroImage: string;

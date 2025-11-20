@@ -4,6 +4,37 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      // Dutch locale: Dutch URLs → English folders
+      {
+        source: "/nl/over-ons/:path*",
+        destination: "/nl/about/:path*",
+      },
+      {
+        source: "/nl/zorgaanbod/:path*",
+        destination: "/nl/services/:path*",
+      },
+      // English locale: Dutch URLs → English folders (for backward compatibility)
+      {
+        source: "/en/over-ons/:path*",
+        destination: "/en/about/:path*",
+      },
+      {
+        source: "/en/zorgaanbod/:path*",
+        destination: "/en/services/:path*",
+      },
+      // English locale: English URLs → English folders (clean URLs)
+      {
+        source: "/en/about/:path*",
+        destination: "/en/about/:path*",
+      },
+      {
+        source: "/en/services/:path*",
+        destination: "/en/services/:path*",
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

@@ -1,9 +1,9 @@
 // src/components/pages/ZelfbeeldPage.tsx
-import { ZorgPageLayout, ZorgContentSection } from "@/components/zorg";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import {
   WhatIsZelfbeeld,
   ZelfbeeldTypes,
-} from "@/components/zorgaanbod/self_image";
+} from "@/components/services/self_image";
 
 interface ZelfbeeldPageProps {
   heroImage: string;

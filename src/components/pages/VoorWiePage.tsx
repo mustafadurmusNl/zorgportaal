@@ -2,7 +2,7 @@
 
 // src/components/pages/VoorWiePage.tsx
 import { useTranslations } from "next-intl";
-import { ClientPageLayout } from "@/components/zorg";
+import { ClientPageLayout } from "@/components/care";
 import { WhoWeHelp, WhenToSeekHelp } from "@/components/clienten/voor-wie";
 import {
   ClientTreatmentMethods,

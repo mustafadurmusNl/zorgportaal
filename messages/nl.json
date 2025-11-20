@@ -747,7 +747,7 @@
         "table_title": "Cliënttevredenheid 2024",
         "categories": {
           "rapportcijfer": "Rapportcijfer",
-          "bejegening": "Bejegening", 
+          "bejegening": "Bejegening",
           "informatie": "Informatie behandeling",
           "samen_beslissen": "Samen beslissen",
           "uitvoering": "Uitvoering behandeling"
@@ -765,7 +765,7 @@
         "benefits": [
           "De klant centraal stelt",
           "De zaken intern goed op orde heeft",
-          "Betrouwbare resultaten presenteert", 
+          "Betrouwbare resultaten presenteert",
           "Voortdurend werkt aan optimalisering van de zorg- en dienstverlening"
         ]
       },
@@ -783,6 +783,45 @@
     "questions": {
       "title": "Vragen?",
       "description": "Voor aanmelden, meer informatie of hulp kunt u direct terecht bij Groeipunt Volwassenen via:"
+    }
+  },
+  "contact_page": {
+    "breadcrumb": "WE HELPEN JE GRAAG",
+    "title": "Neem contact op",
+    "office_hours": {
+      "description": "Wij zijn telefonisch bereikbaar tijdens kantooruren van maandag tot en met vrijdag, van 08:30 tot 16:30 uur via",
+      "phone": "010 - 450 40 71",
+      "or_email": "of via e-mail op"
+    },
+    "appointment": {
+      "title": "Verhinderd voor een afspraak?",
+      "description_1": "Dan vragen wij je om minimaal",
+      "hours_required": "48 uur",
+      "description_2": "van te voren telefonisch of per e-mail af te zeggen op",
+      "or_email": "of",
+      "email_requirements": "Vermeld in je e-mail altijd je naam, geboortedatum, telefoonnummer, datum afspraak en reden van afmelding. Zonder deze gegevens kunnen wij de afspraak niet annuleren.",
+      "careful_scheduling": "Wij vragen je zorgvuldig met afspraken om te gaan en deze alleen in uiterste gevallen af te zeggen. Omzetten naar beeldbellen is altijd mogelijk.",
+      "warning": {
+        "title": "Let op: Afspraak annuleren binnen 48 uur",
+        "description": "Wanneer de afspraak minder dan 48 uur van te voren wordt geannuleerd of verplaatst of je niet op de afspraak verschijnt, worden er kosten in rekening gebracht.",
+        "link": "Klik hier",
+        "info": "voor meer informatie over vergoedingen"
+      },
+      "emergency": "Voor spoedgevallen buiten kantoortijden kan je contact opnemen met je huisarts of de huisartsenpost."
+    },
+    "sidebar": {
+      "question_title": "Heb je een vraag?",
+      "contact_info": {
+        "title": "Contactinformatie",
+        "office_hours": "Wij zijn telefonisch bereikbaar tijdens kantooruren van maandag tot en met vrijdag, van 08:30 tot 16:30",
+        "lunch_break": "Vanwege de lunchpauze zijn we telefonisch beperkt bereikbaar tussen 12:30 - 13:30 uur.",
+        "emergency": "Voor spoedgevallen buiten kantoortijden kan je contact opnemen met je huisarts of de huisartsenpost."
+      },
+      "locations": {
+        "title": "Onze locaties",
+        "description": "Benieuwd waar Groeipunt gevestigd is? Bekijk het overzicht van al onze locaties, inclusief contactgegevens en wachttijden.",
+        "button": "Bekijk alle locaties"
+      }
     }
   }
 }

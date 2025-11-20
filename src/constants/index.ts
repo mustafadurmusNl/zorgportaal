@@ -20,11 +20,9 @@ export const navigationLinks: NavLinkType[] = [
     title: "Voor cliënten",
     href: "/",
     submenu: [
-      { id: "aanmelden", href: "/clienten/aanmelden" },
-      {
-        id: "wachttijden",
-        href: "/clienten/wachttijden",
-      },
+      { id: "voor_wie", href: "/clienten/voor-wie" },
+      { id: "intake_behandelplan", href: "/clienten/intake-behandelplan" },
+      { id: "wachttijden", href: "/clienten/wachttijden" },
       { id: "vergoeding", href: "/clienten/vergoeding" },
     ],
   },

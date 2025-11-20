@@ -6,3 +6,7 @@ export { default as ZorgTreatmentMethods } from "./ZorgTreatmentMethods";
 export { default as ZorgPageLayout } from "./ZorgPageLayout";
 export { default as ZorgContentSection } from "./ZorgContentSection";
 export { default as ZorgSimpleContentSection } from "./ZorgSimpleContentSection";
+export { default as ClientPageLayout } from "./ClientPageLayout";
+
+// Client-specific components (hybrid architecture)
+export * from "../clienten";

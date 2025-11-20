@@ -16,6 +16,8 @@
     "somatiek": "Psychosomatic & Psychology",
     "zelfbeeld": "Self-image Issues",
     "persoonlijkheid": "Personality Issues",
+    "voor_wie": "For Whom",
+    "intake_behandelplan": "Intake & Treatment Plan",
     "wachttijden": "Waiting Times",
     "vergoeding": "Reimbursement",
     "locaties": "Locations",
@@ -125,6 +127,13 @@
       "terms": "Terms and Conditions",
       "complaints": "Complaints Procedure",
       "contact": "Contact"
+    },
+    "contact_banner": {
+      "title": "Register treatment or refer?",
+      "description": "Referrals can be made via ZorgDomein, by phone or email.",
+      "email": "info@groeipunt.nl",
+      "phone": "010 - 450 40 71",
+      "hours": "Mon to Fri from 8:30 AM - 4:30 PM"
     },
     "copyright": "© {year} Groeipunt. All rights reserved.",
     "partOf": "Part of"
@@ -474,6 +483,250 @@
         "quote": "Long-term therapy helped me understand and change old patterns. I now handle relationships and emotions much better.",
         "source": "Patient review"
       }
+    }
+  },
+  "clienten": {
+    "voor-wie": {
+      "title": "Who we are here for",
+      "subtitle": "Our care is available for everyone who needs professional psychological help.",
+      "who_we_help": {
+        "title": "Who we help",
+        "content": "Our practice offers specialized care for adults with various mental health concerns. We are here for everyone seeking help."
+      },
+      "adults": {
+        "title": "Adults (18+)",
+        "description": "Professional treatment for all adults with mental health concerns such as anxiety, depression, trauma and more."
+      },
+      "first_time": {
+        "title": "First time seeking help",
+        "description": "Even if this is your first time seeking psychological help, we are happy to guide you through the process."
+      },
+      "returning": {
+        "title": "Recurring concerns",
+        "description": "Have you had help before and are experiencing concerns again? We will help you continue where you left off."
+      },
+      "urgent": {
+        "title": "Urgent situations",
+        "description": "For acute problems, we ensure quick intake and appropriate support."
+      },
+      "when_to_seek_help": {
+        "title": "When to seek help",
+        "content": "Not sure if professional help is needed? These signals may indicate it's time to reach out.",
+        "symptom_1": "You experience persistent mental health concerns that affect your daily functioning",
+        "symptom_2": "You have difficulty regulating your emotions and thoughts",
+        "symptom_3": "Your social relationships or work are negatively affected by your concerns",
+        "symptom_4": "You notice that self-help and support from loved ones are no longer sufficient"
+      },
+      "contact": {
+        "title": "Wondering if you need help?",
+        "description": "Feel free to contact us for a non-committal conversation about your situation.",
+        "button": "Contact us"
+      }
+    },
+    "intake-behandelplan": {
+      "title": "Intake & Treatment Plan",
+      "subtitle": "A careful start to your treatment with personal attention and professional guidance.",
+      "process": {
+        "title": "Our process",
+        "content": "We follow a structured approach to ensure you receive the best care that matches your specific needs.",
+        "step1": {
+          "title": "First contact",
+          "description": "By phone or online, we schedule an appointment and discuss your care request generally."
+        },
+        "step2": {
+          "title": "Intake interview",
+          "description": "Comprehensive conversation where we map out your concerns, background and goals."
+        },
+        "step3": {
+          "title": "Treatment plan",
+          "description": "Together we create a personal treatment plan that matches your needs."
+        },
+        "step4": {
+          "title": "Start treatment",
+          "description": "We begin treatment according to the agreed plan with regular evaluations."
+        }
+      },
+      "what_to_expect": {
+        "title": "What to expect",
+        "content": "We ensure you are well prepared and know what to expect throughout the entire process.",
+        "intake": {
+          "title": "During intake",
+          "description": "A safe environment where you can tell your story and ask all your questions."
+        },
+        "plan": {
+          "title": "Your treatment plan",
+          "description": "A customized plan with clear goals and an appropriate treatment method."
+        }
+      },
+      "preparation": {
+        "title": "Preparing for your intake",
+        "content": "Good preparation helps you get the most out of your intake interview and ensures an efficient start to your treatment journey.",
+        "tips_title": "Tips for your first appointment:",
+        "tip1": "Think about what you want to achieve with treatment",
+        "tip2": "Make notes about your concerns and when they started",
+        "tip3": "Bring a list of medications you are taking",
+        "tip4": "Prepare questions you would like to ask"
+      }
+    },
+    "wachttijden": {
+      "title": "Current Waiting Times",
+      "subtitle": "Transparent information about our current waiting times for different treatments.",
+      "current_times": {
+        "title": "Current waiting times",
+        "intake": {
+          "title": "Intake interview",
+          "time": "1-2 weeks",
+          "description": "For a first consultation"
+        },
+        "treatment": {
+          "title": "Start treatment",
+          "time": "2-4 weeks",
+          "description": "After treatment plan approval"
+        },
+        "urgent": {
+          "title": "Emergency care",
+          "time": "Within 48 hours",
+          "description": "For acute problems"
+        }
+      },
+      "note": {
+        "title": "Note",
+        "description": "Waiting times may vary per therapist and type of treatment. We always keep you informed."
+      },
+      "factors": {
+        "title": "What affects waiting times",
+        "factor1": "Type of treatment and therapist specialization",
+        "factor2": "Urgency of your care request",
+        "factor3": "Availability of contracted therapists",
+        "factor4": "Seasonal demand (often busier after holidays)"
+      },
+      "while_waiting": {
+        "title": "While waiting",
+        "description": "While waiting for your treatment, you can take some steps:",
+        "tip1": "Keep a diary of your concerns and triggers",
+        "tip2": "Stay in touch with your family doctor",
+        "tip3": "Seek temporary support from family or friends",
+        "tip4": "Look for self-help groups in your area"
+      },
+      "urgent_contact": {
+        "title": "Need urgent help?",
+        "description": "For serious concerns or crisis situations, you can contact us directly for emergency intake.",
+        "button": "Direct contact"
+      },
+      "registration_cta": {
+        "badge": "Contact us",
+        "title": "Register or refer?",
+        "description": "Want to know how to register yourself or refer a client to Forta Adults? Check out our registration information.",
+        "button": "Registration information"
+      }
+    },
+    "vergoeding": {
+      "title": "Reimbursement & costs",
+      "subtitle": "Clear information about treatment costs and what is reimbursed by your insurance.",
+      "basic_insurance": {
+        "title": "Basic insurance",
+        "covered": {
+          "title": "Treatment fully covered",
+          "description": "Psychological treatment is covered by basic insurance and is fully reimbursed after your deductible."
+        },
+        "sessions": {
+          "title": "Number of sessions",
+          "description": "Basic insurance covers all necessary treatment sessions without a maximum number."
+        },
+        "referral": {
+          "title": "Referral required",
+          "description": "You need a referral from your GP to qualify for reimbursement."
+        }
+      },
+      "deductible": {
+        "title": "Deductible",
+        "amount": {
+          "title": "€385 per year (2024)",
+          "description": "You first pay your deductible. After that, your insurance reimburses 100% of the costs."
+        }
+      },
+      "additional_insurance": {
+        "title": "Additional insurance",
+        "description": "Some insurers offer extra reimbursement for psychological help through additional insurance.",
+        "psychology": {
+          "title": "Additional psychology",
+          "description": "Extra reimbursement for treatment by psychologists without referral."
+        },
+        "alternative": {
+          "title": "Alternative therapies",
+          "description": "Reimbursement for additional treatment forms such as EMDR or mindfulness."
+        }
+      },
+      "payment_process": {
+        "title": "How payment works",
+        "step1": {
+          "title": "Direct billing",
+          "description": "We bill directly with your health insurer. You don't need to arrange anything yourself."
+        },
+        "step2": {
+          "title": "Deductible",
+          "description": "You only pay your deductible, we settle the rest directly with your insurer."
+        },
+        "step3": {
+          "title": "Transparent costs",
+          "description": "You always receive clear information about all costs and reimbursements in advance."
+        }
+      },
+      "contact": {
+        "title": "Questions about reimbursement?",
+        "description": "We are happy to help you with questions about insurance and costs. Feel free to contact us.",
+        "button": "Contact about reimbursement"
+      }
+    }
+  },
+  "shared": {
+    "treatment-methods": {
+      "title": "Treatment Methods",
+      "individual": {
+        "title": "Individual therapy",
+        "description": "Personal guidance tailored to you"
+      },
+      "group": {
+        "title": "Group therapy",
+        "description": "Working together towards recovery"
+      },
+      "online": {
+        "title": "Online treatment",
+        "description": "Flexible help from a distance"
+      }
+    },
+    "contact": {
+      "title": "Ready to start?",
+      "description": "Contact us for an intake or ask your question directly.",
+      "phone_button": "Call us",
+      "form_button": "Contact form"
+    }
+  },
+  "notFound": {
+    "title": "Oops, this page was not found",
+    "subtitle": "What are you looking for?",
+    "suggestions": {
+      "zorg": {
+        "text": "Appropriate mental health care? Check our",
+        "link": "care programs"
+      },
+      "wachttijden": {
+        "text": "Current waiting times? You can find them on the",
+        "link": "waiting times page"
+      },
+      "locaties": {
+        "text": "Location information? Check our",
+        "link": "locations"
+      }
+    },
+    "contact": {
+      "text": "Can't figure it out? Feel free to",
+      "link": "contact",
+      "suffix": " us!"
+    },
+    "buttons": {
+      "goBack": "Go back",
+      "goHome": "Go to homepage"
     }
   }
 }

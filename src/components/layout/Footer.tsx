@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { contactInfo } from "@/constants";
+import { ContactBanner } from "./ContactBanner";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,6 +16,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      {/* Contact Banner - en üst kısım */}
+      <ContactBanner />
+
       <div className="footer-content">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">

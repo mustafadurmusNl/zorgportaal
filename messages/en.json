@@ -177,6 +177,7 @@
       },
       "types": {
         "title": "Different forms of depression",
+        "content": "Depression can manifest in various ways and symptoms may vary in intensity and duration. Recognizing the type of depression is important for appropriate treatment.",
         "major_depression": {
           "title": "Major depressive disorder",
           "description": "The most common form of depression, characterized by depressed mood or loss of interest in activities for at least two weeks."
@@ -297,6 +298,7 @@
       "types": {
         "title": "Presentations of ADHD",
         "subtitle": "ADHD has different presentations that affect daily life.",
+        "content": "ADHD presents differently across individuals and symptoms can vary from person to person. Recognizing the type of ADHD is important for effective treatment.",
         "inattentive": {
           "title": "Predominantly inattentive",
           "description": "Difficulty sustaining attention, easily distracted, trouble completing tasks."
@@ -828,195 +830,6 @@
         "title": "Our locations",
         "description": "Curious where Groeipunt is located? View the overview of all our locations, including contact details and waiting times.",
         "button": "View all locations"
-      }
-    }
-  },
-  "clienten": {
-    "voor_wie": {
-      "title": "Who We Are Here For",
-      "subtitle": "Our care is available for everyone who needs professional psychological help.",
-      "sections": {
-        "age_groups": {
-          "title": "For which age groups",
-          "groups": [
-            {
-              "icon": "👨‍💼",
-              "title": "Adults (18+)",
-              "description": "We provide specialized care for all adults aged 18 and over with various mental health complaints.",
-              "features": [
-                "Individual and group treatment",
-                "Experienced therapists",
-                "Evidence-based methods"
-              ]
-            },
-            {
-              "icon": "👥",
-              "title": "First-time treatment",
-              "description": "Even if this is the first time you're seeking psychological help, we're happy to guide you through the process.",
-              "features": [
-                "Low-threshold help",
-                "Clear explanation of the process",
-                "Personal guidance"
-              ]
-            }
-          ]
-        },
-        "common_issues": {
-          "title": "Common complaints",
-          "description": "We treat a wide range of mental health complaints in adults.",
-          "categories": [
-            {
-              "title": "Anxiety and mood disorders",
-              "issues": [
-                "Anxiety disorders",
-                "Depression",
-                "Panic attacks",
-                "Phobias"
-              ]
-            },
-            {
-              "title": "Trauma and stress",
-              "issues": [
-                "PTSD",
-                "Acute stress",
-                "Complex trauma",
-                "Grief processing"
-              ]
-            }
-          ]
-        },
-        "treatment_approaches": {
-          "title": "Our treatment approach",
-          "effective_for": "Effective for",
-          "approaches": [
-            {
-              "title": "Cognitive Behavioral Therapy (CBT)",
-              "description": "Proven effective method where we look together at thoughts, feelings and behavior.",
-              "effective_for": ["Anxiety", "Depression", "PTSD"]
-            },
-            {
-              "title": "EMDR",
-              "description": "Specialized trauma therapy for processing traumatic memories.",
-              "effective_for": ["Trauma", "PTSD", "Phobias"]
-            }
-          ]
-        },
-        "when_to_seek_help": {
-          "title": "When to seek help?",
-          "subtitle": "These signs may indicate it's time for professional help",
-          "signs": [
-            "You experience long-term mental health complaints that affect your daily functioning",
-            "You have difficulty regulating your emotions and thoughts",
-            "Your social relationships or work are negatively affected by your complaints",
-            "Self-help and support from loved ones are no longer sufficient"
-          ]
-        },
-        "what_we_dont_treat": {
-          "title": "What we don't treat",
-          "description": "For certain complaints, we refer to specialized institutions.",
-          "conditions": [
-            "Acute suicidality",
-            "Psychoses",
-            "Severe addiction problems",
-            "Personality disorders requiring intensive treatment"
-          ],
-          "alternative": {
-            "title": "Alternative",
-            "description": "We're happy to help you find the right care elsewhere."
-          }
-        },
-        "getting_started": {
-          "title": "How to get started",
-          "description": "Starting treatment is simple. Contact us and we'll discuss the possibilities.",
-          "contact": {
-            "title": "Contact",
-            "phone": "Phone",
-            "phone_number": "010 - 450 40 71",
-            "email": "Email",
-            "email_address": "info@groeipunt.nl"
-          },
-          "hours": {
-            "title": "Opening hours",
-            "weekdays": "Mon - Fri: 08:30 - 16:30",
-            "weekend": "Weekend: Closed"
-          }
-        }
-      }
-    },
-    "intake_behandelplan": {
-      "title": "Intake & Treatment Plan",
-      "subtitle": "A careful start to your treatment with personal attention and professional guidance.",
-      "sections": {
-        "what_is_intake": {
-          "title": "What is an intake?",
-          "description": "An intake is a comprehensive conversation where we explore your request for help together and see which treatment suits you best.",
-          "goals": {
-            "title": "Goals of the intake",
-            "list": [
-              "Map out your request for help and goals",
-              "Discuss your background and history",
-              "Create a suitable treatment plan",
-              "Align expectations"
-            ]
-          }
-        },
-        "intake_process": {
-          "title": "The intake process",
-          "duration": "Duration",
-          "location": "Location",
-          "steps": [
-            {
-              "title": "First contact",
-              "description": "By phone or online we make an appointment and globally discuss your request for help.",
-              "duration": "15-30 minutes",
-              "location": "By phone"
-            },
-            {
-              "title": "Intake conversation",
-              "description": "Comprehensive conversation where we map out your complaints, background and goals.",
-              "duration": "60-90 minutes",
-              "location": "On location or online"
-            }
-          ]
-        }
-      }
-    },
-    "wachttijden": {
-      "title": "Current waiting times",
-      "subtitle": "Transparent information about our current waiting times for various treatments.",
-      "sections": {
-        "current_times": {
-          "title": "Current waiting times",
-          "last_updated": "Last updated",
-          "note": {
-            "title": "Note",
-            "description": "Waiting times may vary per therapist and type of treatment."
-          },
-          "services": [
-            {
-              "name": "Intake conversation",
-              "waiting_time": "1-2 weeks",
-              "description": "For a first conversation",
-              "status": "short",
-              "last_updated": "This week"
-            }
-          ]
-        }
-      }
-    },
-    "vergoeding": {
-      "title": "Reimbursement & costs",
-      "subtitle": "Clear information about treatment costs and what is reimbursed by your insurance.",
-      "sections": {
-        "basic_insurance": {
-          "title": "Basic insurance",
-          "description": "Psychological treatment is covered under basic insurance and is fully reimbursed after your deductible.",
-          "covered_treatments": [
-            "Individual therapy",
-            "Group therapy",
-            "Online treatment"
-          ]
-        }
       }
     }
   }

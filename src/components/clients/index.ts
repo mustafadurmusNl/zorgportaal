@@ -1,7 +1,7 @@
-// src/components/clienten/index.ts
+// src/components/clients/index.ts
 // Shared components - generic across all client pages
 export * from "./shared";
 
 // Page-specific components
-export * from "./voor-wie";
-export * from "./wachttijden";
+export * from "./for-whom";
+export * from "./waiting-times";

@@ -1,4 +1,9 @@
 {
+  "global": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "success": "Gelukt"
+  },
   "site": {
     "title": "Zorgportaal - Diagnostiek en behandeling van psychische klachten",
     "description": "Vanuit servicegerichte praktijken bieden enthousiaste psychologen, vaktherapeuten en psychiaters behandeling voor volwassenen."
@@ -484,6 +489,193 @@
     }
   },
   "clienten": {
+    "voor_wie": {
+      "title": "Voor wie zijn wij er",
+      "subtitle": "Onze zorg is er voor iedereen die professionele psychologische hulp nodig heeft.",
+      "sections": {
+        "age_groups": {
+          "title": "Voor welke leeftijdsgroepen",
+          "groups": [
+            {
+              "icon": "👨‍💼",
+              "title": "Volwassenen (18+)",
+              "description": "Wij bieden specialistische zorg voor alle volwassenen vanaf 18 jaar met verschillende psychische klachten.",
+              "features": [
+                "Individuele en groepsbehandeling",
+                "Ervaren therapeuten",
+                "Wetenschappelijk onderbouwde methoden"
+              ]
+            },
+            {
+              "icon": "👥",
+              "title": "Eerstelijnsbehandeling",
+              "description": "Ook als dit de eerste keer is dat je psychologische hulp zoekt, begeleiden we je graag door het proces.",
+              "features": [
+                "Laagdrempelige hulp",
+                "Duidelijke uitleg over het proces",
+                "Persoonlijke begeleiding"
+              ]
+            }
+          ]
+        },
+        "common_issues": {
+          "title": "Veel voorkomende klachten",
+          "description": "Wij behandelen een breed scala aan psychische klachten bij volwassenen.",
+          "categories": [
+            {
+              "title": "Angst en stemmingsstoornissen",
+              "issues": [
+                "Angststoornissen",
+                "Depressie",
+                "Paniekaanvallen",
+                "Fobieën"
+              ]
+            },
+            {
+              "title": "Trauma en stress",
+              "issues": [
+                "PTSS",
+                "Acute stress",
+                "Complex trauma",
+                "Rouwverwerking"
+              ]
+            }
+          ]
+        },
+        "treatment_approaches": {
+          "title": "Onze behandelapproach",
+          "effective_for": "Effectief voor",
+          "approaches": [
+            {
+              "title": "Cognitieve gedragstherapie (CGT)",
+              "description": "Bewezen effectieve methode waarbij we samen kijken naar gedachten, gevoelens en gedrag.",
+              "effective_for": ["Angst", "Depressie", "PTSS"]
+            },
+            {
+              "title": "EMDR",
+              "description": "Gespecialiseerde traumatherapie voor de verwerking van traumatische herinneringen.",
+              "effective_for": ["Trauma", "PTSS", "Fobieën"]
+            }
+          ]
+        },
+        "when_to_seek_help": {
+          "title": "Wanneer hulp zoeken?",
+          "subtitle": "Deze signalen kunnen aangeven dat het tijd is voor professionele hulp",
+          "signs": [
+            "Je ervaart langdurig psychische klachten die je dagelijks functioneren beïnvloeden",
+            "Je hebt moeite om je gevoelens en gedachten te reguleren",
+            "Je sociale relaties of werk worden negatief beïnvloed door je klachten",
+            "Zelfhulp en ondersteuning van naasten zijn niet meer voldoende"
+          ]
+        },
+        "what_we_dont_treat": {
+          "title": "Wat behandelen wij niet",
+          "description": "Voor bepaalde klachten verwijzen wij door naar gespecialiseerde instellingen.",
+          "conditions": [
+            "Acute suïcidaliteit",
+            "Psychoses",
+            "Ernstige verslavingsproblematiek",
+            "Persoonlijkheidsstoornissen die intensieve behandeling vereisen"
+          ],
+          "alternative": {
+            "title": "Alternatief",
+            "description": "We helpen je graag bij het vinden van de juiste zorg elders."
+          }
+        },
+        "getting_started": {
+          "title": "Hoe te beginnen",
+          "description": "Een behandeling starten is eenvoudig. Neem contact op en we bespreken de mogelijkheden.",
+          "contact": {
+            "title": "Contact",
+            "phone": "Telefoon",
+            "phone_number": "010 - 450 40 71",
+            "email": "E-mail",
+            "email_address": "info@groeipunt.nl"
+          },
+          "hours": {
+            "title": "Openingstijden",
+            "weekdays": "Ma t/m vr: 08:30 - 16:30",
+            "weekend": "Weekend: Gesloten"
+          }
+        }
+      }
+    },
+    "intake_behandelplan": {
+      "title": "Intake & Behandelplan",
+      "subtitle": "Een zorgvuldige start van je behandeling met persoonlijke aandacht en professionele begeleiding.",
+      "sections": {
+        "what_is_intake": {
+          "title": "Wat is een intake?",
+          "description": "Een intake is een uitgebreid gesprek waarin we samen je hulpvraag verkennen en kijken welke behandeling het beste bij jou past.",
+          "goals": {
+            "title": "Doelen van de intake",
+            "list": [
+              "Je hulpvraag en doelen in kaart brengen",
+              "Je achtergrond en geschiedenis bespreken",
+              "Een passend behandelplan opstellen",
+              "Verwachtingen afstemmen"
+            ]
+          }
+        },
+        "intake_process": {
+          "title": "Het intakeproces",
+          "duration": "Duur",
+          "location": "Locatie",
+          "steps": [
+            {
+              "title": "Eerste contact",
+              "description": "Via telefoon of online maken we een afspraak en bespreken we je hulpvraag globaal.",
+              "duration": "15-30 minuten",
+              "location": "Telefonisch"
+            },
+            {
+              "title": "Intakegesprek",
+              "description": "Uitgebreid gesprek waarin we je klachten, achtergrond en doelen in kaart brengen.",
+              "duration": "60-90 minuten",
+              "location": "Op locatie of online"
+            }
+          ]
+        }
+      }
+    },
+    "wachttijden": {
+      "title": "Actuele wachttijden",
+      "subtitle": "Transparante informatie over onze huidige wachttijden voor verschillende behandelingen.",
+      "sections": {
+        "current_times": {
+          "title": "Huidige wachttijden",
+          "last_updated": "Laatst bijgewerkt",
+          "note": {
+            "title": "Let op",
+            "description": "Wachttijden kunnen variëren per therapeut en type behandeling."
+          },
+          "services": [
+            {
+              "name": "Intake gesprek",
+              "waiting_time": "1-2 weken",
+              "description": "Voor een eerste gesprek",
+              "status": "short",
+              "last_updated": "Deze week"
+            }
+          ]
+        }
+      }
+    },
+    "vergoeding": {
+      "title": "Vergoeding & kosten",
+      "subtitle": "Duidelijke informatie over de kosten van behandeling en wat er vergoed wordt door je verzekering.",
+      "sections": {
+        "basic_insurance": {
+          "title": "Basisverzekering",
+          "description": "Psychologische behandeling valt onder de basisverzekering en wordt volledig vergoed na je eigen risico.",
+          "covered_treatments": [
+            "Individuele therapie",
+            "Groepstherapie",
+            "Online behandeling"
+          ]
+        }
+      }
+    },
     "voor-wie": {
       "title": "Voor wie zijn wij er",
       "subtitle": "Onze zorg is er voor iedereen die professionele psychologische hulp nodig heeft.",

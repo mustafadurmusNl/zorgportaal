@@ -4,6 +4,7 @@ export * from "./ui";
 export * from "./care";
 export * from "./services";
 export * from "./about";
+export * from "./clients";
 export * from "./pages";
 
 export { default as ClientPageRenderer } from "./ClientPageRenderer";

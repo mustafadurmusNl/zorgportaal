@@ -9,4 +9,4 @@ export { default as ZorgSimpleContentSection } from "./ZorgSimpleContentSection"
 export { default as ClientPageLayout } from "./ClientPageLayout";
 
 // Client-specific components (hybrid architecture)
-export * from "../clienten";
+export * from "../clients";

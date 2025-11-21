@@ -1,7 +1,12 @@
 // src/components/AboutUsPageRenderer.tsx
 "use client";
 
-import { AboutUsSidebar, LocationsPage, TeamPage, KwaliteitPage } from "@/components";
+import {
+  AboutUsSidebar,
+  LocationsPage,
+  TeamPage,
+  QualityPage,
+} from "@/components";
 
 interface AboutUsPageRendererProps {
   page: string;
@@ -15,7 +20,7 @@ export function AboutUsPageRenderer({ page }: AboutUsPageRendererProps) {
       case "team":
         return <TeamPage />;
       case "kwaliteit":
-        return <KwaliteitPage />;
+        return <QualityPage />;
       default:
         return (
           <div className="text-center py-12">

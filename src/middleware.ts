@@ -74,6 +74,8 @@ export default function middleware(request: NextRequest) {
     "/clienten",
     "/clienten/voor-wie",
     "/clienten/wachttijden",
+    "/clienten/vergoeding",
+    "/clienten/intake-behandelplan",
     "/contact",
   ];
 

@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import ZorgTreatmentMethods from "./ZorgTreatmentMethods";
-import { ClientSidebar } from "@/components/clienten/shared";
+import { ClientSidebar } from "@/components/clients/shared";
 
 interface ClientPageLayoutProps {
   title?: string;

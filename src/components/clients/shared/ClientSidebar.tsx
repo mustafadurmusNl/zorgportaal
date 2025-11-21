@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { RegistrationCTA } from "../wachttijden/RegistrationCTA";
+import { RegistrationCTA } from "../waiting-times/RegistrationCTA";
 
 const CLIENT_PAGES = [
   {

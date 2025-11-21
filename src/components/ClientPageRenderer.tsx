@@ -3,12 +3,12 @@ import dynamic from "next/dynamic";
 
 // Static dynamic imports for client pages
 const CLIENT_PAGE_COMPONENTS: Record<string, any> = {
-  "voor-wie": dynamic(() => import("@/components/pages/VoorWiePage")),
+  "voor-wie": dynamic(() => import("./pages/ForWhomPage")),
   "intake-behandelplan": dynamic(
-    () => import("@/components/pages/IntakeBehandelplanPage")
+    () => import("./pages/IntakeAndTreatmentPage")
   ),
-  wachttijden: dynamic(() => import("@/components/pages/WachttijdenPage")),
-  vergoeding: dynamic(() => import("@/components/pages/VergoedingPage")),
+  wachttijden: dynamic(() => import("./pages/WaitingTimesPage")),
+  vergoeding: dynamic(() => import("./pages/ReimbursementPage")),
 };
 
 interface ClientPageRendererProps {

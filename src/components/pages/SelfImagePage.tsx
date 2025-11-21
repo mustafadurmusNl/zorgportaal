@@ -1,26 +1,22 @@
-// src/components/pages/ZelfbeeldPage.tsx
+// src/components/pages/SelfImagePage.tsx
 import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import {
   WhatIsZelfbeeld,
   ZelfbeeldTypes,
 } from "@/components/services/self_image";
 
-interface ZelfbeeldPageProps {
+interface SelfImagePageProps {
   heroImage: string;
 }
 
-export default function ZelfbeeldPage({ heroImage }: ZelfbeeldPageProps) {
+export default function SelfImagePage({ heroImage }: SelfImagePageProps) {
   return (
-    <ZorgPageLayout
-      category="zelfbeeld"
-      heroImage={heroImage}
-      heroAltText="Zelfbeeld & Zelfwaardering"
-    >
-      <ZorgContentSection>
+    <ZorgPageLayout category="zelfbeeld" heroImage={heroImage}>
+      <ZorgContentSection id="what-is-zelfbeeld">
         <WhatIsZelfbeeld />
       </ZorgContentSection>
 
-      <ZorgContentSection>
+      <ZorgContentSection id="zelfbeeld-types">
         <ZelfbeeldTypes />
       </ZorgContentSection>
     </ZorgPageLayout>

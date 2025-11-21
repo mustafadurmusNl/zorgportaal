@@ -1,9 +1,9 @@
-// src/components/pages/KwaliteitPage.tsx
+// src/components/pages/QualityPage.tsx
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
 
-export function KwaliteitPage() {
+function QualityPage() {
   const t = useTranslations("over-ons.kwaliteit");
   const locale = useLocale();
 
@@ -200,3 +200,5 @@ export function KwaliteitPage() {
     </div>
   );
 }
+
+export default QualityPage;

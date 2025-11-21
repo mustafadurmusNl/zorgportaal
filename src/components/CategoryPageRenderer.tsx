@@ -11,9 +11,9 @@ const CATEGORY_COMPONENTS: Record<string, any> = {
   depressie: dynamic(() => import("./pages/DepressionPage")),
   adhd: dynamic(() => import("./pages/ADHDPage")),
   trauma: dynamic(() => import("./pages/TraumaPage")),
-  somatiek: dynamic(() => import("./pages/SomatiekPage")),
-  zelfbeeld: dynamic(() => import("./pages/ZelfbeeldPage")),
-  persoonlijkheid: dynamic(() => import("./pages/PersoonlijkheidPage")),
+  somatiek: dynamic(() => import("./pages/SomaticPage")),
+  zelfbeeld: dynamic(() => import("./pages/SelfImagePage")),
+  persoonlijkheid: dynamic(() => import("./pages/PersonalityPage")),
 };
 
 interface CategoryPageRendererProps {

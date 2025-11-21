@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         source: "/nl/zorgaanbod/:path*",
         destination: "/nl/services/:path*",
       },
+      {
+        source: "/nl/clienten/:path*",
+        destination: "/nl/clients/:path*",
+      },
       // English locale: Dutch URLs → English folders (for backward compatibility)
       {
         source: "/en/over-ons/:path*",
@@ -24,6 +28,10 @@ const nextConfig: NextConfig = {
         source: "/en/zorgaanbod/:path*",
         destination: "/en/services/:path*",
       },
+      {
+        source: "/en/clienten/:path*",
+        destination: "/en/clients/:path*",
+      },
       // English locale: English URLs → English folders (clean URLs)
       {
         source: "/en/about/:path*",
@@ -32,6 +40,10 @@ const nextConfig: NextConfig = {
       {
         source: "/en/services/:path*",
         destination: "/en/services/:path*",
+      },
+      {
+        source: "/en/clients/:path*",
+        destination: "/en/clients/:path*",
       },
     ];
   },

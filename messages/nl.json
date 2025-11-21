@@ -177,6 +177,7 @@
       },
       "types": {
         "title": "Verschillende vormen van depressie",
+        "content": "Depressie kan zich op verschillende manieren manifesteren en de symptomen kunnen variëren in intensiteit en duur. Het herkennen van het type depressie is belangrijk voor een gepaste behandeling.",
         "major_depression": {
           "title": "Depressieve stoornis",
           "description": "De meest voorkomende vorm van depressie, gekenmerkt door een depressieve stemming of verlies van interesse in activiteiten gedurende minimaal twee weken."
@@ -297,6 +298,7 @@
       "types": {
         "title": "Vormen van ADHD",
         "subtitle": "ADHD kent verschillende presentaties die invloed hebben op het dagelijks leven.",
+        "content": "ADHD presenteert zich op verschillende manieren en de symptomen kunnen per persoon verschillen. Het herkennen van het type ADHD is belangrijk voor een effectieve behandeling.",
         "inattentive": {
           "title": "Overwegend onoplettend",
           "description": "Moeite met concentratie, snel afgeleid zijn en moeilijk taken afmaken."

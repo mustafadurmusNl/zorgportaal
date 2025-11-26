@@ -6,17 +6,9 @@ import {
   DepressionTypes,
 } from "@/components/services/depression";
 
-interface DepressionPageProps {
-  heroImage: string;
-}
-
-export default function DepressionPage({ heroImage }: DepressionPageProps) {
+export default function DepressionPage() {
   return (
-    <ZorgPageLayout
-      category="depression"
-      heroImage={heroImage}
-      heroAltText="Depression therapy session"
-    >
+    <ZorgPageLayout category="depression">
       {/* Content sections using generic wrapper */}
       <ZorgContentSection>
         <WhatIsDepression />

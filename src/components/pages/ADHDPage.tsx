@@ -7,17 +7,9 @@ import {
 } from "@/components/care";
 import { WhatIsADHD, ADHDTypes } from "@/components/services/adhd";
 
-interface ADHDPageProps {
-  heroImage: string;
-}
-
-export default function ADHDPage({ heroImage }: ADHDPageProps) {
+export default function ADHDPage() {
   return (
-    <ZorgPageLayout
-      category="adhd"
-      heroImage={heroImage}
-      heroAltText="ADHD assessment and therapy"
-    >
+    <ZorgPageLayout category="adhd">
       <ZorgContentSection>
         <WhatIsADHD />
       </ZorgContentSection>

@@ -2,20 +2,15 @@ import { getStaticImageByCategory } from "@/lib/staticImages";
 import { notFound, redirect } from "next/navigation";
 import CategoryPageRenderer from "@/components/CategoryPageRenderer";
 import type { Locale } from "@/i18n/request";
+import {
+  getMessages,
+  getPageMetadata,
+  VALID_CATEGORIES,
+  ValidCategory,
+} from "@/lib/i18n-utils";
+import { ZorgaanbodProvider } from "@/contexts/ZorgaanbodContext";
 
-// Define valid categories (Dutch URLs only)
-const VALID_CATEGORIES = [
-  "angst",
-  "depressie",
-  "adhd",
-  "trauma",
-  "burnout",
-  "somatiek",
-  "zelfbeeld",
-  "persoonlijkheid",
-] as const;
-
-type ValidCategory = (typeof VALID_CATEGORIES)[number];
+// Valid categories imported from utilities
 
 // Define supported locales
 const LOCALES: Locale[] = ["nl", "en"];
@@ -46,61 +41,54 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
 
   // Validate locale - if it's not supported, redirect to default locale
   if (!LOCALES.includes(locale as Locale)) {
-    // Redirect to default locale (nl)
     redirect(`/nl/zorgaanbod/${category}`);
   }
 
   console.log(`🎯 Dynamic route: /${locale}/zorgaanbod/${category}`);
 
-  // Get static image for category
+  // Load data server-side
   const heroImage = getStaticImageByCategory(category);
+  const messages = await getMessages(locale);
+
+  // Prepare data for context
+  const zorgaanbodData = {
+    category,
+    locale: locale as Locale,
+    heroImage,
+    messages,
+  };
 
   return (
     <div className="min-h-screen">
-      {/* 🚀 PURE COMPONENT MAPPING - Use category directly */}
-      <CategoryPageRenderer category={category} heroImage={heroImage} />
+      <ZorgaanbodProvider data={zorgaanbodData}>
+        <CategoryPageRenderer category={category} />
+      </ZorgaanbodProvider>
     </div>
   );
 }
 
-// Temporarily disable static params to test dynamic routing
-// export async function generateStaticParams() {
-//   console.log("🏗️ generateStaticParams called for zorgaanbod");
-//   const params = [];
+// Generate static params for all valid categories and locales
+export async function generateStaticParams() {
+  const params = [];
 
-//   // Generate params for all valid categories (Dutch URLs only)
-//   for (const category of VALID_CATEGORIES) {
-//     for (const locale of LOCALES) {
-//       console.log(`🏗️ Generating param: ${locale}/${category}`);
-//       params.push({
-//         category,
-//         locale,
-//       });
-//     }
-//   }
+  for (const category of VALID_CATEGORIES) {
+    for (const locale of ["nl", "en"]) {
+      params.push({
+        category,
+        locale,
+      });
+    }
+  }
 
-//   console.log(`🏗️ Generated ${params.length} static params:`, params);
-//   return params;
-// }
+  return params;
+}
 
 // Generate metadata with i18n support
 export async function generateMetadata({ params }: ZorgaanbodPageProps) {
   const { category, locale } = await params;
 
-  // Import messages dynamically based on locale. If the locale file is missing
-  // fall back to the default Dutch messages to avoid server errors.
-  let messages;
-  try {
-    // Try to load the requested locale
-    messages = (await import(`../../../../../messages/${locale}.json`)).default;
-  } catch (e) {
-    // Fallback to Dutch messages
-    messages = (await import(`../../../../../messages/nl.json`)).default;
-  }
-
-  // Get category-specific translations
-  const categoryData = messages[category as ValidCategory];
-  const siteData = messages.site;
+  // Use centralized message loading
+  const messages = await getMessages(locale);
 
   // Fallback titles if category data is not available
   const categoryTitles: Record<string, { nl: string; en: string }> = {
@@ -117,13 +105,17 @@ export async function generateMetadata({ params }: ZorgaanbodPageProps) {
     },
   };
 
-  const title =
-    categoryData?.title || categoryTitles[category]?.[locale as Locale];
-  const description = categoryData?.subtitle || categoryData?.description;
+  const { title, description } = getPageMetadata(
+    messages,
+    category,
+    category,
+    locale as Locale,
+    categoryTitles
+  );
 
   return {
-    title: `${title} | Zorgportaal`,
-    description: description || siteData.description,
+    title,
+    description,
     alternates: {
       canonical: `/${locale}/zorgaanbod/${category}`,
       languages: {
@@ -132,8 +124,8 @@ export async function generateMetadata({ params }: ZorgaanbodPageProps) {
       },
     },
     openGraph: {
-      title: `${title} | Zorgportaal`,
-      description: description || siteData.description,
+      title,
+      description,
       locale: locale,
       alternateLocale: locale === "nl" ? ["en"] : ["nl"],
     },

@@ -2,13 +2,9 @@
 import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import { WhatIsSomatiek, SomatiekTypes } from "@/components/services/somatic";
 
-interface SomaticPageProps {
-  heroImage: string;
-}
-
-export default function SomaticPage({ heroImage }: SomaticPageProps) {
+export default function SomaticPage() {
   return (
-    <ZorgPageLayout category="somatiek" heroImage={heroImage}>
+    <ZorgPageLayout category="somatiek">
       <ZorgContentSection id="what-is-somatiek">
         <WhatIsSomatiek />
       </ZorgContentSection>

@@ -6,17 +6,9 @@ import {
   AnxietyDisorders,
 } from "@/components/services/anxiety";
 
-interface AnxietyPageProps {
-  heroImage: string;
-}
-
-export default function AnxietyPage({ heroImage }: AnxietyPageProps) {
+export default function AnxietyPage() {
   return (
-    <ZorgPageLayout
-      category="anxiety"
-      heroImage={heroImage}
-      heroAltText="Anxiety therapy session"
-    >
+    <ZorgPageLayout category="anxiety">
       {/* Content sections using generic wrapper */}
       <ZorgContentSection>
         <WhatIsAnxiety />

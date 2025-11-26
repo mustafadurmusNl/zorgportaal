@@ -5,13 +5,9 @@ import {
   ZelfbeeldTypes,
 } from "@/components/services/self_image";
 
-interface SelfImagePageProps {
-  heroImage: string;
-}
-
-export default function SelfImagePage({ heroImage }: SelfImagePageProps) {
+export default function SelfImagePage() {
   return (
-    <ZorgPageLayout category="zelfbeeld" heroImage={heroImage}>
+    <ZorgPageLayout category="zelfbeeld">
       <ZorgContentSection id="what-is-zelfbeeld">
         <WhatIsZelfbeeld />
       </ZorgContentSection>

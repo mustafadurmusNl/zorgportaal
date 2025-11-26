@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import type { Locale } from "@/i18n/request";
 import { ClientPageRenderer } from "@/components";
 import { NotFoundPage } from "@/components/sections";
+import { getMessages, getPageMetadata } from "@/lib/i18n-utils";
 
 // Define valid client pages
 const VALID_CLIENT_PAGES = [
@@ -45,37 +46,28 @@ export default async function ClientPage({ params }: ClientPageProps) {
   );
 }
 
-// Temporarily disable static params to test dynamic routing
-// export async function generateStaticParams() {
-//   const params = [];
+// Generate static params for known client pages and locales
+export async function generateStaticParams() {
+  const params = [];
 
-//   for (const page of VALID_CLIENT_PAGES) {
-//     for (const locale of LOCALES) {
-//       params.push({
-//         page,
-//         locale,
-//       });
-//     }
-//   }
+  for (const page of VALID_CLIENT_PAGES) {
+    for (const locale of LOCALES) {
+      params.push({
+        page,
+        locale,
+      });
+    }
+  }
 
-//   return params;
-// }
+  return params;
+}
 
 // Generate metadata with i18n support
 export async function generateMetadata({ params }: ClientPageProps) {
   const { page, locale } = await params;
 
-  // Import messages dynamically based on locale
-  let messages;
-  try {
-    messages = (await import(`../../../../../messages/${locale}.json`)).default;
-  } catch (e) {
-    messages = (await import(`../../../../../messages/nl.json`)).default;
-  }
-
-  // Get page-specific translations
-  const pageData = messages.clienten?.[page as ValidClientPage];
-  const siteData = messages.site;
+  // Use centralized message loading
+  const messages = await getMessages(locale);
 
   // Fallback titles if page data is not available
   const pageTitles: Record<string, { nl: string; en: string }> = {
@@ -88,12 +80,17 @@ export async function generateMetadata({ params }: ClientPageProps) {
     vergoeding: { nl: "Vergoeding", en: "Reimbursement" },
   };
 
-  const title = pageData?.title || pageTitles[page]?.[locale as Locale];
-  const description = pageData?.subtitle || pageData?.description;
+  const { title, description } = getPageMetadata(
+    messages,
+    "clienten",
+    page as ValidClientPage,
+    locale as Locale,
+    pageTitles
+  );
 
   return {
-    title: `${title} | Zorgportaal`,
-    description: description || siteData.description,
+    title,
+    description,
     alternates: {
       canonical: `/${locale}/clienten/${page}`,
       languages: {
@@ -102,8 +99,8 @@ export async function generateMetadata({ params }: ClientPageProps) {
       },
     },
     openGraph: {
-      title: `${title} | Zorgportaal`,
-      description: description || siteData.description,
+      title,
+      description,
       locale: locale,
       alternateLocale: locale === "nl" ? ["en"] : ["nl"],
     },

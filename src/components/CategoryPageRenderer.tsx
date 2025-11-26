@@ -1,11 +1,7 @@
 // src/components/CategoryPageRenderer.tsx
 import dynamic from "next/dynamic";
-import zorgCategories, {
-  ZORG_CATEGORIES,
-} from "@/components/care/zorgCategories";
 
-// Static dynamic imports — keep imports explicit so Next.js can statically
-// analyze them. Avoid using a runtime-variable inside `import(...)`.
+// Static dynamic imports
 const CATEGORY_COMPONENTS: Record<string, any> = {
   angst: dynamic(() => import("./pages/AnxietyPage")),
   depressie: dynamic(() => import("./pages/DepressionPage")),
@@ -18,20 +14,23 @@ const CATEGORY_COMPONENTS: Record<string, any> = {
 
 interface CategoryPageRendererProps {
   category: string;
-  heroImage: string;
 }
 
 export default function CategoryPageRenderer({
   category,
-  heroImage,
 }: CategoryPageRendererProps) {
+  console.log("🔍 ClientPageRenderer:", {
+    category,
+    hasComponent: !!CATEGORY_COMPONENTS[category],
+  });
+
   // Check if specific page component exists
   const CategoryPage =
     CATEGORY_COMPONENTS[category as keyof typeof CATEGORY_COMPONENTS];
 
-  // If specific page exists, render it
+  // If specific page exists, render it (no more prop drilling!)
   if (CategoryPage) {
-    return <CategoryPage heroImage={heroImage} />;
+    return <CategoryPage />;
   }
 
   // Simple fallback: Coming Soon page for categories without specific components

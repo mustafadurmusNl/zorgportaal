@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+import { useZorgaanbod } from "@/contexts/ZorgaanbodContext";
 import ZorgHero from "./ZorgHero";
 import ZorgCareSidebar from "./ZorgCareSidebar";
 import ZorgTestimonial from "./ZorgTestimonial";
@@ -20,8 +21,6 @@ type CategoryType =
 
 interface ZorgPageLayoutProps {
   category: CategoryType;
-  heroImage?: string;
-  heroAltText?: string;
   children: ReactNode; // Content sections for the main area
   hideTestimonials?: boolean;
   hideTreatmentMethods?: boolean;
@@ -29,12 +28,13 @@ interface ZorgPageLayoutProps {
 
 const ZorgPageLayout = ({
   category,
-  heroImage,
-  heroAltText,
   children,
   hideTestimonials = false,
   hideTreatmentMethods = false,
 }: ZorgPageLayoutProps) => {
+  // Get hero image from context
+  const { heroImage } = useZorgaanbod();
+
   // For client pages, we want to hide treatment methods and testimonials
   const isClientPage = category === "client";
   const shouldShowTestimonials = !hideTestimonials && !isClientPage;
@@ -46,7 +46,7 @@ const ZorgPageLayout = ({
       <ZorgHero
         category={isClientPage ? "anxiety" : category} // Fallback for client pages
         imageUrl={heroImage}
-        altText={heroAltText}
+        altText={`${category} treatment hero image`}
       />
 
       {/* Main content with sidebar */}

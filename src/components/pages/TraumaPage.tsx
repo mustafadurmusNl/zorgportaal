@@ -2,17 +2,9 @@
 import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import { WhatIsTrauma, TraumaTypes } from "@/components/services/trauma";
 
-interface TraumaPageProps {
-  heroImage: string;
-}
-
-export default function TraumaPage({ heroImage }: TraumaPageProps) {
+export default function TraumaPage() {
   return (
-    <ZorgPageLayout
-      category="trauma"
-      heroImage={heroImage}
-      heroAltText="Trauma & PTSD treatment"
-    >
+    <ZorgPageLayout category="trauma">
       <ZorgContentSection>
         <WhatIsTrauma />
       </ZorgContentSection>

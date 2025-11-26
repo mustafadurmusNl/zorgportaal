@@ -156,6 +156,19 @@ interface ZorgHeroProps {
 }
 
 const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
+  // Debug logging to see what image URL we're getting
+  console.log(
+    "🖼️ ZorgHero received imageUrl:",
+    imageUrl,
+    "for category:",
+    category
+  );
+
+  // Force a visual debug in the browser
+  if (typeof window !== "undefined") {
+    console.log("🌐 Browser side - ZorgHero imageUrl:", imageUrl);
+  }
+
   const translationKey = CATEGORY_TO_TRANSLATION_KEY[category];
   const breadcrumbKey = CATEGORY_TO_BREADCRUMB_KEY[category];
   const t = useTranslations(translationKey);
@@ -224,42 +237,60 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
             <div className="flex justify-center items-center">
               <div className={`relative w-full max-w-md ${imageHeightClass}`}>
                 {imageUrl ? (
-                  <Image
-                    src={imageUrl}
-                    alt={altText || `${category} therapy session`}
-                    fill
-                    className="object-cover rounded-2xl shadow-xl"
-                    priority
-                  />
+                  <>
+                    {console.log(
+                      "🎨 Rendering image component with:",
+                      imageUrl
+                    )}
+                    <Image
+                      src={imageUrl}
+                      alt={altText || `${category} therapy session`}
+                      width={400}
+                      height={320}
+                      className="w-full h-full object-cover rounded-2xl shadow-xl"
+                      priority
+                      onLoadingComplete={() =>
+                        console.log("✅ Image loaded successfully:", imageUrl)
+                      }
+                      onError={() =>
+                        console.log("❌ Image failed to load:", imageUrl)
+                      }
+                    />
+                  </>
                 ) : (
-                  <div
-                    className={`w-full h-full bg-gradient-to-br ${theme.fallbackGradient} rounded-2xl shadow-xl flex items-center justify-center`}
-                  >
-                    {/* Fallback design with calming elements */}
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                      {/* Therapy session silhouettes */}
-                      <div
-                        className={`absolute top-1/3 left-1/4 w-24 h-24 bg-gradient-to-r ${theme.silhouetteColors[0]} rounded-full opacity-60 animate-pulse`}
-                      ></div>
-                      <div
-                        className={`absolute top-1/2 left-1/3 w-16 h-32 bg-gradient-to-b ${theme.silhouetteColors[1]} rounded-lg opacity-40`}
-                      ></div>
-                      <div
-                        className={`absolute bottom-1/3 right-1/4 w-20 h-28 bg-gradient-to-b ${theme.silhouetteColors[2]} rounded-lg opacity-40`}
-                      ></div>
+                  <>
+                    {console.log(
+                      "🚫 No imageUrl provided, showing fallback design"
+                    )}
+                    <div
+                      className={`w-full h-full bg-gradient-to-br ${theme.fallbackGradient} rounded-2xl shadow-xl flex items-center justify-center`}
+                    >
+                      {/* Fallback design with calming elements */}
+                      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                        {/* Therapy session silhouettes */}
+                        <div
+                          className={`absolute top-1/3 left-1/4 w-24 h-24 bg-gradient-to-r ${theme.silhouetteColors[0]} rounded-full opacity-60 animate-pulse`}
+                        ></div>
+                        <div
+                          className={`absolute top-1/2 left-1/3 w-16 h-32 bg-gradient-to-b ${theme.silhouetteColors[1]} rounded-lg opacity-40`}
+                        ></div>
+                        <div
+                          className={`absolute bottom-1/3 right-1/4 w-20 h-28 bg-gradient-to-b ${theme.silhouetteColors[2]} rounded-lg opacity-40`}
+                        ></div>
 
-                      {/* Floating calming particles */}
-                      <div
-                        className={`absolute top-1/4 right-1/3 w-2 h-2 ${theme.particleColors[0]} rounded-full animate-bounce delay-100 opacity-60`}
-                      ></div>
-                      <div
-                        className={`absolute top-1/2 left-1/4 w-1.5 h-1.5 ${theme.particleColors[1]} rounded-full animate-pulse delay-300 opacity-60`}
-                      ></div>
-                      <div
-                        className={`absolute top-3/4 right-1/2 w-3 h-3 ${theme.particleColors[2]} rounded-full animate-bounce delay-500 opacity-60`}
-                      ></div>
+                        {/* Floating calming particles */}
+                        <div
+                          className={`absolute top-1/4 right-1/3 w-2 h-2 ${theme.particleColors[0]} rounded-full animate-bounce delay-100 opacity-60`}
+                        ></div>
+                        <div
+                          className={`absolute top-1/2 left-1/4 w-1.5 h-1.5 ${theme.particleColors[1]} rounded-full animate-pulse delay-300 opacity-60`}
+                        ></div>
+                        <div
+                          className={`absolute top-3/4 right-1/2 w-3 h-3 ${theme.particleColors[2]} rounded-full animate-bounce delay-500 opacity-60`}
+                        ></div>
+                      </div>
                     </div>
-                  </div>
+                  </>
                 )}
               </div>
             </div>

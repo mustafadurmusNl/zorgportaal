@@ -5,19 +5,9 @@ import {
   PersoonlijkheidTypes,
 } from "@/components/services/personality";
 
-interface PersoonlijkheidPageProps {
-  heroImage: string;
-}
-
-export default function PersoonlijkheidPage({
-  heroImage,
-}: PersoonlijkheidPageProps) {
+export default function PersoonlijkheidPage() {
   return (
-    <ZorgPageLayout
-      category="persoonlijkheid"
-      heroImage={heroImage}
-      heroAltText="Personality-related care"
-    >
+    <ZorgPageLayout category="persoonlijkheid">
       <ZorgContentSection>
         <WhatIsPersoonlijkheid />
       </ZorgContentSection>

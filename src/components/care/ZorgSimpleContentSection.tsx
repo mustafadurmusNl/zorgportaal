@@ -26,7 +26,9 @@ const ZorgSimpleContentSection = ({
       </h2>
       <div className="prose prose-lg max-w-none">
         {hasContent && (
-          <p className="text-gray-700 leading-relaxed text-lg">{t("content")}</p>
+          <p className="text-gray-700 leading-relaxed text-lg">
+            {t("content")}
+          </p>
         )}
         {children}
       </div>

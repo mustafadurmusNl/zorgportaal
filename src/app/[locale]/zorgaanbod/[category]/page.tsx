@@ -1,9 +1,9 @@
 import { getStaticImageByCategory } from "@/lib/staticImages";
 import { notFound, redirect } from "next/navigation";
+import { getMessages } from "next-intl/server";
 import CategoryPageRenderer from "@/components/CategoryPageRenderer";
 import type { Locale } from "@/i18n/request";
 import {
-  getMessages,
   getPageMetadata,
   VALID_CATEGORIES,
   ValidCategory,
@@ -48,7 +48,7 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
 
   // Load data server-side
   const heroImage = getStaticImageByCategory(category);
-  const messages = await getMessages(locale);
+  const messages = await getMessages({ locale });
 
   // Prepare data for context
   const zorgaanbodData = {
@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: ZorgaanbodPageProps) {
   const { category, locale } = await params;
 
   // Use centralized message loading
-  const messages = await getMessages(locale);
+  const messages = await getMessages({ locale });
 
   // Fallback titles if category data is not available
   const categoryTitles: Record<string, { nl: string; en: string }> = {

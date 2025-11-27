@@ -1,8 +1,9 @@
 import { redirect } from "next/navigation";
+import { getMessages } from "next-intl/server";
 import type { Locale } from "@/i18n/request";
 import { ClientPageRenderer } from "@/components";
 import { NotFoundPage } from "@/components/sections";
-import { getMessages, getPageMetadata } from "@/lib/i18n-utils";
+import { getPageMetadata } from "@/lib/i18n-utils";
 
 // Define valid client pages
 const VALID_CLIENT_PAGES = [
@@ -38,10 +39,14 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
   console.log(`🎯 Dynamic route: /${locale}/clienten/${page}`);
 
+  // Load messages for the specific page
+  const messages = await getMessages({ locale });
+  const pageMessages = messages?.clienten?.[page]; // Use direct key, not replacing dashes
+
   return (
     <div className="min-h-screen">
       {/* 🚀 PURE COMPONENT MAPPING - NO CONFIG NEEDED */}
-      <ClientPageRenderer page={page} />
+      <ClientPageRenderer page={page} locale={locale} messages={pageMessages} />
     </div>
   );
 }
@@ -66,8 +71,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ClientPageProps) {
   const { page, locale } = await params;
 
-  // Use centralized message loading
-  const messages = await getMessages(locale);
+  // Use centralized message loading with correct Next.js function
+  const messages = await getMessages({ locale });
 
   // Fallback titles if page data is not available
   const pageTitles: Record<string, { nl: string; en: string }> = {

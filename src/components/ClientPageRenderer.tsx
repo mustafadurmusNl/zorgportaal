@@ -13,16 +13,22 @@ const CLIENT_PAGE_COMPONENTS: Record<string, any> = {
 
 interface ClientPageRendererProps {
   page: string;
+  locale?: string;
+  messages?: any;
 }
 
-export default function ClientPageRenderer({ page }: ClientPageRendererProps) {
+export default function ClientPageRenderer({
+  page,
+  locale,
+  messages,
+}: ClientPageRendererProps) {
   // Check if specific page component exists
   const ClientPage =
     CLIENT_PAGE_COMPONENTS[page as keyof typeof CLIENT_PAGE_COMPONENTS];
 
-  // If specific page exists, render it
+  // If specific page exists, render it with locale prop and messages
   if (ClientPage) {
-    return <ClientPage />;
+    return <ClientPage locale={locale} messages={messages} />;
   }
 
   // Simple fallback: Coming Soon page for pages without specific components

@@ -35,18 +35,33 @@ const CATEGORY_IMAGES: StaticImageMap = {
 };
 
 /**
- * Get random image from available images
+ * Get deterministic image based on category hash
+ * This prevents hydration mismatches by ensuring consistent server/client results
  *
- * @returns string - Random image path
+ * @param seed - Optional seed for deterministic selection
+ * @returns string - Deterministic image path
  */
-export function getRandomImage(): string {
-  const randomIndex = Math.floor(Math.random() * AVAILABLE_IMAGES.length);
-  const selectedImage = AVAILABLE_IMAGES[randomIndex];
+export function getRandomImage(seed?: string): string {
+  let index = 0;
+
+  if (seed) {
+    // Generate deterministic index based on seed
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      const char = seed.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash; // Convert to 32-bit integer
+    }
+    index = Math.abs(hash) % AVAILABLE_IMAGES.length;
+  } else {
+    // Fallback to first image for consistency
+    index = 0;
+  }
+
+  const selectedImage = AVAILABLE_IMAGES[index];
 
   console.log(
-    `🎲 Random image selected: ${selectedImage} (index: ${randomIndex}/${
-      AVAILABLE_IMAGES.length - 1
-    })`
+    `🎲 Deterministic image selected: ${selectedImage} (index: ${index}/${AVAILABLE_IMAGES.length})`
   );
   return selectedImage;
 }
@@ -63,10 +78,10 @@ export function getStaticImageByCategory(
   category: string,
   forceRandom: boolean = false
 ): string {
-  // If force random is enabled, return random image
+  // If force random is enabled, return deterministic image
   if (forceRandom) {
-    console.log(`🎲 Force random enabled for ${category}`);
-    return getRandomImage();
+    console.log(`🎲 Force deterministic enabled for ${category}`);
+    return getRandomImage(category);
   }
 
   const specificImage = CATEGORY_IMAGES[category];
@@ -79,8 +94,8 @@ export function getStaticImageByCategory(
 
   // If mapping is "random" or no specific mapping exists
   if (specificImage === "random" || !specificImage) {
-    console.log(`🎲 Random image requested for ${category}`);
-    return getRandomImage();
+    console.log(`🎲 Deterministic image requested for ${category}`);
+    return getRandomImage(category);
   }
 
   // Fallback (should not reach here)

@@ -8,11 +8,11 @@ import {
 export default function SelfImagePage() {
   return (
     <ZorgPageLayout category="zelfbeeld">
-      <ZorgContentSection id="what-is-zelfbeeld">
+      <ZorgContentSection>
         <WhatIsZelfbeeld />
       </ZorgContentSection>
 
-      <ZorgContentSection id="zelfbeeld-types">
+      <ZorgContentSection>
         <ZelfbeeldTypes />
       </ZorgContentSection>
     </ZorgPageLayout>

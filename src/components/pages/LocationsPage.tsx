@@ -87,7 +87,7 @@ const LOCATIONS: LocationData[] = [
   },
 ];
 
-export function LocationsPage() {
+export default function LocationsPage() {
   const t = useTranslations("over-ons.locaties");
   const questionsT = useTranslations("over-ons.questions");
   const locale = useLocale();

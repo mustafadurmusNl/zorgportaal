@@ -4,11 +4,13 @@ import type { Locale } from "@/i18n/request";
 /**
  * Centralized message loader to eliminate duplicate locale-based JSON imports
  */
-export async function getMessages(locale: string): Promise<any> {
+export async function getMessages(
+  locale: string
+): Promise<Record<string, unknown>> {
   try {
     const messages = await import(`../../messages/${locale}.json`);
     return messages.default;
-  } catch (error) {
+  } catch {
     console.warn(
       `Failed to load messages for locale: ${locale}, falling back to Dutch`
     );
@@ -21,14 +23,17 @@ export async function getMessages(locale: string): Promise<any> {
  * Get page-specific metadata with fallback support
  */
 export function getPageMetadata(
-  messages: any,
+  messages: Record<string, unknown>,
   section: string,
   pageKey: string,
   locale: Locale,
   fallbackTitles?: Record<string, { nl: string; en: string }>
 ) {
-  const pageData = messages[section]?.[pageKey];
-  const siteData = messages.site;
+  const sectionData = messages[section] as Record<string, unknown> | undefined;
+  const pageData = sectionData?.[pageKey] as
+    | Record<string, unknown>
+    | undefined;
+  const siteData = messages.site as Record<string, unknown> | undefined;
 
   const title = pageData?.title || fallbackTitles?.[pageKey]?.[locale];
   const description = pageData?.subtitle || pageData?.description;

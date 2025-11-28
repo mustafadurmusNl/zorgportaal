@@ -7,6 +7,5 @@ export * from "./about";
 export * from "./clients";
 export * from "./pages";
 
-export { default as ClientPageRenderer } from "./ClientPageRenderer";
-export { default as CategoryPageRenderer } from "./CategoryPageRenderer";
-export { AboutUsPageRenderer } from "./AboutUsPageRenderer";
+// Export unified page renderer
+export { default as PageRenderer } from "./PageRenderer";

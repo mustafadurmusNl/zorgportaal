@@ -5,11 +5,11 @@ import { WhatIsSomatiek, SomatiekTypes } from "@/components/services/somatic";
 export default function SomaticPage() {
   return (
     <ZorgPageLayout category="somatiek">
-      <ZorgContentSection id="what-is-somatiek">
+      <ZorgContentSection>
         <WhatIsSomatiek />
       </ZorgContentSection>
 
-      <ZorgContentSection id="somatiek-types">
+      <ZorgContentSection>
         <SomatiekTypes />
       </ZorgContentSection>
     </ZorgPageLayout>

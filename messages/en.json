@@ -927,10 +927,7 @@
           "title": "Register or refer?",
           "description": "Want to know how to register yourself or refer a client to Forta Adults? Check out our registration information.",
           "button": "Registration information"
-        },
-        "wait_time": "Wait time",
-        "contact": "Contact",
-        "response_time": "Response within 24 hours"
+        }
       },
       "vergoeding": {
         "title": "Reimbursement & costs",
@@ -1013,6 +1010,144 @@
         "title": "Questions about reimbursement?",
         "description": "We are happy to help you with questions about insurance and costs. Feel free to contact us.",
         "button": "Contact about reimbursement"
+      }
+    },
+    "wachttijden": {
+      "title": "Current Waiting Times",
+      "subtitle": "Transparent information about our current waiting times for different treatments.",
+      "current_times": {
+        "title": "Current waiting times",
+        "intake": {
+          "title": "Intake interview",
+          "time": "1-2 weeks",
+          "description": "For a first consultation"
+        },
+        "treatment": {
+          "title": "Start treatment",
+          "time": "2-4 weeks",
+          "description": "After treatment plan approval"
+        },
+        "urgent": {
+          "title": "Emergency care",
+          "time": "Within 48 hours",
+          "description": "For acute problems"
+        }
+      },
+      "note": {
+        "title": "Note",
+        "description": "Waiting times may vary per therapist and type of treatment. We always keep you informed."
+      },
+      "factors": {
+        "title": "What affects waiting times",
+        "factor1": "Type of treatment and therapist specialization",
+        "factor2": "Urgency of your care request",
+        "factor3": "Availability of contracted therapists",
+        "factor4": "Seasonal demand (often busier after holidays)"
+      },
+      "services": {
+        "anxiety": {
+          "title": "Anxiety Disorders",
+          "time": "2-3 weeks",
+          "description": "Treatment of panic attacks, phobias and generalized anxiety disorder",
+          "updated": "January 15, 2024"
+        },
+        "depression": {
+          "title": "Depression",
+          "time": "3-4 weeks",
+          "description": "Individual and group treatment for various forms of depression",
+          "updated": "January 15, 2024"
+        },
+        "trauma": {
+          "title": "Trauma & PTSD",
+          "time": "4-6 weeks",
+          "description": "EMDR and other trauma-focused treatments",
+          "updated": "January 15, 2024"
+        },
+        "adhd": {
+          "title": "ADHD",
+          "time": "6-8 weeks",
+          "description": "Diagnosis and treatment of ADHD in adults",
+          "updated": "January 15, 2024"
+        }
+      },
+      "last_update": "Last update",
+      "acute_help": {
+        "title": "Acute help available",
+        "description": "For acute suicidal thoughts or other crisis situations, we can often schedule a conversation within 24-48 hours.",
+        "urgency_title": "When is there urgency?",
+        "urgency_items": {
+          "suicidal": "Suicidal thoughts with concrete plans",
+          "psychosis": "Severe psychosis or loss of reality",
+          "trauma": "Acute traumatic event"
+        },
+        "crisis_note": "For acute crisis situations: Call 010-450 40 71 immediately or go to the Emergency Department."
+      },
+      "alternatives": {
+        "title": "Alternative options",
+        "description": "During the waiting period, various alternatives are available for support.",
+        "online_self_help": {
+          "title": "Online self-help",
+          "description": "Digital modules for anxiety and depression through our partners.",
+          "wait_time": "Immediately available"
+        },
+        "group_therapy": {
+          "title": "Group therapy",
+          "description": "Group treatments for specific complaints start regularly.",
+          "wait_time": "1-2 weeks"
+        },
+        "gp_psychologist": {
+          "title": "GP psychologist",
+          "description": "Short treatments through GP psychology.",
+          "wait_time": "1 week",
+          "contact": "Through GP"
+        },
+        "crisis_service": {
+          "title": "Crisis service",
+          "description": "24/7 accessible crisis help for acute situations.",
+          "wait_time": "Immediate",
+          "contact": "0800-0113"
+        }
+      },
+      "contact_questions": {
+        "title": "Questions about waiting times?",
+        "description": "Do you have questions about our waiting times or want to know if starting earlier is possible? Please feel free to contact us.",
+        "phone": {
+          "title": "Phone",
+          "number": "010-450 40 71"
+        },
+        "email": {
+          "title": "Email",
+          "address": "info@fortavolwassenen.nl"
+        },
+        "availability": "Available Monday to Friday from 9:00 AM to 5:00 PM"
+      },
+      "how_to_reduce": {
+        "title": "How to reduce waiting time",
+        "tips": [
+          "Be flexible with appointment times",
+          "Consider online therapy options",
+          "Have all documents ready",
+          "Respond quickly to intake invitations"
+        ]
+      },
+      "while_waiting": {
+        "title": "While waiting",
+        "description": "While waiting for your treatment, you can take some steps:",
+        "tip1": "Keep a diary of your concerns and triggers",
+        "tip2": "Stay in touch with your family doctor",
+        "tip3": "Seek temporary support from family or friends",
+        "tip4": "Look for self-help groups in your area"
+      },
+      "urgent_contact": {
+        "title": "Need urgent help?",
+        "description": "For serious concerns or crisis situations, you can contact us directly for emergency intake.",
+        "button": "Direct contact"
+      },
+      "registration_cta": {
+        "badge": "Contact us",
+        "title": "Register or refer?",
+        "description": "Want to know how to register yourself or refer a client to Forta Adults? Check out our registration information.",
+        "button": "Registration information"
       }
     }
   },

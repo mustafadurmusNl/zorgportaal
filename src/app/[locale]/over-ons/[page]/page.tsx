@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
+import { getMessages } from "next-intl/server";
 import type { Locale } from "@/i18n/request";
-import { AboutUsPageRenderer } from "@/components";
+import PageRenderer from "@/components/PageRenderer";
 import { NotFoundPage } from "@/components/sections";
 
 // Define valid about us pages (Dutch URLs only)
@@ -36,7 +37,7 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
   return (
     <div className="min-h-screen">
       {/* 🚀 PURE COMPONENT MAPPING - Use page directly */}
-      <AboutUsPageRenderer page={page} />
+      <PageRenderer pageType="about" page={page} />
     </div>
   );
 }
@@ -62,13 +63,8 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
 export async function generateMetadata({ params }: AboutUsPageProps) {
   const { page, locale } = await params;
 
-  // Import messages dynamically based on locale
-  let messages;
-  try {
-    messages = (await import(`../../../../../messages/${locale}.json`)).default;
-  } catch (e) {
-    messages = (await import(`../../../../../messages/nl.json`)).default;
-  }
+  // Use standard getMessages pattern
+  const messages = await getMessages({ locale });
 
   // Get page-specific translations
   const pageData = messages["over-ons"]?.[page as ValidAboutPage];

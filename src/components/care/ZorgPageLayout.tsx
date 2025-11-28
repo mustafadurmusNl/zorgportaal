@@ -62,7 +62,9 @@ const ZorgPageLayout = ({
 
               {/* Testimonial section - only for care pages */}
               {shouldShowTestimonials && (
-                <ZorgTestimonial category={category as any} />
+                <ZorgTestimonial
+                  category={category as Exclude<CategoryType, "client">}
+                />
               )}
             </div>
           </div>
@@ -77,7 +79,9 @@ const ZorgPageLayout = ({
       {/* Treatment methods - only for care pages */}
       {shouldShowTreatmentMethods && (
         <div style={{ marginTop: "80px", marginBottom: "80px" }}>
-          <ZorgTreatmentMethods category={category as any} />
+          <ZorgTreatmentMethods
+            category={category as Exclude<CategoryType, "client">}
+          />
         </div>
       )}
     </>

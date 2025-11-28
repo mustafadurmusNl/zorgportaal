@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { getMessages } from "next-intl/server";
 import type { Locale } from "@/i18n/request";
 import { ContactPage } from "@/components/pages";
 
@@ -31,13 +32,8 @@ export default async function Contact({ params }: ContactPageProps) {
 export async function generateMetadata({ params }: ContactPageProps) {
   const { locale } = await params;
 
-  // Import messages dynamically based on locale
-  let messages;
-  try {
-    messages = (await import(`../../../../messages/${locale}.json`)).default;
-  } catch (e) {
-    messages = (await import(`../../../../messages/nl.json`)).default;
-  }
+  // Use standard getMessages pattern
+  const messages = await getMessages({ locale });
 
   const contactData = messages.contact;
   const siteData = messages.site;

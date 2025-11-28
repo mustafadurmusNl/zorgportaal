@@ -1,6 +1,6 @@
 // src/components/pages/index.ts
-export { LocationsPage } from "./LocationsPage";
-export { TeamPage } from "./TeamPage";
+export { default as LocationsPage } from "./LocationsPage";
+export { default as TeamPage } from "./TeamPage";
 export { default as QualityPage } from "./QualityPage";
 export { default as PersonalityPage } from "./PersonalityPage";
 export { default as SomaticPage } from "./SomaticPage";

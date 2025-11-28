@@ -164,10 +164,7 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
     category
   );
 
-  // Force a visual debug in the browser
-  if (typeof window !== "undefined") {
-    console.log("🌐 Browser side - ZorgHero imageUrl:", imageUrl);
-  }
+  console.log("🎨 Rendering image component with:", imageUrl);
 
   const translationKey = CATEGORY_TO_TRANSLATION_KEY[category];
   const breadcrumbKey = CATEGORY_TO_BREADCRUMB_KEY[category];
@@ -175,8 +172,14 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
   const breadcrumbT = useTranslations(`${translationKey}.breadcrumb`);
 
   const theme = CATEGORY_THEMES[category];
-  const headingClass = (theme as any).headingClass || "text-4xl md:text-5xl";
-  const imageHeightClass = (theme as any).imageHeightClass || "h-80 lg:h-96";
+  const themeWithOptionalProps = theme as typeof theme & {
+    headingClass?: string;
+    imageHeightClass?: string;
+  };
+  const headingClass =
+    themeWithOptionalProps.headingClass || "text-4xl md:text-5xl";
+  const imageHeightClass =
+    themeWithOptionalProps.imageHeightClass || "h-80 lg:h-96";
 
   return (
     <>

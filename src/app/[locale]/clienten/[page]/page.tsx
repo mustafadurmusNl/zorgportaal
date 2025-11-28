@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import type { Locale } from "@/i18n/request";
-import { ClientPageRenderer } from "@/components";
+import PageRenderer from "@/components/PageRenderer";
 import { NotFoundPage } from "@/components/sections";
 import { getPageMetadata } from "@/lib/i18n-utils";
 
@@ -46,7 +46,12 @@ export default async function ClientPage({ params }: ClientPageProps) {
   return (
     <div className="min-h-screen">
       {/* 🚀 PURE COMPONENT MAPPING - NO CONFIG NEEDED */}
-      <ClientPageRenderer page={page} locale={locale} messages={pageMessages} />
+      <PageRenderer
+        pageType="client"
+        page={page}
+        locale={locale}
+        messages={pageMessages}
+      />
     </div>
   );
 }

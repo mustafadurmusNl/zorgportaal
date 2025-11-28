@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+
 // Internal not-found page for middleware redirects
 // This ensures invalid routes get the styled 404 page
 export default function NotFoundInternal() {
@@ -8,30 +12,30 @@ export default function NotFoundInternal() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/nl" className="text-2xl font-bold text-gray-900">
+              <Link href="/nl" className="text-2xl font-bold text-gray-900">
                 Groeipunt
-              </a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a
+                <Link
                   href="/nl/zorgaanbod"
                   className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 >
                   Zorgaanbod
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/nl/clienten/voor-wie"
                   className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 >
                   Voor cliënten
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/nl"
                   className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -62,12 +66,12 @@ export default function NotFoundInternal() {
               <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
               <p className="text-gray-700">
                 Passende GGZ-zorg? Bekijk ons{" "}
-                <a
+                <Link
                   href="/nl/zorgaanbod/angst"
                   className="text-pink-500 hover:text-pink-600 font-medium"
                 >
                   zorgaanbod
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -75,12 +79,12 @@ export default function NotFoundInternal() {
               <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
               <p className="text-gray-700">
                 Actuele wachttijden? Je vindt ze op de{" "}
-                <a
+                <Link
                   href="/nl/clienten/wachttijden"
                   className="text-pink-500 hover:text-pink-600 font-medium"
                 >
                   wachttijdenpagina
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -88,12 +92,12 @@ export default function NotFoundInternal() {
               <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
               <p className="text-gray-700">
                 Locatiegegevens? Bekijk onze{" "}
-                <a
+                <Link
                   href="/#locaties"
                   className="text-pink-500 hover:text-pink-600 font-medium"
                 >
                   locaties
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -114,19 +118,19 @@ export default function NotFoundInternal() {
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="javascript:history.back()"
+            <button
+              onClick={() => window.history.back()}
               className="inline-flex items-center justify-center px-8 py-3 border border-pink-500 text-pink-500 rounded-md font-medium hover:bg-pink-50 transition-colors"
             >
               Ga terug
-            </a>
+            </button>
 
-            <a
+            <Link
               href="/nl"
               className="inline-flex items-center justify-center px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-md font-medium transition-colors"
             >
               Naar homepage
-            </a>
+            </Link>
           </div>
         </div>
       </main>

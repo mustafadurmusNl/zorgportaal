@@ -36,7 +36,7 @@ const TEAM_CATEGORIES = [
   },
 ];
 
-export function TeamPage() {
+export default function TeamPage() {
   const t = useTranslations("over-ons.team");
 
   return (

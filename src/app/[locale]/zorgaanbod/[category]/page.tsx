@@ -1,7 +1,7 @@
 import { getStaticImageByCategory } from "@/lib/staticImages";
 import { notFound, redirect } from "next/navigation";
 import { getMessages } from "next-intl/server";
-import CategoryPageRenderer from "@/components/CategoryPageRenderer";
+import PageRenderer from "@/components/PageRenderer";
 import type { Locale } from "@/i18n/request";
 import {
   getPageMetadata,
@@ -61,7 +61,7 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
   return (
     <div className="min-h-screen">
       <ZorgaanbodProvider data={zorgaanbodData}>
-        <CategoryPageRenderer category={category} />
+        <PageRenderer pageType="category" page={category} />
       </ZorgaanbodProvider>
     </div>
   );

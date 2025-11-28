@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 // Fallback content for when translations are not available
 const FALLBACK_CONTENT = {
@@ -11,44 +12,64 @@ const FALLBACK_CONTENT = {
     subtitle: "Waar ben je naar op zoek?",
     suggestions: {
       zorg: { text: "Passende GGZ-zorg? Bekijk ons", link: "zorgaanbod" },
-      wachttijden: { text: "Actuele wachttijden? Je vindt ze op de", link: "wachttijdenpagina" },
-      locaties: { text: "Locatiegegevens? Bekijk onze", link: "locaties" }
+      wachttijden: {
+        text: "Actuele wachttijden? Je vindt ze op de",
+        link: "wachttijdenpagina",
+      },
+      locaties: { text: "Locatiegegevens? Bekijk onze", link: "locaties" },
     },
-    contact: { text: "Kom je er niet uit? Neem gerust", link: "contact", suffix: " met ons op!" },
-    buttons: { goBack: "Ga terug", goHome: "Naar homepage" }
+    contact: {
+      text: "Kom je er niet uit? Neem gerust",
+      link: "contact",
+      suffix: " met ons op!",
+    },
+    buttons: { goBack: "Ga terug", goHome: "Naar homepage" },
   },
   en: {
     title: "Oops, this page was not found",
     subtitle: "What are you looking for?",
     suggestions: {
-      zorg: { text: "Appropriate mental health care? Check our", link: "care programs" },
-      wachttijden: { text: "Current waiting times? You can find them on the", link: "waiting times page" },
-      locaties: { text: "Location information? Check our", link: "locations" }
+      zorg: {
+        text: "Appropriate mental health care? Check our",
+        link: "care programs",
+      },
+      wachttijden: {
+        text: "Current waiting times? You can find them on the",
+        link: "waiting times page",
+      },
+      locaties: { text: "Location information? Check our", link: "locations" },
     },
-    contact: { text: "Can't figure it out? Feel free to", link: "contact", suffix: " us!" },
-    buttons: { goBack: "Go back", goHome: "Go to homepage" }
-  }
+    contact: {
+      text: "Can't figure it out? Feel free to",
+      link: "contact",
+      suffix: " us!",
+    },
+    buttons: { goBack: "Go back", goHome: "Go to homepage" },
+  },
 };
+
+type TranslationFunction = (key: string) => string;
 
 export default function NotFoundPage() {
   const router = useRouter();
-  
-  // Try to get translations, fallback to Dutch if not available
-  let t: any;
-  let currentLocale = 'nl';
-  
+
+  // Always call hooks at the top level
+  let t: TranslationFunction;
+  let currentLocale = "nl";
+
   try {
-    t = useTranslations("notFound");
-    // Try to detect current locale from URL
-    if (typeof window !== 'undefined') {
-      const path = window.location.pathname;
-      if (path.startsWith('/en')) currentLocale = 'en';
-    }
-  } catch (error) {
+    const translations = useTranslations("notFound");
+    t = (key: string) => translations(key);
+    // Use router to get current locale to avoid hydration mismatch
+    // Default to 'nl' to prevent hydration issues
+    currentLocale = "nl";
+  } catch {
     // Fallback to hardcoded content
     t = (key: string) => {
-      const keys = key.split('.');
-      let value: any = FALLBACK_CONTENT[currentLocale as keyof typeof FALLBACK_CONTENT];
+      const keys = key.split(".");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let value: any =
+        FALLBACK_CONTENT[currentLocale as keyof typeof FALLBACK_CONTENT];
       for (const k of keys) {
         value = value?.[k];
       }
@@ -88,12 +109,12 @@ export default function NotFoundPage() {
             <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-gray-700">
               {t("suggestions.zorg.text")}{" "}
-              <a
+              <Link
                 href="/nl/zorgaanbod/angst"
                 className="text-pink-500 hover:text-pink-600 font-medium"
               >
                 {t("suggestions.zorg.link")}
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -101,12 +122,12 @@ export default function NotFoundPage() {
             <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-gray-700">
               {t("suggestions.wachttijden.text")}{" "}
-              <a
+              <Link
                 href="/nl/clienten/wachttijden"
                 className="text-pink-500 hover:text-pink-600 font-medium"
               >
                 {t("suggestions.wachttijden.link")}
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -114,12 +135,12 @@ export default function NotFoundPage() {
             <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-gray-700">
               {t("suggestions.locaties.text")}{" "}
-              <a
+              <Link
                 href="/#locaties"
                 className="text-pink-500 hover:text-pink-600 font-medium"
               >
                 {t("suggestions.locaties.link")}
-              </a>
+              </Link>
             </p>
           </div>
         </div>

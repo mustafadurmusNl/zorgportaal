@@ -1,10 +1,5 @@
 // src/components/pages/ADHDPage.tsx
-import {
-  ZorgPageLayout,
-  ZorgContentSection,
-  ZorgTreatmentMethods,
-  ZorgTestimonial,
-} from "@/components/care";
+import { ZorgPageLayout, ZorgContentSection } from "@/components/care";
 import { WhatIsADHD, ADHDTypes } from "@/components/services/adhd";
 
 export default function ADHDPage() {

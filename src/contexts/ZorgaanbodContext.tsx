@@ -8,11 +8,11 @@ interface ZorgaanbodData {
   category: string;
   locale: Locale;
   heroImage: string;
-  messages: any;
+  messages: Record<string, unknown>;
 }
 
 interface ZorgaanbodContextType extends ZorgaanbodData {
-  getCategoryData: (key?: string) => any;
+  getCategoryData: (key?: string) => unknown;
   t: (key: string) => string;
 }
 
@@ -31,20 +31,27 @@ export function ZorgaanbodProvider({
 
   // Helper function to get category-specific data
   const getCategoryData = (key?: string) => {
-    const categoryData = messages[category];
+    const categoryData = messages[category] as
+      | Record<string, unknown>
+      | undefined;
     return key ? categoryData?.[key] : categoryData;
   };
 
   // Translation helper for category-specific strings
   const t = (key: string) => {
     const keys = key.split(".");
-    let value = messages[category];
+    let value: unknown = messages[category];
 
     for (const k of keys) {
-      value = value?.[k];
+      if (value && typeof value === "object" && k in value) {
+        value = (value as Record<string, unknown>)[k];
+      } else {
+        value = undefined;
+        break;
+      }
     }
 
-    return value || key;
+    return typeof value === "string" ? value : key;
   };
 
   const contextValue: ZorgaanbodContextType = {

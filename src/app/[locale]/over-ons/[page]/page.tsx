@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import type { Locale } from "@/i18n/request";
 import PageRenderer from "@/components/PageRenderer";
 import { NotFoundPage } from "@/components/sections";
+import { UnifiedPageProvider } from "@/contexts/UnifiedPageContext";
 
 // Define valid about us pages (Dutch URLs only)
 const VALID_ABOUT_PAGES = ["locaties", "team", "kwaliteit"] as const;
@@ -34,10 +35,22 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
 
   console.log(`🎯 Dynamic route: /${locale}/over-ons/${page}`);
 
+  // Load messages for unified context
+  const messages = await getMessages({ locale });
+
+  // Prepare unified page data
+  const pageData = {
+    pageType: "about" as const,
+    page,
+    locale: locale as Locale,
+    messages,
+  };
+
   return (
     <div className="min-h-screen">
-      {/* 🚀 PURE COMPONENT MAPPING - Use page directly */}
-      <PageRenderer pageType="about" page={page} />
+      <UnifiedPageProvider data={pageData}>
+        <PageRenderer pageType="about" page={page} />
+      </UnifiedPageProvider>
     </div>
   );
 }

@@ -8,7 +8,7 @@ import {
   VALID_CATEGORIES,
   ValidCategory,
 } from "@/lib/i18n-utils";
-import { ZorgaanbodProvider } from "@/contexts/ZorgaanbodContext";
+import { UnifiedPageProvider } from "@/contexts/UnifiedPageContext";
 
 // Valid categories imported from utilities
 
@@ -50,19 +50,21 @@ export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
   const heroImage = getStaticImageByCategory(category);
   const messages = await getMessages({ locale });
 
-  // Prepare data for context
-  const zorgaanbodData = {
-    category,
+  // Prepare unified page data
+  const pageData = {
+    pageType: "category" as const,
+    page: category,
     locale: locale as Locale,
-    heroImage,
     messages,
+    heroImage,
+    category,
   };
 
   return (
     <div className="min-h-screen">
-      <ZorgaanbodProvider data={zorgaanbodData}>
+      <UnifiedPageProvider data={pageData}>
         <PageRenderer pageType="category" page={category} />
-      </ZorgaanbodProvider>
+      </UnifiedPageProvider>
     </div>
   );
 }

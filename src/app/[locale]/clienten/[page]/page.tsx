@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/request";
 import PageRenderer from "@/components/PageRenderer";
 import { NotFoundPage } from "@/components/sections";
 import { getPageMetadata } from "@/lib/i18n-utils";
+import { UnifiedPageProvider } from "@/contexts/UnifiedPageContext";
 
 // Define valid client pages
 const VALID_CLIENT_PAGES = [
@@ -39,19 +40,22 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
   console.log(`🎯 Dynamic route: /${locale}/clienten/${page}`);
 
-  // Load messages for the specific page
+  // Load messages for unified context
   const messages = await getMessages({ locale });
-  const pageMessages = messages?.clienten?.[page]; // Use direct key, not replacing dashes
+
+  // Prepare unified page data
+  const pageData = {
+    pageType: "client" as const,
+    page,
+    locale: locale as Locale,
+    messages,
+  };
 
   return (
     <div className="min-h-screen">
-      {/* 🚀 PURE COMPONENT MAPPING - NO CONFIG NEEDED */}
-      <PageRenderer
-        pageType="client"
-        page={page}
-        locale={locale}
-        messages={pageMessages}
-      />
+      <UnifiedPageProvider data={pageData}>
+        <PageRenderer pageType="client" page={page} />
+      </UnifiedPageProvider>
     </div>
   );
 }

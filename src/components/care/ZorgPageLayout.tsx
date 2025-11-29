@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { useZorgaanbod } from "@/contexts/ZorgaanbodContext";
+import { useUnifiedPage } from "@/contexts/UnifiedPageContext";
 import ZorgHero from "./ZorgHero";
 import ZorgCareSidebar from "./ZorgCareSidebar";
 import ZorgTestimonial from "./ZorgTestimonial";
@@ -33,7 +33,7 @@ const ZorgPageLayout = ({
   hideTreatmentMethods = false,
 }: ZorgPageLayoutProps) => {
   // Get hero image from context
-  const { heroImage } = useZorgaanbod();
+  const { heroImage } = useUnifiedPage();
 
   // For client pages, we want to hide treatment methods and testimonials
   const isClientPage = category === "client";

@@ -4,6 +4,18 @@ import { AboutUsSidebar } from "@/components";
 
 // Simple page configuration
 export const PAGE_CONFIG = {
+  // Zorgaanbod overview page
+  "zorgaanbod-overview": {
+    components: {
+      overview: dynamic(() => import("./pages/ZorgaanbodOverviewPage")),
+    },
+    layout: "none",
+    fallback: {
+      title: () => "Zorgaanbod",
+      subtitle: () => "Our care services",
+    },
+  },
+
   // Category pages (zorgaanbod/[category])
   category: {
     components: {

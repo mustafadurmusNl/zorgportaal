@@ -1297,5 +1297,28 @@
         "button": "View all locations"
       }
     }
+  },
+  "aanmelden": {
+    "title": "Registration Information",
+    "description": "You can register with Forta Adults for treatment on referral from your GP, company doctor or medical specialist. Do you have questions about the registration procedure? Please feel free to contact us.",
+    "intro": "Registration for treatment at Forta Adults is possible on referral from your GP or other healthcare provider. Below you can read how this works.",
+    "steps": {
+      "registration": {
+        "title": "Registration",
+        "description": "To register for treatment you need a referral letter from your referrer. Without a referral letter we cannot process the registration."
+      },
+      "intake_planning": {
+        "title": "Schedule intake interview",
+        "description": "As soon as we can schedule intake appointments, we will contact you by phone. Please take into account the waiting times, these can vary per location."
+      },
+      "intake": {
+        "title": "Intake interview",
+        "description": "During the intake interview we discuss your request for help and together we look at the best treatment for your situation."
+      }
+    },
+    "help_needed": "Questions or need help?",
+    "help_description": "For consultation you can contact our central secretariat. They will put you in contact with the right healthcare professional.",
+    "for_referrers": "For referrers",
+    "referrers_description": "Are you a GP, company doctor or medical specialist and would you like to refer a client to Forta Adults? Check the..."
   }
 }

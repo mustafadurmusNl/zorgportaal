@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter, useParams } from "next/navigation";
 import {
   Button,
   Card,
@@ -12,6 +13,9 @@ import {
 
 const Services = () => {
   const t = useTranslations("services");
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
 
   // Define services structure with translation keys
   const serviceItems = [
@@ -36,6 +40,33 @@ const Services = () => {
       colorClass: "service-card-orange",
     },
   ];
+
+  // Handle navigation for different services
+  const handleServiceClick = (serviceId: string) => {
+    console.log(`🔍 Service clicked: ${serviceId}, locale: ${locale}`);
+
+    let targetUrl = "";
+    switch (serviceId) {
+      case "ourCare":
+        targetUrl = `/${locale}/zorgaanbod`;
+        break;
+      case "digitalPoli":
+        targetUrl = `/${locale}/digitale-poli`;
+        break;
+      case "locations":
+        targetUrl = `/${locale}/over-ons/locaties`;
+        break;
+      case "careers":
+        targetUrl = `/${locale}/contact`;
+        break;
+      default:
+        console.log(`❌ Unknown service: ${serviceId}`);
+        return;
+    }
+
+    console.log(`→ Navigating to: ${targetUrl}`);
+    router.push(targetUrl);
+  };
 
   return (
     <section className="py-16 px-4">
@@ -63,13 +94,26 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="mt-auto pt-0">
-                <Button
-                  variant="outline"
-                  className="w-full border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-200"
-                  onClick={() => {}}
+                <button
+                  className="w-full border border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-200 px-4 py-2 rounded"
+                  onClick={() => {
+                    console.log(`🚀 Direct button clicked for: ${service.id}`);
+                    const targetUrl =
+                      service.id === "ourCare"
+                        ? `/${locale}/zorgaanbod`
+                        : service.id === "digitalPoli"
+                        ? `/${locale}/digitale-poli`
+                        : service.id === "locations"
+                        ? `/${locale}/over-ons/locaties`
+                        : service.id === "careers"
+                        ? `/${locale}/contact`
+                        : "/";
+                    console.log(`🎯 Navigating to: ${targetUrl}`);
+                    window.location.href = targetUrl;
+                  }}
                 >
                   {index === 3 ? t("careers.description") : t("moreInfo")}
-                </Button>
+                </button>
               </CardContent>
             </Card>
           ))}

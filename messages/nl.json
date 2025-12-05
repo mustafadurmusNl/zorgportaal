@@ -1017,5 +1017,28 @@
         "button": "Bekijk alle locaties"
       }
     }
+  },
+  "aanmelden": {
+    "title": "Aanmeldinformatie",
+    "description": "Je kunt je bij Forta Volwassenen aanmelden voor behandeling op verwijzing van je huisarts, bedrijfsarts of medisch specialist. Heb je vragen over de aanmeldprocedure? Neem dan gerust contact met ons op.",
+    "intro": "Aanmelden voor behandeling bij Forta Volwassenen kan op verwijzing van je huisarts of andere behandelaar. Hieronder lees je hoe dat werkt.",
+    "steps": {
+      "registration": {
+        "title": "Aanmelden",
+        "description": "Om je aan te melden voor een behandeling heb je een verwijsbrief van je verwijzer nodig. Zonder verwijsbrief kunnen wij de aanmelding niet in behandeling nemen."
+      },
+      "intake_planning": {
+        "title": "Intakegesprek plannen",
+        "description": "Zodra wij intake afspraken kunnen gaan inplannen, nemen wij telefonisch contact met je op. Houd rekening met de wachttijden, deze kunnen per locatie verschillen."
+      },
+      "intake": {
+        "title": "Intakegesprek",
+        "description": "Tijdens het intakegesprek bespreken we je hulpvraag en kijken we samen naar de beste behandeling voor jouw situatie."
+      }
+    },
+    "help_needed": "Vragen of hulp nodig?",
+    "help_description": "Voor consultatie kunt u contact opnemen met ons centraal secretariaat. Zij brengen u in contact met de juiste zorgprofessional.",
+    "for_referrers": "Voor verwijzers",
+    "referrers_description": "Ben je huisarts, bedrijfsarts of medisch specialist en wil je een cliënt verwijzen naar Forta Volwassenen? Bekijk de..."
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter, useParams } from "next/navigation";
 import { Button, Badge } from "@/components/ui";
 import Image from "next/image";
 
@@ -170,6 +171,9 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
   const breadcrumbKey = CATEGORY_TO_BREADCRUMB_KEY[category];
   const t = useTranslations(translationKey);
   const breadcrumbT = useTranslations(`${translationKey}.breadcrumb`);
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
 
   const theme = CATEGORY_THEMES[category];
   const themeWithOptionalProps = theme as typeof theme & {
@@ -227,8 +231,8 @@ const ZorgHero = ({ category, imageUrl, altText }: ZorgHeroProps) => {
                   size="xl"
                   className={`bg-gradient-to-r ${theme.buttonGradient} text-white font-semibold transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl`}
                   onClick={() => {
-                    // Navigate to registration page
-                    window.location.href = "/aanmelden";
+                    // Navigate to registration page with locale
+                    router.push(`/${locale}/aanmelden`);
                   }}
                 >
                   {t("cta")}

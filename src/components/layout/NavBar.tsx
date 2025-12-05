@@ -231,9 +231,15 @@ const NavBar = () => {
             )}
           </div>
 
-          <Button variant="healthcare" size="default" onClick={() => {}}>
+          <button
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600 transition-all duration-200 h-10 px-4 py-2 rounded-md text-sm font-medium"
+            onClick={() => {
+              console.log("Desktop register button clicked!");
+              window.location.href = "/nl/aanmelden";
+            }}
+          >
             {t("aanmelden")}
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -326,7 +332,11 @@ const NavBar = () => {
               <Button
                 variant="healthcare"
                 className="w-full"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  console.log("Mobile register button clicked!");
+                  setIsMobileMenuOpen(false);
+                  window.location.href = "/nl/aanmelden";
+                }}
               >
                 {t("aanmelden")}
               </Button>

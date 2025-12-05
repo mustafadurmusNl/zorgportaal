@@ -1,10 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter, useParams } from "next/navigation";
 import { Button, Badge } from "@/components/ui";
 
 const Hero = () => {
   const t = useTranslations("hero");
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 overflow-hidden pt-20">
       {/* Background Video Effect */}
@@ -49,10 +53,18 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center animate-fadeInUp">
-          <Button variant="healthcare" size="xl" onClick={() => {}}>
+          <Button
+            variant="healthcare"
+            size="xl"
+            onClick={() => router.push(`/${locale}/zorgaanbod`)}
+          >
             {t("treatments")}
           </Button>
-          <Button variant="healthcare-outline" size="xl" onClick={() => {}}>
+          <Button
+            variant="healthcare-outline"
+            size="xl"
+            onClick={() => router.push(`/${locale}/clienten/wachttijden`)}
+          >
             {t("waitingTimes")}
           </Button>
         </div>

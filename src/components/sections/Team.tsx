@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter, useParams } from "next/navigation";
 import { teamMembers } from "@/constants";
 import {
   Button,
@@ -13,6 +14,9 @@ import {
 
 const Team = () => {
   const t = useTranslations("team");
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
 
   return (
     <section className="section">
@@ -82,7 +86,7 @@ const Team = () => {
             variant="outline"
             size="lg"
             className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors duration-200"
-            onClick={() => {}}
+            onClick={() => router.push(`/${locale}/contact`)}
           >
             {t("cta.button")}
           </Button>

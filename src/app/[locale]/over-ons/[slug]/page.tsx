@@ -15,33 +15,33 @@ const LOCALES: Locale[] = ["nl", "en"];
 
 interface AboutUsPageProps {
   params: Promise<{
-    page: string;
+    slug: string;
     locale: string;
   }>;
 }
 
 export default async function AboutUsPage({ params }: AboutUsPageProps) {
-  const { page, locale } = await params;
+  const { slug, locale } = await params;
 
   // Validate locale first
   if (!LOCALES.includes(locale as Locale)) {
-    redirect(`/nl/over-ons/${page}`);
+    redirect(`/nl/over-ons/${slug}`);
   }
 
-  // Validate page parameter
-  if (!VALID_ABOUT_PAGES.includes(page as ValidAboutPage)) {
+  // Validate slug parameter
+  if (!VALID_ABOUT_PAGES.includes(slug as ValidAboutPage)) {
     return <NotFoundPage />;
   }
 
-  console.log(`🎯 Dynamic route: /${locale}/over-ons/${page}`);
+  console.log(`🎯 Route: /${locale}/over-ons/${slug}`);
 
   // Load messages for unified context
   const messages = await getMessages({ locale });
 
-  // Prepare unified page data
+  // Prepare unified page data with consistent naming
   const pageData = {
-    pageType: "about" as const,
-    page,
+    section: "over-ons" as const,
+    slug,
     locale: locale as Locale,
     messages,
   };
@@ -49,7 +49,7 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
   return (
     <div className="min-h-screen">
       <UnifiedPageProvider data={pageData}>
-        <PageRenderer pageType="about" page={page} />
+        <PageRenderer section="over-ons" slug={slug} />
       </UnifiedPageProvider>
     </div>
   );
@@ -60,10 +60,10 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
 //   const params = [];
 
 //   // Generate params for all valid pages (Dutch URLs only)
-//   for (const page of VALID_ABOUT_PAGES) {
+//   for (const slug of VALID_ABOUT_PAGES) {
 //     for (const locale of LOCALES) {
 //       params.push({
-//         page,
+//         slug,
 //         locale,
 //       });
 //     }
@@ -74,33 +74,33 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
 
 // Generate metadata with i18n support
 export async function generateMetadata({ params }: AboutUsPageProps) {
-  const { page, locale } = await params;
+  const { slug, locale } = await params;
 
   // Use standard getMessages pattern
   const messages = await getMessages({ locale });
 
   // Get page-specific translations
-  const pageData = messages["over-ons"]?.[page as ValidAboutPage];
+  const pageData = messages["over-ons"]?.[slug as ValidAboutPage];
   const siteData = messages.site;
 
   // Fallback titles if page data is not available
-  const pageTitles: Record<string, { nl: string; en: string }> = {
+  const fallbackTitles: Record<string, { nl: string; en: string }> = {
     locaties: { nl: "Onze locaties", en: "Our Locations" },
     team: { nl: "Ons team", en: "Our Team" },
     kwaliteit: { nl: "Kwaliteit", en: "Quality" },
   };
 
-  const title = pageData?.title || pageTitles[page]?.[locale as Locale];
+  const title = pageData?.title || fallbackTitles[slug]?.[locale as Locale];
   const description = pageData?.subtitle || pageData?.description;
 
   return {
     title: `${title} | Groeipunt`,
     description: description || siteData.description,
     alternates: {
-      canonical: `/${locale}/over-ons/${page}`,
+      canonical: `/${locale}/over-ons/${slug}`,
       languages: {
-        nl: `/nl/over-ons/${page}`,
-        en: `/en/over-ons/${page}`,
+        nl: `/nl/over-ons/${slug}`,
+        en: `/en/over-ons/${slug}`,
       },
     },
     openGraph: {

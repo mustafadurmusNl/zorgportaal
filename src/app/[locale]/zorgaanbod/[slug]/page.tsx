@@ -10,73 +10,62 @@ import {
 } from "@/lib/i18n-utils";
 import { UnifiedPageProvider } from "@/contexts/UnifiedPageContext";
 
-// Valid categories imported from utilities
-
 // Define supported locales
 const LOCALES: Locale[] = ["nl", "en"];
 
 interface ZorgaanbodPageProps {
   params: Promise<{
-    category: string;
+    slug: string;
     locale: string;
   }>;
 }
 
 export default async function ZorgaanbodPage({ params }: ZorgaanbodPageProps) {
-  console.log("🚀 ZorgaanbodPage called with params:", await params);
+  const { slug, locale } = await params;
 
-  const { category, locale } = await params;
+  console.log(`🎯 Route: /${locale}/zorgaanbod/${slug}`);
 
-  console.log(
-    `🔍 DEBUG: category=${category}, locale=${locale}, valid=${VALID_CATEGORIES.includes(
-      category as ValidCategory
-    )}`
-  );
-
-  // Validate category
-  if (!VALID_CATEGORIES.includes(category as ValidCategory)) {
-    console.log(`❌ Invalid category: ${category}`);
+  // Validate slug
+  if (!VALID_CATEGORIES.includes(slug as ValidCategory)) {
+    console.log(`❌ Invalid slug: ${slug}`);
     notFound();
   }
 
   // Validate locale - if it's not supported, redirect to default locale
   if (!LOCALES.includes(locale as Locale)) {
-    redirect(`/nl/zorgaanbod/${category}`);
+    redirect(`/nl/zorgaanbod/${slug}`);
   }
 
-  console.log(`🎯 Dynamic route: /${locale}/zorgaanbod/${category}`);
-
   // Load data server-side
-  const heroImage = getStaticImageByCategory(category);
+  const heroImage = getStaticImageByCategory(slug);
   const messages = await getMessages({ locale });
 
-  // Prepare unified page data
+  // Prepare unified page data with consistent naming
   const pageData = {
-    pageType: "category" as const,
-    page: category,
+    section: "zorgaanbod" as const,
+    slug,
     locale: locale as Locale,
     messages,
     heroImage,
-    category,
   };
 
   return (
     <div className="min-h-screen">
       <UnifiedPageProvider data={pageData}>
-        <PageRenderer pageType="category" page={category} />
+        <PageRenderer section="zorgaanbod" slug={slug} />
       </UnifiedPageProvider>
     </div>
   );
 }
 
-// Generate static params for all valid categories and locales
+// Generate static params for all valid slugs and locales
 export async function generateStaticParams() {
   const params = [];
 
-  for (const category of VALID_CATEGORIES) {
+  for (const slug of VALID_CATEGORIES) {
     for (const locale of ["nl", "en"]) {
       params.push({
-        category,
+        slug,
         locale,
       });
     }
@@ -87,13 +76,13 @@ export async function generateStaticParams() {
 
 // Generate metadata with i18n support
 export async function generateMetadata({ params }: ZorgaanbodPageProps) {
-  const { category, locale } = await params;
+  const { slug, locale } = await params;
 
   // Use centralized message loading
   const messages = await getMessages({ locale });
 
-  // Fallback titles if category data is not available
-  const categoryTitles: Record<string, { nl: string; en: string }> = {
+  // Fallback titles if data is not available
+  const fallbackTitles: Record<string, { nl: string; en: string }> = {
     angst: { nl: "Angst", en: "Anxiety" },
     depressie: { nl: "Depressie", en: "Depression" },
     adhd: { nl: "ADHD", en: "ADHD" },
@@ -109,20 +98,20 @@ export async function generateMetadata({ params }: ZorgaanbodPageProps) {
 
   const { title, description } = getPageMetadata(
     messages,
-    category,
-    category,
+    slug,
+    slug,
     locale as Locale,
-    categoryTitles
+    fallbackTitles
   );
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/zorgaanbod/${category}`,
+      canonical: `/${locale}/zorgaanbod/${slug}`,
       languages: {
-        nl: `/nl/zorgaanbod/${category}`,
-        en: `/en/zorgaanbod/${category}`,
+        nl: `/nl/zorgaanbod/${slug}`,
+        en: `/en/zorgaanbod/${slug}`,
       },
     },
     openGraph: {

@@ -1,24 +1,19 @@
 // src/components/pageConfig.ts
 import dynamic from "next/dynamic";
 import { AboutUsSidebar } from "@/components";
+import type { Section } from "@/contexts/UnifiedPageContext";
 
-// Simple page configuration
+/**
+ * Centralized page configuration
+ *
+ * Structure: PAGE_CONFIG[section][slug] = Component
+ * This provides a consistent pattern for all pages across all sections
+ */
 export const PAGE_CONFIG = {
-  // Zorgaanbod overview page
-  "zorgaanbod-overview": {
-    components: {
+  // Zorgaanbod section - care services pages
+  zorgaanbod: {
+    pages: {
       overview: dynamic(() => import("./pages/ZorgaanbodOverviewPage")),
-    },
-    layout: "none",
-    fallback: {
-      title: () => "Zorgaanbod",
-      subtitle: () => "Our care services",
-    },
-  },
-
-  // Category pages (zorgaanbod/[category])
-  category: {
-    components: {
       angst: dynamic(() => import("./pages/AnxietyPage")),
       depressie: dynamic(() => import("./pages/DepressionPage")),
       adhd: dynamic(() => import("./pages/ADHDPage")),
@@ -27,18 +22,12 @@ export const PAGE_CONFIG = {
       zelfbeeld: dynamic(() => import("./pages/SelfImagePage")),
       persoonlijkheid: dynamic(() => import("./pages/PersonalityPage")),
     },
-    layout: "none",
-    fallback: {
-      title: (page: string) =>
-        `${page.charAt(0).toUpperCase() + page.slice(1)} Treatment`,
-      subtitle: (page: string) =>
-        `Professional ${page} treatment and support services`,
-    },
+    layout: "none" as const,
   },
 
-  // Client pages (voor-klanten/[page])
-  client: {
-    components: {
+  // Clienten section - client information pages
+  clienten: {
+    pages: {
       "voor-wie": dynamic(() => import("./pages/ForWhomPage")),
       "intake-behandelplan": dynamic(
         () => import("./pages/IntakeAndTreatmentPage")
@@ -46,33 +35,35 @@ export const PAGE_CONFIG = {
       wachttijden: dynamic(() => import("./pages/WaitingTimesPage")),
       vergoeding: dynamic(() => import("./pages/ReimbursementPage")),
     },
-    layout: "none",
-    fallback: {
-      title: (page: string) =>
-        page
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" "),
-      subtitle: () => "Information for clients",
-    },
+    layout: "none" as const,
   },
 
-  // About us pages (over-ons/[page])
-  about: {
-    components: {
+  // Over-ons section - about us pages
+  "over-ons": {
+    pages: {
       locaties: dynamic(() => import("./pages/LocationsPage")),
       team: dynamic(() => import("./pages/TeamPage")),
       kwaliteit: dynamic(() => import("./pages/QualityPage")),
     },
-    layout: "sidebar",
+    layout: "sidebar" as const,
     sidebar: AboutUsSidebar,
-    fallback: {
-      title: (page: string) => page.charAt(0).toUpperCase() + page.slice(1),
-      subtitle: () => "About our practice",
-    },
   },
 } as const;
 
-export type PageType = keyof typeof PAGE_CONFIG;
-export type PageName<T extends PageType> =
-  keyof (typeof PAGE_CONFIG)[T]["components"];
+// Type helpers for better type safety
+export type ValidSection = keyof typeof PAGE_CONFIG;
+export type ValidSlug<S extends ValidSection> =
+  keyof (typeof PAGE_CONFIG)[S]["pages"];
+
+// Helper to check if a slug is valid for a section
+export function isValidSlug<S extends ValidSection>(
+  section: S,
+  slug: string
+): boolean {
+  return slug in PAGE_CONFIG[section].pages;
+}
+
+// Get all valid slugs for a section
+export function getValidSlugs<S extends ValidSection>(section: S): string[] {
+  return Object.keys(PAGE_CONFIG[section].pages);
+}

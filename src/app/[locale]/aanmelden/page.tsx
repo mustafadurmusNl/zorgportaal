@@ -254,10 +254,10 @@ const AanmeldenPage = () => {
                       </div>
                       <div>
                         <a
-                          href="mailto:info@forta.nl"
+                          href="mailto:info@groeipunt.nl"
                           className="text-white font-semibold hover:text-pink-100 transition-colors"
                         >
-                          info@forta.nl
+                          info@groeipunt.nl
                         </a>
                       </div>
                     </div>

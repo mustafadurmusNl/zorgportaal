@@ -4,24 +4,23 @@
 import React, { createContext, useContext, ReactNode } from "react";
 import type { Locale } from "@/i18n/request";
 
-export type PageType = "category" | "client" | "about";
+// Clearer section names instead of abstract types
+export type Section = "zorgaanbod" | "clienten" | "over-ons";
 
 interface UnifiedPageData {
-  pageType: PageType;
-  page: string;
+  section: Section;
+  slug: string; // Consistent naming: slug instead of page/category
   locale: Locale;
   messages: Record<string, unknown>;
 
-  // Optional fields for specific page types
-  heroImage?: string; // For category pages (zorgaanbod)
-  category?: string; // For category pages (zorgaanbod)
+  // Optional fields
+  heroImage?: string; // For zorgaanbod pages
 }
 
 interface UnifiedPageContextType extends UnifiedPageData {
-  // Helper functions
-  getCategoryData: (key?: string) => unknown;
-  getPageData: (section: string, key?: string) => unknown;
-  t: (key: string, section?: string) => string;
+  // Simplified helper functions
+  getContent: (key?: string) => unknown;
+  t: (key: string) => string;
 }
 
 const UnifiedPageContext = createContext<UnifiedPageContextType | null>(null);
@@ -35,65 +34,57 @@ export function UnifiedPageProvider({
   data,
   children,
 }: UnifiedPageProviderProps) {
-  const { pageType, page, locale, messages, heroImage, category } = data;
+  const { section, slug, locale, messages, heroImage } = data;
 
-  // Helper function to get category-specific data (for zorgaanbod)
-  const getCategoryData = (key?: string) => {
-    if (pageType !== "category" || !category) return undefined;
-
-    const categoryData = messages[category] as
-      | Record<string, unknown>
-      | undefined;
-    return key ? categoryData?.[key] : categoryData;
-  };
-
-  // Helper function to get page-specific data (for client/about pages)
-  const getPageData = (section: string, key?: string) => {
+  /**
+   * Universal content getter - works for all sections
+   *
+   * For zorgaanbod: messages["zorgaanbod"][slug] - e.g., messages["zorgaanbod"]["angst"]
+   * For clienten: messages["clienten"][slug] - e.g., messages["clienten"]["voor-wie"]
+   * For over-ons: messages["over-ons"][slug] - e.g., messages["over-ons"]["locaties"]
+   *
+   * @param key - Optional nested key to access within the page data
+   */
+  const getContent = (key?: string) => {
     const sectionData = messages[section] as
       | Record<string, unknown>
       | undefined;
-    const pageData = sectionData?.[page] as Record<string, unknown> | undefined;
-    return key ? pageData?.[key] : pageData;
-  };
+    const pageData = sectionData?.[slug] as Record<string, unknown> | undefined;
 
-  // Universal translation helper
-  const t = (key: string, section?: string) => {
+    if (!key) return pageData;
+
+    // Support nested keys with dot notation (e.g., "sections.what_is_anxiety")
     const keys = key.split(".");
-    let value: unknown;
+    let value: unknown = pageData;
 
-    if (pageType === "category" && category) {
-      // For category pages, use category as base
-      value = messages[category];
-    } else if (section) {
-      // For client/about pages with section specified
-      value = messages[section];
-    } else {
-      // Fallback to direct message access
-      value = messages;
-    }
-
-    // Navigate through the key path
     for (const k of keys) {
       if (value && typeof value === "object" && k in value) {
         value = (value as Record<string, unknown>)[k];
       } else {
-        value = undefined;
-        break;
+        return undefined;
       }
     }
 
+    return value;
+  };
+
+  /**
+   * Simplified translation helper
+   *
+   * @param key - Dot-notation key path (e.g., "title" or "sections.hero.title")
+   */
+  const t = (key: string): string => {
+    const value = getContent(key);
     return typeof value === "string" ? value : key;
   };
 
   const contextValue: UnifiedPageContextType = {
-    pageType,
-    page,
+    section,
+    slug,
     locale,
     messages,
     heroImage,
-    category,
-    getCategoryData,
-    getPageData,
+    getContent,
     t,
   };
 
@@ -112,7 +103,9 @@ export function useUnifiedPage() {
   return context;
 }
 
-// Backward compatibility - alias for existing zorgaanbod usage
+// Backward compatibility aliases
 export const useZorgaanbod = useUnifiedPage;
+export const useClienten = useUnifiedPage;
+export const useOverOns = useUnifiedPage;
 
 export type { UnifiedPageData };

@@ -365,7 +365,6 @@
       }
     }
   },
-
   "somatiek": {
     "title": "Somatic & Psych",
     "subtitle": "Somatic issues concern physical complaints that are connected with psychological factors.",
@@ -409,7 +408,6 @@
       }
     }
   },
-
   "zelfbeeld": {
     "title": "Self-image issues",
     "subtitle": "Problems with self-image can seriously affect functioning and wellbeing.",
@@ -524,11 +522,6 @@
         "symptom_3": "Your social relationships or work are negatively affected by your concerns",
         "symptom_4": "You notice that self-help and support from loved ones are no longer sufficient"
       },
-      "contact": {
-        "title": "Wondering if you need help?",
-        "description": "Feel free to contact us for a non-committal conversation about your situation.",
-        "button": "Contact us"
-      },
       "common_issues": {
         "title": "Common complaints",
         "description": "We treat a wide range of psychological complaints in adults.",
@@ -592,424 +585,10 @@
           "response": "Response within 24 hours"
         }
       },
-      "intake-behandelplan": {
-        "title": "Intake & Treatment Plan",
-        "subtitle": "A careful start to your treatment with personal attention and professional guidance.",
-        "process": {
-          "title": "Our process",
-          "content": "We follow a structured approach to ensure you receive the best care that matches your specific needs.",
-          "step1": {
-            "title": "First contact",
-            "description": "By phone or online, we schedule an appointment and discuss your care request generally."
-          },
-          "step2": {
-            "title": "Intake interview",
-            "description": "Comprehensive conversation where we map out your concerns, background and goals."
-          },
-          "step3": {
-            "title": "Treatment plan",
-            "description": "Together we create a personal treatment plan that matches your needs."
-          },
-          "step4": {
-            "title": "Start treatment",
-            "description": "We begin treatment according to the agreed plan with regular evaluations."
-          }
-        },
-        "what_to_expect": {
-          "title": "What to expect",
-          "content": "We ensure you are well prepared and know what to expect throughout the entire process.",
-          "intake": {
-            "title": "During intake",
-            "description": "A safe environment where you can tell your story and ask all your questions."
-          },
-          "plan": {
-            "title": "Your treatment plan",
-            "description": "A customized plan with clear goals and an appropriate treatment method."
-          }
-        },
-        "what_is_intake": {
-          "title": "What is an intake?",
-          "description": "An intake is the first official conversation between you and your therapist. This conversation forms the basis for your entire treatment."
-        },
-        "intake_purpose": {
-          "title": "Purpose of the intake",
-          "items": [
-            "Map out your concerns and request for help",
-            "Discuss your history",
-            "Establish expectations and goals",
-            "Create treatment plan"
-          ]
-        },
-        "intake_process": {
-          "title": "The intake process",
-          "description": "The intake process consists of different components that together provide a complete picture of your situation.",
-          "steps": {
-            "preparation": {
-              "number": "1",
-              "title": "Preparation",
-              "description": "Before the intake conversation, you will receive questionnaires that you can complete at home. These help us better understand your situation.",
-              "duration": "30-60 minutes preparation at home"
-            },
-            "conversation": {
-              "number": "2",
-              "title": "The conversation",
-              "description": "The intake conversation takes place at our practice or via video calling. We extensively discuss your concerns, history and expectations.",
-              "duration": "60-90 minutes"
-            },
-            "analysis": {
-              "number": "3",
-              "title": "Analysis and plan",
-              "description": "After the conversation, your therapist analyzes all information and creates a treatment plan tailored to your specific situation.",
-              "duration": "1-2 days"
-            }
-          }
-        },
-        "treatment_plan": {
-          "title": "Creating a treatment plan",
-          "description": "Based on the intake, a personal treatment plan is created that matches your unique situation and goals.",
-          "content": {
-            "title": "What is in a treatment plan?",
-            "goals": {
-              "title": "Goals",
-              "items": [
-                "Short-term goals",
-                "Long-term goals",
-                "Measurable results"
-              ]
-            },
-            "methodology": {
-              "title": "Methodology",
-              "items": [
-                "Treatment methods",
-                "Session frequency",
-                "Estimated duration"
-              ]
-            },
-            "features": {
-              "targeted": {
-                "title": "Targeted approach",
-                "description": "Each treatment plan is unique and focused on your specific concerns and personal goals."
-              },
-              "flexible": {
-                "title": "Flexible and adaptable",
-                "description": "The treatment plan is regularly evaluated during treatment and adjusted if necessary."
-              }
-            }
-          }
-        },
-        "expectations": {
-          "title": "What you can expect",
-          "before": {
-            "title": "Before the intake",
-            "items": [
-              "Confirmation of appointment by email",
-              "Preparatory questionnaires",
-              "Information about what to expect",
-              "Opportunity to ask questions"
-            ]
-          },
-          "during": {
-            "title": "During the intake",
-            "items": [
-              "Confidential and safe conversation",
-              "Room for all your questions and concerns",
-              "Professional and empathetic guidance",
-              "Clear explanation of next steps"
-            ]
-          },
-          "after": {
-            "title": "After the intake",
-            "items": [
-              "Treatment plan within 3 working days",
-              "Planning follow-up appointments",
-              "Information about insurance and costs",
-              "Contact for questions always possible"
-            ]
-          }
-        },
-        "preparation_tips": {
-          "title": "Preparation tips",
-          "think_about": {
-            "title": "Think about",
-            "items": [
-              "When concerns started",
-              "What trigger situations are",
-              "Previous treatments",
-              "Your main goals"
-            ]
-          },
-          "bring": {
-            "title": "Bring with you",
-            "items": [
-              "Completed questionnaires",
-              "List of current medication",
-              "Previous reports (if applicable)",
-              "Insurance information"
-            ]
-          }
-        },
-        "faq": {
-          "title": "Frequently asked questions",
-          "duration": {
-            "question": "How long does an intake take?",
-            "answer": "An intake conversation usually takes between 60-90 minutes. We take the time needed to properly understand your situation."
-          },
-          "support_person": {
-            "question": "Can I bring someone to the intake?",
-            "answer": "Yes, you can bring a trusted person if you find that comforting. Please discuss this with us in advance so we can take this into account."
-          },
-          "nervousness": {
-            "question": "What if I'm nervous about the conversation?",
-            "answer": "It's very normal to be nervous. Our therapists have a lot of experience in putting clients at ease. You set the pace of the conversation yourself."
-          },
-          "confidentiality": {
-            "question": "Will my information be treated confidentially?",
-            "answer": "Yes, all information you share is treated strictly confidentially according to the professional code for psychologists and GDPR legislation."
-          }
-        },
-        "schedule": {
-          "title": "Schedule intake?",
-          "description": "Are you ready to take the first step? Contact us to schedule an intake conversation.",
-          "phone": {
-            "title": "Phone",
-            "number": "010-450 40 71",
-            "hours": "Mon-Fri 8:00-17:00"
-          },
-          "email": {
-            "title": "Email",
-            "address": "intake@zorgportaal.nl",
-            "response": "Response within 24 hours"
-          }
-        },
-        "preparation": {
-          "title": "Preparing for your intake",
-          "content": "Good preparation helps you get the most out of your intake interview and ensures an efficient start to your treatment journey.",
-          "tips_title": "Tips for your first appointment:",
-          "tip1": "Think about what you want to achieve with treatment",
-          "tip2": "Make notes about your concerns and when they started",
-          "tip3": "Bring a list of medications you are taking",
-          "tip4": "Prepare questions you would like to ask"
-        }
-      },
-      "wachttijden": {
-        "title": "Current Waiting Times",
-        "subtitle": "Transparent information about our current waiting times for different treatments.",
-        "current_times": {
-          "title": "Current waiting times",
-          "intake": {
-            "title": "Intake interview",
-            "time": "1-2 weeks",
-            "description": "For a first consultation"
-          },
-          "treatment": {
-            "title": "Start treatment",
-            "time": "2-4 weeks",
-            "description": "After treatment plan approval"
-          },
-          "urgent": {
-            "title": "Emergency care",
-            "time": "Within 48 hours",
-            "description": "For acute problems"
-          }
-        },
-        "note": {
-          "title": "Note",
-          "description": "Waiting times may vary per therapist and type of treatment. We always keep you informed."
-        },
-        "factors": {
-          "title": "What affects waiting times",
-          "factor1": "Type of treatment and therapist specialization",
-          "factor2": "Urgency of your care request",
-          "factor3": "Availability of contracted therapists",
-          "factor4": "Seasonal demand (often busier after holidays)"
-        },
-        "services": {
-          "anxiety": {
-            "title": "Anxiety Disorders",
-            "time": "2-3 weeks",
-            "description": "Treatment of panic attacks, phobias and generalized anxiety disorder",
-            "updated": "January 15, 2024"
-          },
-          "depression": {
-            "title": "Depression",
-            "time": "3-4 weeks",
-            "description": "Individual and group treatment for various forms of depression",
-            "updated": "January 15, 2024"
-          },
-          "trauma": {
-            "title": "Trauma & PTSD",
-            "time": "4-6 weeks",
-            "description": "EMDR and other trauma-focused treatments",
-            "updated": "January 15, 2024"
-          },
-          "adhd": {
-            "title": "ADHD",
-            "time": "6-8 weeks",
-            "description": "Diagnosis and treatment of ADHD in adults",
-            "updated": "January 15, 2024"
-          }
-        },
-        "last_update": "Last update",
-        "acute_help": {
-          "title": "Acute help available",
-          "description": "For acute suicidal thoughts or other crisis situations, we can often schedule a conversation within 24-48 hours.",
-          "urgency_title": "When is there urgency?",
-          "urgency_items": {
-            "suicidal": "Suicidal thoughts with concrete plans",
-            "psychosis": "Severe psychosis or loss of reality",
-            "trauma": "Acute traumatic event"
-          },
-          "crisis_note": "For acute crisis situations: Call 010-450 40 71 immediately or go to the Emergency Department."
-        },
-        "alternatives": {
-          "title": "Alternative options",
-          "description": "During the waiting period, various alternatives are available for support.",
-          "online_self_help": {
-            "title": "Online self-help",
-            "description": "Digital modules for anxiety and depression through our partners.",
-            "wait_time": "Immediately available"
-          },
-          "group_therapy": {
-            "title": "Group therapy",
-            "description": "Group treatments for specific complaints start regularly.",
-            "wait_time": "1-2 weeks"
-          },
-          "gp_psychologist": {
-            "title": "GP psychologist",
-            "description": "Short treatments through GP psychology.",
-            "wait_time": "1 week",
-            "contact": "Through GP"
-          },
-          "crisis_service": {
-            "title": "Crisis service",
-            "description": "24/7 accessible crisis help for acute situations.",
-            "wait_time": "Immediate",
-            "contact": "0800-0113"
-          }
-        },
-        "contact_questions": {
-          "title": "Questions about waiting times?",
-          "description": "Do you have questions about our waiting times or want to know if starting earlier is possible? Please feel free to contact us.",
-          "phone": {
-            "title": "Phone",
-            "number": "010-450 40 71"
-          },
-          "email": {
-            "title": "Email",
-            "address": "info@fortavolwassenen.nl"
-          },
-          "availability": "Available Monday to Friday from 9:00 AM to 5:00 PM"
-        },
-        "how_to_reduce": {
-          "title": "How to reduce waiting time",
-          "tips": [
-            "Be flexible with appointment times",
-            "Consider online therapy options",
-            "Have all documents ready",
-            "Respond quickly to intake invitations"
-          ]
-        },
-        "while_waiting": {
-          "title": "While waiting",
-          "description": "While waiting for your treatment, you can take some steps:",
-          "tip1": "Keep a diary of your concerns and triggers",
-          "tip2": "Stay in touch with your family doctor",
-          "tip3": "Seek temporary support from family or friends",
-          "tip4": "Look for self-help groups in your area"
-        },
-        "urgent_contact": {
-          "title": "Need urgent help?",
-          "description": "For serious concerns or crisis situations, you can contact us directly for emergency intake.",
-          "button": "Direct contact"
-        },
-        "registration_cta": {
-          "badge": "Contact us",
-          "title": "Register or refer?",
-          "description": "Want to know how to register yourself or refer a client to Forta Adults? Check out our registration information.",
-          "button": "Registration information"
-        }
-      },
-      "vergoeding": {
-        "title": "Reimbursement & costs",
-        "subtitle": "Clear information about treatment costs and what is reimbursed by your insurance.",
-        "basic_insurance": {
-          "title": "Basic insurance",
-          "description": "Psychological help is reimbursed from basic insurance. Most treatments are covered under the Health Insurance Act.",
-          "covered_treatments": {
-            "individual": "Individual psychotherapy",
-            "group": "Group therapy",
-            "diagnostics": "Diagnostics",
-            "emdr": "EMDR treatment"
-          }
-        },
-        "additional_insurance": {
-          "title": "Additional insurance",
-          "description": "Additional insurance can provide extra benefits such as shorter waiting times or reimbursement of alternative treatment methods.",
-          "note": {
-            "title": "Please note",
-            "description": "Always check with your insurer which treatments are covered under your additional policy."
-          }
-        },
-        "deductible": {
-          "title": "Deductible",
-          "description": "Psychological help falls under the deductible. This means you must first use up your deductible before the insurance fully reimburses.",
-          "calculation": {
-            "title": "Deductible calculation",
-            "cost_per_session": "Cost per session: €90-120",
-            "deductible_2024": "Deductible 2024: €385",
-            "sessions_deductible": "Number of sessions deductible: 3-4 sessions"
-          }
-        },
-        "reimbursement_steps": {
-          "title": "Request reimbursement",
-          "steps": {
-            "start_treatment": {
-              "title": "Start treatment",
-              "description": "Schedule an intake conversation with one of our therapists."
-            },
-            "receive_invoice": {
-              "title": "Receive invoice",
-              "description": "You will receive an invoice after each treatment session."
-            },
-            "claim_insurance": {
-              "title": "Claim with insurer",
-              "description": "Send the invoice to your health insurer for reimbursement."
-            }
-          }
-        },
-        "contact_questions": {
-          "title": "Questions about reimbursement?",
-          "description": "Do you have questions about reimbursement or your insurance? Please contact us.",
-          "phone": {
-            "title": "Phone",
-            "number": "010-450 40 71",
-            "hours": "Mon-Fri 8:00 AM-5:00 PM"
-          },
-          "email": {
-            "title": "Email",
-            "address": "info@zorgportaal.nl"
-          }
-        }
-      },
-      "payment_process": {
-        "title": "How payment works",
-        "step1": {
-          "title": "Direct billing",
-          "description": "We bill directly with your health insurer. You don't need to arrange anything yourself."
-        },
-        "step2": {
-          "title": "Deductible",
-          "description": "You only pay your deductible, we settle the rest directly with your insurer."
-        },
-        "step3": {
-          "title": "Transparent costs",
-          "description": "You always receive clear information about all costs and reimbursements in advance."
-        }
-      },
       "contact": {
-        "title": "Questions about reimbursement?",
-        "description": "We are happy to help you with questions about insurance and costs. Feel free to contact us.",
-        "button": "Contact about reimbursement"
+        "title": "Wondering if you need help?",
+        "description": "Feel free to contact us for a non-committal conversation about your situation.",
+        "button": "Contact us"
       }
     },
     "wachttijden": {
@@ -1148,6 +727,287 @@
         "title": "Register or refer?",
         "description": "Want to know how to register yourself or refer a client to Forta Adults? Check out our registration information.",
         "button": "Registration information"
+      }
+    },
+    "intake-behandelplan": {
+      "title": "Intake & Treatment Plan",
+      "subtitle": "A careful start to your treatment with personal attention and professional guidance.",
+      "process": {
+        "title": "Our process",
+        "content": "We follow a structured approach to ensure you receive the best care that matches your specific needs.",
+        "step1": {
+          "title": "First contact",
+          "description": "By phone or online, we schedule an appointment and discuss your care request generally."
+        },
+        "step2": {
+          "title": "Intake interview",
+          "description": "Comprehensive conversation where we map out your concerns, background and goals."
+        },
+        "step3": {
+          "title": "Treatment plan",
+          "description": "Together we create a personal treatment plan that matches your needs."
+        },
+        "step4": {
+          "title": "Start treatment",
+          "description": "We begin treatment according to the agreed plan with regular evaluations."
+        }
+      },
+      "what_to_expect": {
+        "title": "What to expect",
+        "content": "We ensure you are well prepared and know what to expect throughout the entire process.",
+        "intake": {
+          "title": "During intake",
+          "description": "A safe environment where you can tell your story and ask all your questions."
+        },
+        "plan": {
+          "title": "Your treatment plan",
+          "description": "A customized plan with clear goals and an appropriate treatment method."
+        }
+      },
+      "what_is_intake": {
+        "title": "What is an intake?",
+        "description": "An intake is the first official conversation between you and your therapist. This conversation forms the basis for your entire treatment."
+      },
+      "intake_purpose": {
+        "title": "Purpose of the intake",
+        "items": [
+          "Map out your concerns and request for help",
+          "Discuss your history",
+          "Establish expectations and goals",
+          "Create treatment plan"
+        ]
+      },
+      "intake_process": {
+        "title": "The intake process",
+        "description": "The intake process consists of different components that together provide a complete picture of your situation.",
+        "steps": {
+          "preparation": {
+            "number": "1",
+            "title": "Preparation",
+            "description": "Before the intake conversation, you will receive questionnaires that you can complete at home. These help us better understand your situation.",
+            "duration": "30-60 minutes preparation at home"
+          },
+          "conversation": {
+            "number": "2",
+            "title": "The conversation",
+            "description": "The intake conversation takes place at our practice or via video calling. We extensively discuss your concerns, history and expectations.",
+            "duration": "60-90 minutes"
+          },
+          "analysis": {
+            "number": "3",
+            "title": "Analysis and plan",
+            "description": "After the conversation, your therapist analyzes all information and creates a treatment plan tailored to your specific situation.",
+            "duration": "1-2 days"
+          }
+        }
+      },
+      "treatment_plan": {
+        "title": "Creating a treatment plan",
+        "description": "Based on the intake, a personal treatment plan is created that matches your unique situation and goals.",
+        "content": {
+          "title": "What is in a treatment plan?",
+          "goals": {
+            "title": "Goals",
+            "items": [
+              "Short-term goals",
+              "Long-term goals",
+              "Measurable results"
+            ]
+          },
+          "methodology": {
+            "title": "Methodology",
+            "items": [
+              "Treatment methods",
+              "Session frequency",
+              "Estimated duration"
+            ]
+          },
+          "features": {
+            "targeted": {
+              "title": "Targeted approach",
+              "description": "Each treatment plan is unique and focused on your specific concerns and personal goals."
+            },
+            "flexible": {
+              "title": "Flexible and adaptable",
+              "description": "The treatment plan is regularly evaluated during treatment and adjusted if necessary."
+            }
+          }
+        }
+      },
+      "expectations": {
+        "title": "What you can expect",
+        "before": {
+          "title": "Before the intake",
+          "items": [
+            "Confirmation of appointment by email",
+            "Preparatory questionnaires",
+            "Information about what to expect",
+            "Opportunity to ask questions"
+          ]
+        },
+        "during": {
+          "title": "During the intake",
+          "items": [
+            "Confidential and safe conversation",
+            "Room for all your questions and concerns",
+            "Professional and empathetic guidance",
+            "Clear explanation of next steps"
+          ]
+        },
+        "after": {
+          "title": "After the intake",
+          "items": [
+            "Treatment plan within 3 working days",
+            "Planning follow-up appointments",
+            "Information about insurance and costs",
+            "Contact for questions always possible"
+          ]
+        }
+      },
+      "preparation_tips": {
+        "title": "Preparation tips",
+        "think_about": {
+          "title": "Think about",
+          "items": [
+            "When concerns started",
+            "What trigger situations are",
+            "Previous treatments",
+            "Your main goals"
+          ]
+        },
+        "bring": {
+          "title": "Bring with you",
+          "items": [
+            "Completed questionnaires",
+            "List of current medication",
+            "Previous reports (if applicable)",
+            "Insurance information"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "duration": {
+          "question": "How long does an intake take?",
+          "answer": "An intake conversation usually takes between 60-90 minutes. We take the time needed to properly understand your situation."
+        },
+        "support_person": {
+          "question": "Can I bring someone to the intake?",
+          "answer": "Yes, you can bring a trusted person if you find that comforting. Please discuss this with us in advance so we can take this into account."
+        },
+        "nervousness": {
+          "question": "What if I'm nervous about the conversation?",
+          "answer": "It's very normal to be nervous. Our therapists have a lot of experience in putting clients at ease. You set the pace of the conversation yourself."
+        },
+        "confidentiality": {
+          "question": "Will my information be treated confidentially?",
+          "answer": "Yes, all information you share is treated strictly confidentially according to the professional code for psychologists and GDPR legislation."
+        }
+      },
+      "schedule": {
+        "title": "Schedule intake?",
+        "description": "Are you ready to take the first step? Contact us to schedule an intake conversation.",
+        "phone": {
+          "title": "Phone",
+          "number": "010-450 40 71",
+          "hours": "Mon-Fri 8:00-17:00"
+        },
+        "email": {
+          "title": "Email",
+          "address": "intake@zorgportaal.nl",
+          "response": "Response within 24 hours"
+        }
+      },
+      "preparation": {
+        "title": "Preparing for your intake",
+        "content": "Good preparation helps you get the most out of your intake interview and ensures an efficient start to your treatment journey.",
+        "tips_title": "Tips for your first appointment:",
+        "tip1": "Think about what you want to achieve with treatment",
+        "tip2": "Make notes about your concerns and when they started",
+        "tip3": "Bring a list of medications you are taking",
+        "tip4": "Prepare questions you would like to ask"
+      }
+    },
+    "vergoeding": {
+      "title": "Reimbursement & costs",
+      "subtitle": "Clear information about treatment costs and what is reimbursed by your insurance.",
+      "basic_insurance": {
+        "title": "Basic insurance",
+        "description": "Psychological help is reimbursed from basic insurance. Most treatments are covered under the Health Insurance Act.",
+        "covered_treatments": {
+          "individual": "Individual psychotherapy",
+          "group": "Group therapy",
+          "diagnostics": "Diagnostics",
+          "emdr": "EMDR treatment"
+        }
+      },
+      "additional_insurance": {
+        "title": "Additional insurance",
+        "description": "Additional insurance can provide extra benefits such as shorter waiting times or reimbursement of alternative treatment methods.",
+        "note": {
+          "title": "Please note",
+          "description": "Always check with your insurer which treatments are covered under your additional policy."
+        }
+      },
+      "deductible": {
+        "title": "Deductible",
+        "description": "Psychological help falls under the deductible. This means you must first use up your deductible before the insurance fully reimburses.",
+        "calculation": {
+          "title": "Deductible calculation",
+          "cost_per_session": "Cost per session: €90-120",
+          "deductible_2024": "Deductible 2024: €385",
+          "sessions_deductible": "Number of sessions deductible: 3-4 sessions"
+        }
+      },
+      "reimbursement_steps": {
+        "title": "Request reimbursement",
+        "steps": {
+          "start_treatment": {
+            "title": "Start treatment",
+            "description": "Schedule an intake conversation with one of our therapists."
+          },
+          "receive_invoice": {
+            "title": "Receive invoice",
+            "description": "You will receive an invoice after each treatment session."
+          },
+          "claim_insurance": {
+            "title": "Claim with insurer",
+            "description": "Send the invoice to your health insurer for reimbursement."
+          }
+        }
+      },
+      "contact_questions": {
+        "title": "Questions about reimbursement?",
+        "description": "Do you have questions about reimbursement or your insurance? Please contact us.",
+        "phone": {
+          "title": "Phone",
+          "number": "010-450 40 71",
+          "hours": "Mon-Fri 8:00 AM-5:00 PM"
+        },
+        "email": {
+          "title": "Email",
+          "address": "info@zorgportaal.nl"
+        }
+      },
+      "payment_process": {
+        "title": "How payment works",
+        "step1": {
+          "title": "Direct billing",
+          "description": "We bill directly with your health insurer. You don't need to arrange anything yourself."
+        },
+        "step2": {
+          "title": "Deductible",
+          "description": "You only pay your deductible, we settle the rest directly with your insurer."
+        },
+        "step3": {
+          "title": "Transparent costs",
+          "description": "You always receive clear information about all costs and reimbursements in advance."
+        }
+      },
+      "contact": {
+        "title": "Questions about reimbursement?",
+        "description": "We are happy to help you with questions about insurance and costs. Feel free to contact us.",
+        "button": "Contact about reimbursement"
       }
     }
   },

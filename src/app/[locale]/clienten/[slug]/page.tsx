@@ -20,33 +20,33 @@ const LOCALES: Locale[] = ["nl", "en"];
 
 interface ClientPageProps {
   params: Promise<{
-    page: string;
+    slug: string;
     locale: string;
   }>;
 }
 
 export default async function ClientPage({ params }: ClientPageProps) {
-  const { page, locale } = await params;
+  const { slug, locale } = await params;
 
   // Validate locale first
   if (!LOCALES.includes(locale as Locale)) {
-    redirect(`/nl/clienten/${page}`);
+    redirect(`/nl/clienten/${slug}`);
   }
 
-  // If page is not valid, show custom NotFound page instead of generic 404
-  if (!VALID_CLIENT_PAGES.includes(page as ValidClientPage)) {
+  // If slug is not valid, show custom NotFound page instead of generic 404
+  if (!VALID_CLIENT_PAGES.includes(slug as ValidClientPage)) {
     return <NotFoundPage />;
   }
 
-  console.log(`🎯 Dynamic route: /${locale}/clienten/${page}`);
+  console.log(`🎯 Route: /${locale}/clienten/${slug}`);
 
   // Load messages for unified context
   const messages = await getMessages({ locale });
 
-  // Prepare unified page data
+  // Prepare unified page data with consistent naming
   const pageData = {
-    pageType: "client" as const,
-    page,
+    section: "clienten" as const,
+    slug,
     locale: locale as Locale,
     messages,
   };
@@ -54,7 +54,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
   return (
     <div className="min-h-screen">
       <UnifiedPageProvider data={pageData}>
-        <PageRenderer pageType="client" page={page} />
+        <PageRenderer section="clienten" slug={slug} />
       </UnifiedPageProvider>
     </div>
   );
@@ -64,10 +64,10 @@ export default async function ClientPage({ params }: ClientPageProps) {
 export async function generateStaticParams() {
   const params = [];
 
-  for (const page of VALID_CLIENT_PAGES) {
+  for (const slug of VALID_CLIENT_PAGES) {
     for (const locale of LOCALES) {
       params.push({
-        page,
+        slug,
         locale,
       });
     }
@@ -78,13 +78,13 @@ export async function generateStaticParams() {
 
 // Generate metadata with i18n support
 export async function generateMetadata({ params }: ClientPageProps) {
-  const { page, locale } = await params;
+  const { slug, locale } = await params;
 
   // Use centralized message loading with correct Next.js function
   const messages = await getMessages({ locale });
 
   // Fallback titles if page data is not available
-  const pageTitles: Record<string, { nl: string; en: string }> = {
+  const fallbackTitles: Record<string, { nl: string; en: string }> = {
     "voor-wie": { nl: "Voor wie", en: "For Whom" },
     "intake-behandelplan": {
       nl: "Intake & Behandelplan",
@@ -97,19 +97,19 @@ export async function generateMetadata({ params }: ClientPageProps) {
   const { title, description } = getPageMetadata(
     messages,
     "clienten",
-    page as ValidClientPage,
+    slug as ValidClientPage,
     locale as Locale,
-    pageTitles
+    fallbackTitles
   );
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/clienten/${page}`,
+      canonical: `/${locale}/clienten/${slug}`,
       languages: {
-        nl: `/nl/clienten/${page}`,
-        en: `/en/clienten/${page}`,
+        nl: `/nl/clienten/${slug}`,
+        en: `/en/clienten/${slug}`,
       },
     },
     openGraph: {

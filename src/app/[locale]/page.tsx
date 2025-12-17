@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Homepage sections - Auto-deployed via Vercel */}
       <Hero />
       <Services />
       <Locations />

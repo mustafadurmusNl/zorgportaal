@@ -10,7 +10,7 @@ const Hero = () => {
   const params = useParams();
   const locale = params.locale as string;
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 overflow-hidden pt-20">
+    <section className="relative min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-2rem)] flex items-center justify-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 overflow-hidden pt-8 md:pt-12">
       {/* Background Video Effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/2 h-full">
